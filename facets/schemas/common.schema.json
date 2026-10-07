@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://facets.arkavo.dev/schemas/v1/common.schema.json",
+  "title": "FACETS shared definitions",
+  "description": "Shared building blocks. Mechanics are integers; IDs are stable strings without spaces.",
+  "$defs": {
+    "id": {"type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[^\\s]+$"},
+    "namespaced_id": {"type": "string", "minLength": 3, "maxLength": 128, "pattern": "^[^\\s.]+\\.[^\\s]+$"},
+    "text": {"type": "string", "maxLength": 4096},
+    "facet": {"enum": ["force", "agility", "cunning", "empathy", "tenacity", "sense"]},
+    "band": {"enum": ["failure", "costly_offer", "success_with_cost", "success", "strong_success"]},
+    "die": {"type": "integer", "minimum": 1, "maximum": 6},
+    "dice": {
+      "type": "array",
+      "description": "Either empty (routine, no roll) or exactly two dice.",
+      "anyOf": [{"maxItems": 0}, {"minItems": 2, "maxItems": 2}],
+      "items": {"$ref": "#/$defs/die"}
+    },
+    "operation_ref": {
+      "type": "object",
+      "description": "Reference to an allowlisted operation. Parameter shapes are checked by the operation registry, not by this schema.",
+      "additionalProperties": false,
+      "required": ["op"],
+      "properties": {
+        "op": {"type": "string", "pattern": "^[a-z_]+\\.[a-z_]+$"},
+        "params": {"type": "object"},
+        "label": {"$ref": "#/$defs/text"},
+        "secret": {"type": "boolean"}
+      }
+    },
+    "operation_list": {"type": "array", "maxItems": 64, "items": {"$ref": "#/$defs/operation_ref"}},
+    "modifier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id", "factor_id", "scope", "value"],
+      "properties": {
+        "source_id": {"$ref": "#/$defs/id"},
+        "factor_id": {"$ref": "#/$defs/id"},
+        "scope": {"enum": ["situational", "assistance", "relationship", "condition", "equipment", "cover", "defend", "talent"]},
+        "value": {"type": "integer", "minimum": -9, "maximum": 9},
+        "label": {"$ref": "#/$defs/text"},
+        "when": {"$ref": "#/$defs/operation_ref"}
+      }
+    },
+    "build": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["facets", "skills", "talents"],
+      "properties": {
+        "facets": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["force", "agility", "cunning", "empathy", "tenacity", "sense"],
+          "properties": {
+            "force": {"type": "integer", "minimum": 0, "maximum": 10},
+            "agility": {"type": "integer", "minimum": 0, "maximum": 10},
+            "cunning": {"type": "integer", "minimum": 0, "maximum": 10},
+            "empathy": {"type": "integer", "minimum": 0, "maximum": 10},
+            "tenacity": {"type": "integer", "minimum": 0, "maximum": 10},
+            "sense": {"type": "integer", "minimum": 0, "maximum": 10}
+          }
+        },
+        "skills": {
+          "type": "object",
+          "maxProperties": 128,
+          "propertyNames": {"$ref": "#/$defs/id"},
+          "additionalProperties": {"type": "integer", "minimum": 0, "maximum": 10}
+        },
+        "talents": {"type": "array", "maxItems": 128, "items": {"$ref": "#/$defs/id"}},
+        "capabilities": {"type": "array", "maxItems": 128, "items": {"$ref": "#/$defs/namespaced_id"}}
+      }
+    }
+  }
+}

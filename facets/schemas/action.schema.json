@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://facets.arkavo.dev/schemas/v1/action.schema.json",
+  "title": "FACETS action definition",
+  "description": "Pinned action definition as registered and recorded in events. Operation parameters and registry membership are validated by FACETS.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "version", "approaches", "difficulty", "retry_policy"],
+  "properties": {
+    "id": {"$ref": "common.schema.json#/$defs/id"},
+    "version": {"type": "integer", "minimum": 1},
+    "display_name": {"$ref": "common.schema.json#/$defs/text"},
+    "description": {"$ref": "common.schema.json#/$defs/text"},
+    "objective_id": {"$ref": "common.schema.json#/$defs/id"},
+    "tags": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/id"}},
+    "approaches": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "facet", "skill"],
+        "properties": {
+          "id": {"$ref": "common.schema.json#/$defs/id"},
+          "facet": {"$ref": "common.schema.json#/$defs/facet"},
+          "skill": {"$ref": "common.schema.json#/$defs/id"},
+          "label": {"$ref": "common.schema.json#/$defs/text"}
+        }
+      }
+    },
+    "requirements": {"$ref": "common.schema.json#/$defs/operation_list"},
+    "routine_requirements": {"$ref": "common.schema.json#/$defs/operation_list"},
+    "required_tools": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/id"}},
+    "useful_tools": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/id"}},
+    "consumable_substitutes": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/id"}},
+    "difficulty": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "properties": {
+        "kind": {"enum": ["fixed", "opposed", "routine"]},
+        "target": {"type": "integer", "minimum": 2, "maximum": 30},
+        "defender_id": {"type": "string", "maxLength": 128},
+        "defense_facet": {"anyOf": [{"$ref": "common.schema.json#/$defs/facet"}, {"const": ""}]},
+        "defense_skill": {"type": "string", "maxLength": 128},
+        "defense_modifiers": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/modifier"}}
+      }
+    },
+    "modifiers": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/modifier"}},
+    "relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "other_id": {"$ref": "common.schema.json#/$defs/id"},
+        "dimension": {"enum": ["trust", "affinity"]}
+      }
+    },
+    "allow_push": {"type": "boolean"},
+    "allow_resolve": {"type": "boolean"},
+    "allow_assistance": {"type": "boolean"},
+    "clock_cost": {"type": "integer", "minimum": 0},
+    "allows_costly_success": {"type": "boolean"},
+    "costly_options": {"type": "array", "items": {"$ref": "#/$defs/option"}},
+    "success_effects": {"$ref": "common.schema.json#/$defs/operation_list"},
+    "failure_effects": {"$ref": "common.schema.json#/$defs/operation_list"},
+    "strong_benefits": {"type": "array", "items": {"$ref": "#/$defs/option"}},
+    "default_benefit_id": {"type": "string", "maxLength": 128},
+    "lesser_concessions": {"type": "array", "items": {"$ref": "#/$defs/option"}},
+    "stakes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {"success": {"$ref": "common.schema.json#/$defs/text"}, "failure": {"$ref": "common.schema.json#/$defs/text"}}
+    },
+    "fear": {"type": "boolean"},
+    "retry_policy": {"enum": ["lock_until_change", "repeatable"]},
+    "alternate_evidence_sources": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/id"}},
+    "revealable_facts": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/id"}}
+  },
+  "$defs": {
+    "option": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "effects"],
+      "properties": {
+        "id": {"$ref": "common.schema.json#/$defs/id"},
+        "label": {"$ref": "common.schema.json#/$defs/text"},
+        "effects": {"$ref": "common.schema.json#/$defs/operation_list"},
+        "requires_consent": {"type": "boolean"}
+      }
+    }
+  }
+}

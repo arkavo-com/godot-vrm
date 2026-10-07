@@ -1,0 +1,4 @@
+$ tools/verify_clean_install.sh
+CLEAN INSTALL CORE: ok (band success)
+CLEAN INSTALL EDITOR: ok (plugin enabled, no script errors)
+exit 0

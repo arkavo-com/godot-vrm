@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://facets.arkavo.dev/schemas/v1/ai-proposal.schema.json",
+  "title": "FACETS AI intent proposal",
+  "description": "The only shape a provider may return. It names an approach; it never sets difficulty, dice, stats, resources, effects, new objects or private facts.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["actor_id", "action_id", "approach_id"],
+  "properties": {
+    "actor_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "action_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "approach_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "target_ids": {"type": "array", "maxItems": 8, "items": {"type": "string", "maxLength": 128}},
+    "tool_ids": {"type": "array", "maxItems": 8, "items": {"type": "string", "maxLength": 128}},
+    "helper_ids": {"type": "array", "maxItems": 1, "items": {"type": "string", "maxLength": 128}},
+    "display_text": {"type": "string", "maxLength": 280}
+  }
+}

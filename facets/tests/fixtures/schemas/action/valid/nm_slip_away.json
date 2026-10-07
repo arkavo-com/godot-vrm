@@ -1,0 +1,107 @@
+{
+  "allow_assistance": true,
+  "allow_push": true,
+  "allow_resolve": true,
+  "allows_costly_success": true,
+  "alternate_evidence_sources": [],
+  "approaches": [
+    {
+      "facet": "agility",
+      "id": "sneak",
+      "label": "Blend into the crowd",
+      "skill": "stealth"
+    }
+  ],
+  "clock_cost": 0,
+  "consumable_substitutes": [],
+  "costly_options": [
+    {
+      "effects": [
+        {
+          "label": "Someone saw your face",
+          "op": "fact.set",
+          "params": {
+            "fact_id": "fact.face_seen",
+            "label": "Your face was seen",
+            "value": true
+          }
+        }
+      ],
+      "id": "seen",
+      "label": "Someone glimpses your face"
+    }
+  ],
+  "default_benefit_id": "",
+  "description": "Leave the clinic without being followed.",
+  "difficulty": {
+    "defender_id": "",
+    "defense_facet": "",
+    "defense_modifiers": [],
+    "defense_skill": "",
+    "kind": "fixed",
+    "target": 11
+  },
+  "display_name": "Slip out past the fixer's watchers",
+  "failure_effects": [
+    {
+      "label": "You are followed for a while",
+      "op": "actor.strain",
+      "params": {
+        "amount": 1
+      }
+    }
+  ],
+  "fear": true,
+  "id": "nm.slip_away",
+  "lesser_concessions": [],
+  "modifiers": [
+    {
+      "factor_id": "watch.grid_trace",
+      "label": "The grid trace put watchers on you",
+      "scope": "situational",
+      "source_id": "fact.grid_trace",
+      "value": -1,
+      "when": {
+        "op": "require.fact",
+        "params": {
+          "fact_id": "fact.grid_trace",
+          "value": true
+        }
+      }
+    }
+  ],
+  "objective_id": "nm.objective.slip_away",
+  "relationship": {
+
+  },
+  "required_tools": [],
+  "requirements": [
+    {
+      "label": "At the clinic",
+      "op": "require.scene",
+      "params": {
+        "scene_id": "nm.clinic"
+      }
+    }
+  ],
+  "retry_policy": "lock_until_change",
+  "revealable_facts": [],
+  "routine_requirements": [],
+  "stakes": {
+    "failure": "You are followed (1 strain).",
+    "success": "You reach the canal path unseen."
+  },
+  "strong_benefits": [],
+  "success_effects": [
+    {
+      "label": "You reach the canal path unseen",
+      "op": "actor.zone",
+      "params": {
+        "zone_id": "canal"
+      }
+    }
+  ],
+  "tags": [],
+  "useful_tools": [],
+  "version": 1
+}

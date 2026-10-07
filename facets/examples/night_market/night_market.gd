@@ -25,7 +25,7 @@ var _dice_row: HBoxContainer
 
 
 func _ready() -> void:
-	var reply := NightMarketDemo.create({"store": FacetsFileStore.at(NightMarketDemo.DEFAULT_SAVE)})
+	var reply := NightMarketDemo.create({"store": FacetsFileStore.at(NightMarketDemo.AUTOSAVE), "resume": true})
 	if not reply.ok:
 		push_error("Night Market could not start: %s" % reply.error)
 		return

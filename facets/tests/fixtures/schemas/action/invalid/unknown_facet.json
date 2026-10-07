@@ -1,0 +1,1 @@
+{"id": "bad.facet", "version": 1, "approaches": [{"id": "a", "facet": "luck", "skill": "technology"}], "difficulty": {"kind": "fixed", "target": 11}, "retry_policy": "repeatable"}

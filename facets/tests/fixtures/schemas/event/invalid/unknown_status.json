@@ -1,0 +1,331 @@
+{
+ "action": {
+  "allow_assistance": true,
+  "allow_push": true,
+  "allow_resolve": true,
+  "allows_costly_success": true,
+  "alternate_evidence_sources": [],
+  "approaches": [
+   {
+    "facet": "cunning",
+    "id": "tech",
+    "label": "Work the controller",
+    "skill": "technology"
+   }
+  ],
+  "clock_cost": 1,
+  "consumable_substitutes": [
+   "item.scrap_wire"
+  ],
+  "costly_options": [
+   {
+    "effects": [
+     {
+      "label": "You leave a trace in the grid",
+      "op": "world.mark_trace",
+      "params": {
+       "label": "A trace in the market grid",
+       "trace_id": "fact.grid_trace"
+      }
+     }
+    ],
+    "id": "trace",
+    "label": "Leave a trace in the market grid"
+   }
+  ],
+  "default_benefit_id": "silent",
+  "description": "Splice into the service door's controller and open it.",
+  "difficulty": {
+   "defender_id": "",
+   "defense_facet": "",
+   "defense_modifiers": [],
+   "defense_skill": "",
+   "kind": "fixed",
+   "target": 13
+  },
+  "display_name": "Bypass the service door controller",
+  "failure_effects": [
+   {
+    "label": "The patrol advances",
+    "op": "world.counter_add",
+    "params": {
+     "amount": 1,
+     "counter_id": "patrol"
+    }
+   },
+   {
+    "label": "The controller locks down",
+    "op": "object.set_flag",
+    "params": {
+     "key": "locked",
+     "object_id": "controller",
+     "value": true
+    }
+   }
+  ],
+  "fear": false,
+  "id": "nm.bypass_controller",
+  "lesser_concessions": [],
+  "modifiers": [],
+  "objective_id": "nm.objective.bypass_controller",
+  "relationship": {},
+  "required_tools": [
+   "tool.signal_kit"
+  ],
+  "requirements": [
+   {
+    "label": "At the market gate",
+    "op": "require.scene",
+    "params": {
+     "scene_id": "nm.gate"
+    }
+   },
+   {
+    "label": "Still outside the market hall",
+    "op": "require.actor_zone",
+    "params": {
+     "zone_id": "street"
+    }
+   },
+   {
+    "label": "The controller is reachable and not locked down",
+    "op": "require.accessible_controller",
+    "params": {
+     "object_id": "controller"
+    }
+   },
+   {
+    "label": "The service door is still closed",
+    "op": "require.object_flag",
+    "params": {
+     "key": "open",
+     "object_id": "service_door",
+     "value": false
+    }
+   }
+  ],
+  "retry_policy": "lock_until_change",
+  "revealable_facts": [],
+  "routine_requirements": [],
+  "stakes": {
+   "failure": "The patrol advances and the controller locks down.",
+   "success": "The service door opens."
+  },
+  "strong_benefits": [
+   {
+    "effects": [
+     {
+      "label": "Nobody noticed you",
+      "op": "actor.flag",
+      "params": {
+       "key": "silent_entry",
+       "value": true
+      }
+     }
+    ],
+    "id": "silent",
+    "label": "Silent entry",
+    "requires_consent": false
+   },
+   {
+    "effects": [
+     {
+      "label": "You copy the access log",
+      "op": "fact.reveal",
+      "params": {
+       "fact_id": "fact.access_log"
+      }
+     }
+    ],
+    "id": "log",
+    "label": "Copy the access log",
+    "requires_consent": false
+   }
+  ],
+  "success_effects": [
+   {
+    "label": "The service door opens",
+    "op": "object.set_flag",
+    "params": {
+     "key": "open",
+     "object_id": "service_door",
+     "value": true
+    }
+   },
+   {
+    "label": "You step into the market hall",
+    "op": "actor.zone",
+    "params": {
+     "zone_id": "hall"
+    }
+   }
+  ],
+  "tags": [
+   "technical",
+   "route"
+  ],
+  "useful_tools": [],
+  "version": 1
+ },
+ "action_digest": "202617a89fbb98e7d40cddd58d8cee47c818c4c7e265daea60004dee4927c820",
+ "action_id": "nm.bypass_controller",
+ "action_version": 1,
+ "actor_id": "demo.mara_vale",
+ "after_revision": 2,
+ "approach": {
+  "facet": "cunning",
+  "id": "tech",
+  "label": "Work the controller",
+  "skill": "technology"
+ },
+ "approach_id": "tech",
+ "base": {
+  "allows_costly_success": true,
+  "band": "costly_offer",
+  "dice": [
+   3,
+   3
+  ],
+  "facet": 3,
+  "margin": -2,
+  "modifier_applied": 0,
+  "modifier_raw": 0,
+  "push_bonus": 0,
+  "resolve_bonus": 0,
+  "skill": 2,
+  "target": 13,
+  "total": 11
+ },
+ "before_revision": 0,
+ "check": {
+  "allows_costly_success": true,
+  "facet": 3,
+  "facet_id": "cunning",
+  "skill": 2,
+  "skill_id": "technology",
+  "target": 13
+ },
+ "choices": [
+  {
+   "decision_id": "evt-000001:resolve",
+   "kind": "resolve",
+   "option_id": "decline"
+  },
+  {
+   "decision_id": "evt-000001:cost",
+   "kind": "cost",
+   "option_id": "accept:trace"
+  }
+ ],
+ "commit_ops": [
+  {
+   "after": 1,
+   "before": 0,
+   "op": "set",
+   "path": [
+    "clock"
+   ]
+  }
+ ],
+ "decision": {},
+ "dice": [
+  3,
+  3
+ ],
+ "effect_labels": [
+  "The service door opens",
+  "You step into the market hall",
+  "You leave a trace in the grid"
+ ],
+ "evaluation": {
+  "allows_costly_success": true,
+  "band": "costly_offer",
+  "dice": [
+   3,
+   3
+  ],
+  "facet": 3,
+  "margin": -2,
+  "modifier_applied": 0,
+  "modifier_raw": 0,
+  "push_bonus": 0,
+  "resolve_bonus": 0,
+  "skill": 2,
+  "target": 13,
+  "total": 11
+ },
+ "event_id": "evt-000001",
+ "final_band": "success_with_cost",
+ "finalize_ops": [
+  {
+   "after": true,
+   "before": false,
+   "op": "set",
+   "path": [
+    "objects",
+    "service_door",
+    "open"
+   ]
+  },
+  {
+   "after": "hall",
+   "before": "street",
+   "op": "set",
+   "path": [
+    "actors",
+    "demo.mara_vale",
+    "zone_id"
+   ]
+  },
+  {
+   "after": {
+    "label": "A trace in the market grid",
+    "value": true,
+    "visibility": "public"
+   },
+   "before": null,
+   "op": "set",
+   "path": [
+    "facts",
+    "fact.grid_trace"
+   ]
+  }
+ ],
+ "fingerprint": "e461ece7e1595eb4a24fcd9aa92b0bc68e819b1441ca7ec8392481a46af70cb4",
+ "helper_id": "",
+ "kind": "check",
+ "lock_key": "lock:ed6c3c857477881b12d7f6325ea2e1ff",
+ "modifier_applied": 0,
+ "modifier_lines": [],
+ "modifier_raw": 0,
+ "objective_id": "nm.objective.bypass_controller",
+ "push": false,
+ "request": {
+  "action_id": "nm.bypass_controller",
+  "actor_id": "demo.mara_vale",
+  "approach_id": "tech",
+  "evidence_id": "",
+  "expected_revision": -1,
+  "helper_ids": [],
+  "talent_ids": [],
+  "target_ids": [],
+  "tool_ids": [
+   "tool.signal_kit"
+  ]
+ },
+ "resolve_available": true,
+ "resource_deltas": {
+  "resolve": 0,
+  "strain": 0
+ },
+ "routine": false,
+ "scene_id": "nm.gate",
+ "second_look": {},
+ "status": "maybe",
+ "talent_notes": [],
+ "target_explanation": [
+  "Target 13 (demanding)."
+ ],
+ "tool_substitution": {},
+ "visibility": "public"
+}

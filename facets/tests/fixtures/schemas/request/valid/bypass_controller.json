@@ -1,0 +1,13 @@
+{
+  "action_id": "nm.bypass_controller",
+  "actor_id": "demo.mara_vale",
+  "approach_id": "tech",
+  "evidence_id": "",
+  "expected_revision": -1,
+  "helper_ids": [],
+  "talent_ids": [],
+  "target_ids": [],
+  "tool_ids": [
+    "tool.signal_kit"
+  ]
+}

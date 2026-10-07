@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://facets.arkavo.dev/schemas/v1/request.schema.json",
+  "title": "FACETS action request",
+  "description": "Names an approach; never a difficulty, dice, stats or effects. Authority comes from the host principal, not from this payload.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["actor_id", "action_id", "approach_id"],
+  "properties": {
+    "actor_id": {"$ref": "common.schema.json#/$defs/id"},
+    "action_id": {"$ref": "common.schema.json#/$defs/id"},
+    "approach_id": {"$ref": "common.schema.json#/$defs/id"},
+    "target_ids": {"type": "array", "maxItems": 16, "items": {"$ref": "common.schema.json#/$defs/id"}},
+    "tool_ids": {"type": "array", "maxItems": 16, "items": {"$ref": "common.schema.json#/$defs/id"}},
+    "helper_ids": {"type": "array", "maxItems": 1, "items": {"$ref": "common.schema.json#/$defs/id"}},
+    "expected_revision": {"type": "integer", "minimum": -1},
+    "talent_ids": {"type": "array", "maxItems": 8, "items": {"$ref": "common.schema.json#/$defs/id"}},
+    "evidence_id": {"type": "string", "maxLength": 128}
+  }
+}

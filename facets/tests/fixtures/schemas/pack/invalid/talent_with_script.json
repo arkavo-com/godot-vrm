@@ -1,0 +1,2 @@
+{"schema_version": 1, "pack_id": "examples.bad", "version": "0.1.0", "ruleset_id": "facets.core", "ruleset_version": "0.1.0",
+ "talents": [{"id": "bad.talent", "version": 1, "hook_id": "trail_reader", "parameters": {}, "usage_scope": "per_scene", "script": "res://evil.gd"}]}

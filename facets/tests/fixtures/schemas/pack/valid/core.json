@@ -1,0 +1,518 @@
+{
+  "actions": [],
+  "admission_policy": {
+    "allowed_capabilities": [],
+    "allowed_equipment": [],
+    "facet_cap": 4,
+    "facet_min": 2,
+    "facet_total": 18,
+    "id": "core.standard_admission",
+    "kind": "standard",
+    "reset_fields": [
+      "strain",
+      "resolve",
+      "growth",
+      "conditions",
+      "harm",
+      "usage",
+      "awards",
+      "known_facts",
+      "flags"
+    ],
+    "skill_cap": 2,
+    "skill_points": 12,
+    "talent_count": 2
+  },
+  "archetypes": [
+    {
+      "build": {
+        "capabilities": [],
+        "facets": {
+          "agility": 4,
+          "cunning": 3,
+          "empathy": 2,
+          "force": 2,
+          "sense": 4,
+          "tenacity": 3
+        },
+        "skills": {
+          "athletics": 2,
+          "fighting": 1,
+          "influence": 1,
+          "investigation": 1,
+          "medicine": 1,
+          "sleight": 1,
+          "stealth": 2,
+          "survival": 2,
+          "technology": 1
+        },
+        "talents": [
+          "core.trail_reader",
+          "core.quiet_hands"
+        ]
+      },
+      "description": "Fast, quiet and hard to pin down.",
+      "display_name": "Courier",
+      "id": "core.archetype.courier"
+    },
+    {
+      "build": {
+        "capabilities": [],
+        "facets": {
+          "agility": 2,
+          "cunning": 4,
+          "empathy": 3,
+          "force": 2,
+          "sense": 4,
+          "tenacity": 3
+        },
+        "skills": {
+          "athletics": 1,
+          "influence": 2,
+          "investigation": 2,
+          "medicine": 1,
+          "performance": 1,
+          "sleight": 1,
+          "stealth": 1,
+          "survival": 1,
+          "technology": 2
+        },
+        "talents": [
+          "core.second_look",
+          "core.trail_reader"
+        ]
+      },
+      "description": "Patient, observant, relentless about evidence.",
+      "display_name": "Investigator",
+      "id": "core.archetype.investigator"
+    },
+    {
+      "build": {
+        "capabilities": [],
+        "facets": {
+          "agility": 2,
+          "cunning": 3,
+          "empathy": 4,
+          "force": 2,
+          "sense": 4,
+          "tenacity": 3
+        },
+        "skills": {
+          "athletics": 1,
+          "influence": 2,
+          "investigation": 2,
+          "medicine": 2,
+          "performance": 2,
+          "stealth": 1,
+          "survival": 1,
+          "technology": 1
+        },
+        "talents": [
+          "core.bargain_maker",
+          "core.steady_voice"
+        ]
+      },
+      "description": "Reads the room and keeps people talking.",
+      "display_name": "Mediator",
+      "id": "core.archetype.mediator"
+    },
+    {
+      "build": {
+        "capabilities": [],
+        "facets": {
+          "agility": 3,
+          "cunning": 2,
+          "empathy": 3,
+          "force": 4,
+          "sense": 2,
+          "tenacity": 4
+        },
+        "skills": {
+          "athletics": 2,
+          "craft": 1,
+          "fighting": 2,
+          "influence": 1,
+          "investigation": 1,
+          "marksmanship": 1,
+          "medicine": 2,
+          "survival": 2
+        },
+        "talents": [
+          "core.steady_voice",
+          "core.trail_reader"
+        ]
+      },
+      "description": "Stands between danger and the people who matter.",
+      "display_name": "Protector",
+      "id": "core.archetype.protector"
+    },
+    {
+      "build": {
+        "capabilities": [],
+        "facets": {
+          "agility": 3,
+          "cunning": 4,
+          "empathy": 2,
+          "force": 2,
+          "sense": 4,
+          "tenacity": 3
+        },
+        "skills": {
+          "athletics": 1,
+          "craft": 2,
+          "investigation": 2,
+          "medicine": 1,
+          "sleight": 2,
+          "stealth": 1,
+          "survival": 1,
+          "technology": 2
+        },
+        "talents": [
+          "core.field_engineer",
+          "core.quiet_hands"
+        ]
+      },
+      "description": "Fixes, bypasses and improvises with whatever is at hand.",
+      "display_name": "Tinkerer",
+      "id": "core.archetype.tinkerer"
+    }
+  ],
+  "compatibility": "FACETS rules draft v0.1; Godot 4.6.3 baseline.",
+  "conditions": [
+    {
+      "applicability_tags": [
+        "checks"
+      ],
+      "applies_to_facets": [],
+      "description": "Strain has reached capacity. -1 to checks; no pushing and no combat reactions. Removed when strain falls below capacity.",
+      "display_name": "Overwhelmed",
+      "id": "core.overwhelmed",
+      "penalty": -1,
+      "removal_operation": "strain_below_capacity",
+      "restrictions": [
+        "no_push",
+        "no_reactions",
+        "limited_turn"
+      ]
+    },
+    {
+      "applicability_tags": [
+        "checks",
+        "physical"
+      ],
+      "applies_to_facets": [
+        "force",
+        "agility"
+      ],
+      "description": "Harm 3 or more. -1 to physical checks.",
+      "display_name": "Injured",
+      "id": "core.injured",
+      "penalty": -1,
+      "removal_operation": "harm_below_3",
+      "restrictions": []
+    },
+    {
+      "applicability_tags": [
+        "checks",
+        "combat"
+      ],
+      "applies_to_facets": [],
+      "description": "Harm 6 or more. Unable to act or react.",
+      "display_name": "Incapacitated",
+      "id": "core.incapacitated",
+      "penalty": 0,
+      "removal_operation": "harm_below_6",
+      "restrictions": [
+        "cannot_act",
+        "no_reactions",
+        "no_move"
+      ]
+    },
+    {
+      "applicability_tags": [
+        "checks"
+      ],
+      "applies_to_facets": [
+        "empathy",
+        "tenacity"
+      ],
+      "description": "Rattled by fear. -1 to Empathy and Tenacity checks.",
+      "display_name": "Shaken",
+      "id": "core.shaken",
+      "penalty": -1,
+      "removal_operation": "breather",
+      "restrictions": []
+    },
+    {
+      "applicability_tags": [
+        "checks",
+        "physical"
+      ],
+      "applies_to_facets": [
+        "force",
+        "agility"
+      ],
+      "description": "Held or bound. Cannot move; -2 to physical checks.",
+      "display_name": "Restrained",
+      "id": "core.restrained",
+      "penalty": -2,
+      "removal_operation": "manual",
+      "restrictions": [
+        "no_move"
+      ]
+    }
+  ],
+  "dependencies": {
+
+  },
+  "pack_id": "facets.core",
+  "ruleset_id": "facets.core",
+  "ruleset_version": "0.1.0",
+  "schema_version": 1,
+  "skills": [
+    {
+      "description": "Climbing, running, jumping, swimming and enduring physical exertion.",
+      "display_name": "Athletics",
+      "genre": false,
+      "id": "athletics"
+    },
+    {
+      "description": "Close combat with hands or melee weapons, and close defense.",
+      "display_name": "Fighting",
+      "genre": false,
+      "id": "fighting"
+    },
+    {
+      "description": "Ranged weapons and thrown objects.",
+      "display_name": "Marksmanship",
+      "genre": false,
+      "id": "marksmanship"
+    },
+    {
+      "description": "Moving unseen and unheard, hiding and shadowing.",
+      "display_name": "Stealth",
+      "genre": false,
+      "id": "stealth"
+    },
+    {
+      "description": "Fine manipulation: pickpocketing, palming, lockwork and quiet hands.",
+      "display_name": "Sleight",
+      "genre": false,
+      "id": "sleight"
+    },
+    {
+      "description": "Searching, analysing evidence, research and deduction.",
+      "display_name": "Investigation",
+      "genre": false,
+      "id": "investigation"
+    },
+    {
+      "description": "Tracking, navigation, foraging and reading terrain.",
+      "display_name": "Survival",
+      "genre": false,
+      "id": "survival"
+    },
+    {
+      "description": "Operating, bypassing and repairing devices and systems.",
+      "display_name": "Technology",
+      "genre": false,
+      "id": "technology"
+    },
+    {
+      "description": "Building, repairing and improvising physical things.",
+      "display_name": "Craft",
+      "genre": false,
+      "id": "craft"
+    },
+    {
+      "description": "First aid, treatment, diagnosis and stabilization.",
+      "display_name": "Medicine",
+      "genre": false,
+      "id": "medicine"
+    },
+    {
+      "description": "Persuasion, negotiation, intimidation and reading motives.",
+      "display_name": "Influence",
+      "genre": false,
+      "id": "influence"
+    },
+    {
+      "description": "Acting, music, deception through presentation and holding attention.",
+      "display_name": "Performance",
+      "genre": false,
+      "id": "performance"
+    }
+  ],
+  "talents": [
+    {
+      "description": "After a failed attempt, try again once per scene by examining an alternate authored evidence source and spending an extra interval. Never a free unchanged reroll.",
+      "display_name": "Second Look",
+      "hook_id": "second_look",
+      "id": "core.second_look",
+      "package": "core",
+      "parameters": {
+        "interval": 1,
+        "skills": [
+          "investigation"
+        ],
+        "uses_per_scene": 1
+      },
+      "prerequisites": {
+        "facets": {
+
+        },
+        "skills": {
+          "investigation": 1
+        },
+        "talents": []
+      },
+      "repeatable": false,
+      "usage_scope": "per_scene",
+      "uses": 1,
+      "version": 1
+    },
+    {
+      "description": "On a strong success with Stealth or Sleight, leaving no trace may replace the strong benefit.",
+      "display_name": "Quiet Hands",
+      "hook_id": "quiet_hands",
+      "id": "core.quiet_hands",
+      "package": "core",
+      "parameters": {
+        "benefit_id": "quiet_hands.no_trace",
+        "effects": [
+          {
+            "label": "No trace left",
+            "op": "actor.flag",
+            "params": {
+              "key": "left_no_trace",
+              "value": true
+            }
+          }
+        ],
+        "label": "Quiet Hands: leave no trace of the attempt",
+        "skills": [
+          "stealth",
+          "sleight"
+        ]
+      },
+      "prerequisites": {
+        "facets": {
+
+        },
+        "skills": {
+          "sleight": 1
+        },
+        "talents": []
+      },
+      "repeatable": false,
+      "usage_scope": "per_scene",
+      "uses": 1,
+      "version": 1
+    },
+    {
+      "description": "Substitute an authored consumable for a required tool on a Technology or Craft action. The improvised repair expires at scene end.",
+      "display_name": "Field Engineer",
+      "hook_id": "field_engineer",
+      "id": "core.field_engineer",
+      "package": "core",
+      "parameters": {
+        "skills": [
+          "technology",
+          "craft"
+        ],
+        "uses_per_scene": 1
+      },
+      "prerequisites": {
+        "facets": {
+
+        },
+        "skills": {
+          "technology": 1
+        },
+        "talents": []
+      },
+      "repeatable": false,
+      "usage_scope": "per_scene",
+      "uses": 1,
+      "version": 1
+    },
+    {
+      "description": "Spend an action to remove 2 strain from a willing ally who can hear you after a fear setback. Once per scene.",
+      "display_name": "Steady Voice",
+      "hook_id": "steady_voice",
+      "id": "core.steady_voice",
+      "package": "core",
+      "parameters": {
+        "strain_removed": 2,
+        "uses_per_scene": 1
+      },
+      "prerequisites": {
+        "facets": {
+          "empathy": 3
+        },
+        "skills": {
+
+        },
+        "talents": []
+      },
+      "repeatable": false,
+      "usage_scope": "per_scene",
+      "uses": 1,
+      "version": 1
+    },
+    {
+      "description": "On a strong success with Influence, take a listed lesser concession in place of the strong benefit.",
+      "display_name": "Bargain Maker",
+      "hook_id": "bargain_maker",
+      "id": "core.bargain_maker",
+      "package": "core",
+      "parameters": {
+        "skills": [
+          "influence"
+        ],
+        "uses_per_scene": 1
+      },
+      "prerequisites": {
+        "facets": {
+
+        },
+        "skills": {
+          "influence": 1
+        },
+        "talents": []
+      },
+      "repeatable": false,
+      "usage_scope": "per_scene",
+      "uses": 1,
+      "version": 1
+    },
+    {
+      "description": "On a success with Survival or Investigation, also learn one permitted fact the evidence supports. Once per scene.",
+      "display_name": "Trail Reader",
+      "hook_id": "trail_reader",
+      "id": "core.trail_reader",
+      "package": "core",
+      "parameters": {
+        "skills": [
+          "survival",
+          "investigation"
+        ],
+        "uses_per_scene": 1
+      },
+      "prerequisites": {
+        "facets": {
+
+        },
+        "skills": {
+          "survival": 1
+        },
+        "talents": []
+      },
+      "repeatable": false,
+      "usage_scope": "per_scene",
+      "uses": 1,
+      "version": 1
+    }
+  ],
+  "version": "0.1.0"
+}

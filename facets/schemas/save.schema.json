@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://facets.arkavo.dev/schemas/v1/save.schema.json",
+  "title": "FACETS session save",
+  "description": "Schema and rules versions, checkpoint state, ordered journal, last sequence, pending transaction and choices, request-id map, random stream metadata and award/usage ledgers (inside actor state). Restoring replays the journal from recorded operations and verifies state_digest.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "save_kind", "ruleset_id", "ruleset_version", "session_id", "packs", "checkpoint", "journal", "last_sequence", "revision", "state_digest", "pending", "events", "requests", "rng", "event_counter"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "save_kind": {"const": "facets.session"},
+    "ruleset_id": {"const": "facets.core"},
+    "ruleset_version": {"const": "0.1.0"},
+    "session_id": {"$ref": "common.schema.json#/$defs/id"},
+    "packs": {"type": "object", "additionalProperties": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"}},
+    "checkpoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sequence", "state"],
+      "properties": {"sequence": {"type": "integer", "minimum": 0}, "state": {"$ref": "#/$defs/world_state"}}
+    },
+    "journal": {"type": "array", "items": {"$ref": "event.schema.json#/$defs/journal_entry"}},
+    "last_sequence": {"type": "integer", "minimum": 0},
+    "revision": {"type": "integer", "minimum": 0},
+    "state_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "pending": {
+      "anyOf": [
+        {"type": "object", "maxProperties": 0},
+        {"allOf": [{"$ref": "event.schema.json#/$defs/record"}, {"properties": {"status": {"const": "pending"}}}]}
+      ]
+    },
+    "events": {"type": "object", "additionalProperties": {"allOf": [{"$ref": "event.schema.json#/$defs/record"}, {"properties": {"status": {"const": "final"}}}]}},
+    "requests": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["digest", "response"],
+        "properties": {"digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "response": {"$ref": "event.schema.json#/$defs/record"}}
+      }
+    },
+    "rng": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "queue", "draws"],
+      "description": "Seed and state are stored as decimal strings to avoid 64-bit precision loss. Seeded reproducibility is limited to the pinned Godot build; portable replay uses recorded dice.",
+      "properties": {
+        "kind": {"enum": ["rng", "fixed"]},
+        "seed": {"type": "string", "pattern": "^-?\\d+$"},
+        "state": {"type": "string", "pattern": "^-?\\d+$"},
+        "queue": {"type": "array", "items": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"$ref": "common.schema.json#/$defs/die"}}},
+        "draws": {"type": "integer", "minimum": 0}
+      }
+    },
+    "event_counter": {"type": "integer", "minimum": 0}
+  },
+  "$defs": {
+    "world_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["revision", "scene_id", "chapter_id", "clock", "actors", "objects", "facts", "zones", "counters", "opportunities", "retry_locks", "objective_epochs", "refusals", "grants", "expiring", "completed_chapters", "awards"],
+      "properties": {
+        "revision": {"type": "integer", "minimum": 0},
+        "scene_id": {"type": "string"},
+        "chapter_id": {"type": "string"},
+        "clock": {"type": "integer"},
+        "actors": {"type": "object", "additionalProperties": {"$ref": "#/$defs/actor_state"}},
+        "objects": {"type": "object", "additionalProperties": {"type": "object"}},
+        "facts": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["value"],
+            "properties": {"value": true, "visibility": {"enum": ["public", "private"]}, "label": {"type": "string"}, "owner_id": {"type": "string"}, "evidence_id": {"type": "string"}}
+          }
+        },
+        "zones": {"type": "object"},
+        "counters": {"type": "object", "additionalProperties": {"type": "integer"}},
+        "opportunities": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["kind", "used_by"],
+            "properties": {"kind": {"enum": ["breather", "secure_rest", "checkpoint"]}, "scene_id": {"type": "string"}, "used_by": {"type": "array", "items": {"type": "string"}}}
+          }
+        },
+        "retry_locks": {"type": "object"},
+        "objective_epochs": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+        "refusals": {"type": "object", "additionalProperties": {"type": "array", "items": {"type": "string"}}},
+        "grants": {"type": "object"},
+        "expiring": {"type": "array", "items": {"type": "object", "required": ["scope", "path"]}},
+        "completed_chapters": {"type": "array", "items": {"type": "string"}},
+        "awards": {"type": "object"}
+      }
+    },
+    "actor_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["actor_id", "display_name", "controller", "identity", "build", "base_build", "identity_triggers", "strain", "resolve", "growth", "harm", "conditions", "items", "bonds", "known_facts", "trained_skills", "usage", "awards", "ledger", "flags", "profile", "zone_id", "memories"],
+      "properties": {
+        "actor_id": {"$ref": "common.schema.json#/$defs/id"},
+        "display_name": {"type": "string"},
+        "controller": {"enum": ["player", "npc"]},
+        "identity": {"type": "object"},
+        "build": {"$ref": "common.schema.json#/$defs/build"},
+        "base_build": {"anyOf": [{"type": "object", "maxProperties": 0}, {"$ref": "common.schema.json#/$defs/build"}]},
+        "identity_triggers": {"type": "array", "items": {"type": "object", "required": ["id", "disadvantage_effects"]}},
+        "strain": {"type": "integer", "minimum": 0},
+        "resolve": {"type": "integer", "minimum": 0, "maximum": 3},
+        "growth": {"type": "integer", "minimum": 0},
+        "harm": {"type": "integer", "minimum": 0},
+        "conditions": {"type": "array", "items": {"type": "string"}},
+        "items": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 1}},
+        "bonds": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["trust", "affinity"],
+            "properties": {
+              "trust": {"type": "integer", "minimum": -2, "maximum": 2},
+              "affinity": {"type": "integer", "minimum": -2, "maximum": 2},
+              "obligations": {"type": "array", "items": {"type": "string"}},
+              "shared_events": {"type": "array", "items": {"type": "string"}}
+            }
+          }
+        },
+        "known_facts": {"type": "array", "items": {"type": "string"}},
+        "trained_skills": {"type": "array", "items": {"type": "string"}},
+        "usage": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+        "awards": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+        "ledger": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["kind", "id", "cost"],
+            "properties": {"kind": {"enum": ["skill", "talent", "facet"]}, "id": {"type": "string"}, "cost": {"type": "integer", "minimum": 0}, "from": {"type": "integer"}, "to": {"type": "integer"}, "chapter_id": {"type": "string"}, "sequence": {"type": "integer"}}
+          }
+        },
+        "flags": {"type": "object"},
+        "profile": {"type": "object", "properties": {"accomplishments": {"type": "array", "items": {"type": "string"}}}},
+        "zone_id": {"type": "string"},
+        "memories": {"type": "array", "items": {"type": "object", "required": ["source", "text"]}}
+      }
+    }
+  }
+}

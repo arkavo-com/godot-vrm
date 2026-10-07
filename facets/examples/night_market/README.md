@@ -36,8 +36,11 @@ All stakes, costs, benefits and exact odds are shown before you commit.
 Character sheet, legal actions (with reasons when unavailable), preview and
 stakes, push toggle, roll breakdown in the log, choice buttons for Resolve,
 costs and benefits, *Walk away* (abandon: declines Resolve and costs, never
-refunds a push), event log, Save, Load and Reset journey. Reset starts a new
-journey but keeps profile accomplishments.
+refunds a push), event log, Save, Load and Reset journey. Every transaction
+is autosaved (`user://night_market/autosave.json`) and the demo resumes from
+it on launch, including a pending choice. *Save* and *Load* use a separate
+manual slot (`user://night_market/save.json`). Reset starts a new journey but
+keeps profile accomplishments.
 
 *Suggest (offline fake AI)* asks the deterministic fake provider for a
 proposal; it goes through the same validation and preview as a button press.

@@ -1,0 +1,1024 @@
+{
+  "actions": [
+    {
+      "allow_assistance": true,
+      "allow_push": true,
+      "allow_resolve": true,
+      "allows_costly_success": true,
+      "alternate_evidence_sources": [],
+      "approaches": [
+        {
+          "facet": "empathy",
+          "id": "plead",
+          "label": "Appeal to Rook's decency",
+          "skill": "influence"
+        }
+      ],
+      "clock_cost": 1,
+      "consumable_substitutes": [],
+      "costly_options": [
+        {
+          "effects": [
+            {
+              "label": "You owe Rook a favor",
+              "op": "bond.add_obligation",
+              "params": {
+                "obligation": "Owes Rook a favor",
+                "other_id": "npc.rook"
+              }
+            }
+          ],
+          "id": "favor",
+          "label": "Promise Rook a favor later"
+        }
+      ],
+      "default_benefit_id": "route",
+      "description": "Talk the guard into letting you through the side gate before curfew.",
+      "difficulty": {
+        "defender_id": "",
+        "defense_facet": "",
+        "defense_modifiers": [],
+        "defense_skill": "",
+        "kind": "fixed",
+        "target": 11
+      },
+      "display_name": "Ask Rook to open the side gate",
+      "failure_effects": [
+        {
+          "label": "Rook raises the alarm",
+          "op": "fact.set",
+          "params": {
+            "fact_id": "fact.rook_alerted",
+            "label": "Rook raised the alarm",
+            "value": true
+          }
+        },
+        {
+          "label": "The patrol is called",
+          "op": "world.counter_add",
+          "params": {
+            "amount": 1,
+            "counter_id": "patrol"
+          }
+        }
+      ],
+      "fear": false,
+      "id": "nm.ask_guard",
+      "lesser_concessions": [
+        {
+          "effects": [
+            {
+              "label": "You get a side pass",
+              "op": "actor.item_add",
+              "params": {
+                "amount": 1,
+                "item_id": "item.side_pass"
+              }
+            }
+          ],
+          "id": "pass",
+          "label": "A one-time side pass",
+          "requires_consent": false
+        }
+      ],
+      "modifiers": [],
+      "objective_id": "nm.objective.ask_guard",
+      "relationship": {
+        "dimension": "trust",
+        "other_id": "npc.rook"
+      },
+      "required_tools": [],
+      "requirements": [
+        {
+          "label": "At the market gate",
+          "op": "require.scene",
+          "params": {
+            "scene_id": "nm.gate"
+          }
+        },
+        {
+          "label": "Still outside the market hall",
+          "op": "require.actor_zone",
+          "params": {
+            "zone_id": "street"
+          }
+        },
+        {
+          "label": "The side gate is still closed",
+          "op": "require.object_flag",
+          "params": {
+            "key": "open",
+            "object_id": "market_gate",
+            "value": false
+          }
+        },
+        {
+          "label": "Rook has not raised the alarm",
+          "op": "require.fact",
+          "params": {
+            "fact_id": "fact.rook_alerted",
+            "negate": true,
+            "value": true
+          }
+        }
+      ],
+      "retry_policy": "lock_until_change",
+      "revealable_facts": [],
+      "routine_requirements": [],
+      "stakes": {
+        "failure": "Rook raises the alarm and the patrol is called.",
+        "success": "The side gate opens and you are inside."
+      },
+      "strong_benefits": [
+        {
+          "effects": [
+            {
+              "label": "You learn the patrol route",
+              "op": "fact.reveal",
+              "params": {
+                "fact_id": "fact.patrol_route"
+              }
+            }
+          ],
+          "id": "route",
+          "label": "Rook mentions the patrol route",
+          "requires_consent": false
+        },
+        {
+          "effects": [
+            {
+              "label": "Rook trusts you more",
+              "op": "bond.adjust",
+              "params": {
+                "amount": 1,
+                "dimension": "trust",
+                "other_id": "npc.rook"
+              }
+            }
+          ],
+          "id": "vouch",
+          "label": "Rook will vouch for you later",
+          "requires_consent": false
+        }
+      ],
+      "success_effects": [
+        {
+          "label": "Rook unlocks the side gate",
+          "op": "object.set_flag",
+          "params": {
+            "key": "open",
+            "object_id": "market_gate",
+            "value": true
+          }
+        },
+        {
+          "label": "You slip into the market hall",
+          "op": "actor.zone",
+          "params": {
+            "zone_id": "hall"
+          }
+        }
+      ],
+      "tags": [
+        "social",
+        "route"
+      ],
+      "useful_tools": [],
+      "version": 1
+    },
+    {
+      "allow_assistance": true,
+      "allow_push": true,
+      "allow_resolve": true,
+      "allows_costly_success": true,
+      "alternate_evidence_sources": [],
+      "approaches": [
+        {
+          "facet": "cunning",
+          "id": "tech",
+          "label": "Work the controller",
+          "skill": "technology"
+        }
+      ],
+      "clock_cost": 1,
+      "consumable_substitutes": [
+        "item.scrap_wire"
+      ],
+      "costly_options": [
+        {
+          "effects": [
+            {
+              "label": "You leave a trace in the grid",
+              "op": "world.mark_trace",
+              "params": {
+                "label": "A trace in the market grid",
+                "trace_id": "fact.grid_trace"
+              }
+            }
+          ],
+          "id": "trace",
+          "label": "Leave a trace in the market grid"
+        }
+      ],
+      "default_benefit_id": "silent",
+      "description": "Splice into the service door's controller and open it.",
+      "difficulty": {
+        "defender_id": "",
+        "defense_facet": "",
+        "defense_modifiers": [],
+        "defense_skill": "",
+        "kind": "fixed",
+        "target": 13
+      },
+      "display_name": "Bypass the service door controller",
+      "failure_effects": [
+        {
+          "label": "The patrol advances",
+          "op": "world.counter_add",
+          "params": {
+            "amount": 1,
+            "counter_id": "patrol"
+          }
+        },
+        {
+          "label": "The controller locks down",
+          "op": "object.set_flag",
+          "params": {
+            "key": "locked",
+            "object_id": "controller",
+            "value": true
+          }
+        }
+      ],
+      "fear": false,
+      "id": "nm.bypass_controller",
+      "lesser_concessions": [],
+      "modifiers": [],
+      "objective_id": "nm.objective.bypass_controller",
+      "relationship": {
+
+      },
+      "required_tools": [
+        "tool.signal_kit"
+      ],
+      "requirements": [
+        {
+          "label": "At the market gate",
+          "op": "require.scene",
+          "params": {
+            "scene_id": "nm.gate"
+          }
+        },
+        {
+          "label": "Still outside the market hall",
+          "op": "require.actor_zone",
+          "params": {
+            "zone_id": "street"
+          }
+        },
+        {
+          "label": "The controller is reachable and not locked down",
+          "op": "require.accessible_controller",
+          "params": {
+            "object_id": "controller"
+          }
+        },
+        {
+          "label": "The service door is still closed",
+          "op": "require.object_flag",
+          "params": {
+            "key": "open",
+            "object_id": "service_door",
+            "value": false
+          }
+        }
+      ],
+      "retry_policy": "lock_until_change",
+      "revealable_facts": [],
+      "routine_requirements": [],
+      "stakes": {
+        "failure": "The patrol advances and the controller locks down.",
+        "success": "The service door opens."
+      },
+      "strong_benefits": [
+        {
+          "effects": [
+            {
+              "label": "Nobody noticed you",
+              "op": "actor.flag",
+              "params": {
+                "key": "silent_entry",
+                "value": true
+              }
+            }
+          ],
+          "id": "silent",
+          "label": "Silent entry",
+          "requires_consent": false
+        },
+        {
+          "effects": [
+            {
+              "label": "You copy the access log",
+              "op": "fact.reveal",
+              "params": {
+                "fact_id": "fact.access_log"
+              }
+            }
+          ],
+          "id": "log",
+          "label": "Copy the access log",
+          "requires_consent": false
+        }
+      ],
+      "success_effects": [
+        {
+          "label": "The service door opens",
+          "op": "object.set_flag",
+          "params": {
+            "key": "open",
+            "object_id": "service_door",
+            "value": true
+          }
+        },
+        {
+          "label": "You step into the market hall",
+          "op": "actor.zone",
+          "params": {
+            "zone_id": "hall"
+          }
+        }
+      ],
+      "tags": [
+        "technical",
+        "route"
+      ],
+      "useful_tools": [],
+      "version": 1
+    },
+    {
+      "allow_assistance": true,
+      "allow_push": true,
+      "allow_resolve": true,
+      "allows_costly_success": true,
+      "alternate_evidence_sources": [],
+      "approaches": [
+        {
+          "facet": "agility",
+          "id": "climb",
+          "label": "Climb and drop",
+          "skill": "athletics"
+        }
+      ],
+      "clock_cost": 1,
+      "consumable_substitutes": [],
+      "costly_options": [
+        {
+          "effects": [
+            {
+              "label": "You wrench your shoulder",
+              "op": "actor.strain",
+              "params": {
+                "amount": 2
+              }
+            }
+          ],
+          "id": "strain",
+          "label": "Wrench your shoulder (2 strain)"
+        }
+      ],
+      "default_benefit_id": "",
+      "description": "Scale the stalls and drop in through the roof hatch.",
+      "difficulty": {
+        "defender_id": "",
+        "defense_facet": "",
+        "defense_modifiers": [],
+        "defense_skill": "",
+        "kind": "fixed",
+        "target": 13
+      },
+      "display_name": "Climb in through the roof hatch",
+      "failure_effects": [
+        {
+          "label": "You fall hard",
+          "op": "actor.strain",
+          "params": {
+            "amount": 2
+          }
+        },
+        {
+          "label": "The noise draws the patrol",
+          "op": "world.counter_add",
+          "params": {
+            "amount": 1,
+            "counter_id": "patrol"
+          }
+        },
+        {
+          "label": "The stack of crates collapses",
+          "op": "object.set_flag",
+          "params": {
+            "key": "reachable",
+            "object_id": "roof_hatch",
+            "value": false
+          }
+        }
+      ],
+      "fear": true,
+      "id": "nm.rooftop_entry",
+      "lesser_concessions": [],
+      "modifiers": [],
+      "objective_id": "nm.objective.rooftop_entry",
+      "relationship": {
+
+      },
+      "required_tools": [],
+      "requirements": [
+        {
+          "label": "At the market gate",
+          "op": "require.scene",
+          "params": {
+            "scene_id": "nm.gate"
+          }
+        },
+        {
+          "label": "Still outside the market hall",
+          "op": "require.actor_zone",
+          "params": {
+            "zone_id": "street"
+          }
+        },
+        {
+          "label": "The roof hatch is reachable",
+          "op": "require.object_flag",
+          "params": {
+            "key": "reachable",
+            "object_id": "roof_hatch",
+            "value": true
+          }
+        },
+        {
+          "label": "Not injured",
+          "op": "require.no_condition",
+          "params": {
+            "condition_id": "core.injured"
+          }
+        }
+      ],
+      "retry_policy": "lock_until_change",
+      "revealable_facts": [],
+      "routine_requirements": [],
+      "stakes": {
+        "failure": "You fall (2 strain), the patrol hears, and the route collapses.",
+        "success": "You get inside unseen."
+      },
+      "strong_benefits": [
+        {
+          "effects": [
+            {
+              "label": "You see where the couriers go",
+              "op": "fact.reveal",
+              "params": {
+                "fact_id": "fact.rooftop_view"
+              }
+            }
+          ],
+          "id": "view",
+          "label": "Spot the courier route from above",
+          "requires_consent": false
+        }
+      ],
+      "success_effects": [
+        {
+          "label": "You drop into the market hall",
+          "op": "actor.zone",
+          "params": {
+            "zone_id": "hall"
+          }
+        }
+      ],
+      "tags": [
+        "physical",
+        "route"
+      ],
+      "useful_tools": [],
+      "version": 1
+    },
+    {
+      "allow_assistance": true,
+      "allow_push": true,
+      "allow_resolve": true,
+      "allows_costly_success": true,
+      "alternate_evidence_sources": [],
+      "approaches": [
+        {
+          "facet": "empathy",
+          "id": "treat",
+          "label": "Treat and reassure",
+          "skill": "medicine"
+        }
+      ],
+      "clock_cost": 1,
+      "consumable_substitutes": [],
+      "costly_options": [
+        {
+          "effects": [
+            {
+              "label": "An hour passes",
+              "op": "world.clock_advance",
+              "params": {
+                "amount": 1
+              }
+            }
+          ],
+          "id": "time",
+          "label": "It takes an extra hour"
+        }
+      ],
+      "default_benefit_id": "",
+      "description": "Tamsin is hurt and shaking. Patch her up and get her somewhere safe.",
+      "difficulty": {
+        "defender_id": "",
+        "defense_facet": "",
+        "defense_modifiers": [],
+        "defense_skill": "",
+        "kind": "fixed",
+        "target": 11
+      },
+      "display_name": "Help the stranded passenger",
+      "failure_effects": [
+        {
+          "label": "Her panic gets to you",
+          "op": "actor.strain",
+          "params": {
+            "amount": 1
+          }
+        }
+      ],
+      "fear": true,
+      "id": "nm.help_passenger",
+      "lesser_concessions": [],
+      "modifiers": [],
+      "objective_id": "nm.objective.help_passenger",
+      "relationship": {
+
+      },
+      "required_tools": [],
+      "requirements": [
+        {
+          "label": "At the market gate",
+          "op": "require.scene",
+          "params": {
+            "scene_id": "nm.gate"
+          }
+        },
+        {
+          "label": "Tamsin still needs help",
+          "op": "require.object_flag",
+          "params": {
+            "key": "helped",
+            "object_id": "passenger",
+            "value": false
+          }
+        }
+      ],
+      "retry_policy": "lock_until_change",
+      "revealable_facts": [],
+      "routine_requirements": [],
+      "stakes": {
+        "failure": "Her panic gets to you (1 strain).",
+        "success": "Tamsin is safe and will make it to the clinic."
+      },
+      "strong_benefits": [],
+      "success_effects": [
+        {
+          "label": "Tamsin is safe",
+          "op": "object.set_flag",
+          "params": {
+            "key": "helped",
+            "object_id": "passenger",
+            "value": true
+          }
+        }
+      ],
+      "tags": [
+        "social"
+      ],
+      "useful_tools": [],
+      "version": 1
+    },
+    {
+      "allow_assistance": true,
+      "allow_push": true,
+      "allow_resolve": true,
+      "allows_costly_success": false,
+      "alternate_evidence_sources": [],
+      "approaches": [
+        {
+          "facet": "empathy",
+          "id": "hand_over",
+          "label": "Hand it over",
+          "skill": "influence"
+        }
+      ],
+      "clock_cost": 0,
+      "consumable_substitutes": [],
+      "costly_options": [],
+      "default_benefit_id": "",
+      "description": "Hand the package to the clinic's night doctor inside the hall.",
+      "difficulty": {
+        "defender_id": "",
+        "defense_facet": "",
+        "defense_modifiers": [],
+        "defense_skill": "",
+        "kind": "routine",
+        "target": 11
+      },
+      "display_name": "Deliver the sealed package",
+      "failure_effects": [],
+      "fear": false,
+      "id": "nm.deliver_package",
+      "lesser_concessions": [],
+      "modifiers": [],
+      "objective_id": "nm.objective.deliver_package",
+      "relationship": {
+
+      },
+      "required_tools": [],
+      "requirements": [
+        {
+          "label": "At the market gate",
+          "op": "require.scene",
+          "params": {
+            "scene_id": "nm.gate"
+          }
+        },
+        {
+          "label": "Inside the market hall",
+          "op": "require.actor_zone",
+          "params": {
+            "zone_id": "hall"
+          }
+        },
+        {
+          "label": "Not yet delivered",
+          "op": "require.object_flag",
+          "params": {
+            "key": "delivered",
+            "object_id": "package",
+            "value": false
+          }
+        }
+      ],
+      "retry_policy": "repeatable",
+      "revealable_facts": [],
+      "routine_requirements": [],
+      "stakes": {
+        "failure": "",
+        "success": "Routine: the delivery is made."
+      },
+      "strong_benefits": [],
+      "success_effects": [
+        {
+          "label": "Package delivered",
+          "op": "object.set_flag",
+          "params": {
+            "key": "delivered",
+            "object_id": "package",
+            "value": true
+          }
+        }
+      ],
+      "tags": [],
+      "useful_tools": [],
+      "version": 1
+    },
+    {
+      "allow_assistance": true,
+      "allow_push": true,
+      "allow_resolve": true,
+      "allows_costly_success": true,
+      "alternate_evidence_sources": [],
+      "approaches": [
+        {
+          "facet": "agility",
+          "id": "sneak",
+          "label": "Blend into the crowd",
+          "skill": "stealth"
+        }
+      ],
+      "clock_cost": 0,
+      "consumable_substitutes": [],
+      "costly_options": [
+        {
+          "effects": [
+            {
+              "label": "Someone saw your face",
+              "op": "fact.set",
+              "params": {
+                "fact_id": "fact.face_seen",
+                "label": "Your face was seen",
+                "value": true
+              }
+            }
+          ],
+          "id": "seen",
+          "label": "Someone glimpses your face"
+        }
+      ],
+      "default_benefit_id": "",
+      "description": "Leave the clinic without being followed.",
+      "difficulty": {
+        "defender_id": "",
+        "defense_facet": "",
+        "defense_modifiers": [],
+        "defense_skill": "",
+        "kind": "fixed",
+        "target": 11
+      },
+      "display_name": "Slip out past the fixer's watchers",
+      "failure_effects": [
+        {
+          "label": "You are followed for a while",
+          "op": "actor.strain",
+          "params": {
+            "amount": 1
+          }
+        }
+      ],
+      "fear": true,
+      "id": "nm.slip_away",
+      "lesser_concessions": [],
+      "modifiers": [
+        {
+          "factor_id": "watch.grid_trace",
+          "label": "The grid trace put watchers on you",
+          "scope": "situational",
+          "source_id": "fact.grid_trace",
+          "value": -1,
+          "when": {
+            "op": "require.fact",
+            "params": {
+              "fact_id": "fact.grid_trace",
+              "value": true
+            }
+          }
+        }
+      ],
+      "objective_id": "nm.objective.slip_away",
+      "relationship": {
+
+      },
+      "required_tools": [],
+      "requirements": [
+        {
+          "label": "At the clinic",
+          "op": "require.scene",
+          "params": {
+            "scene_id": "nm.clinic"
+          }
+        }
+      ],
+      "retry_policy": "lock_until_change",
+      "revealable_facts": [],
+      "routine_requirements": [],
+      "stakes": {
+        "failure": "You are followed (1 strain).",
+        "success": "You reach the canal path unseen."
+      },
+      "strong_benefits": [],
+      "success_effects": [
+        {
+          "label": "You reach the canal path unseen",
+          "op": "actor.zone",
+          "params": {
+            "zone_id": "canal"
+          }
+        }
+      ],
+      "tags": [],
+      "useful_tools": [],
+      "version": 1
+    },
+    {
+      "allow_assistance": true,
+      "allow_push": true,
+      "allow_resolve": true,
+      "allows_costly_success": false,
+      "alternate_evidence_sources": [
+        "evidence.bag_seal",
+        "evidence.cctv"
+      ],
+      "approaches": [
+        {
+          "facet": "sense",
+          "id": "search",
+          "label": "Search for signs",
+          "skill": "investigation"
+        },
+        {
+          "facet": "sense",
+          "id": "track",
+          "label": "Track the route",
+          "skill": "survival"
+        }
+      ],
+      "clock_cost": 0,
+      "consumable_substitutes": [],
+      "costly_options": [],
+      "default_benefit_id": "",
+      "description": "Tamsin saw a courier dragged toward the canal. Find where.",
+      "difficulty": {
+        "defender_id": "",
+        "defense_facet": "",
+        "defense_modifiers": [],
+        "defense_skill": "",
+        "kind": "fixed",
+        "target": 13
+      },
+      "display_name": "Follow the passenger's lead",
+      "failure_effects": [
+        {
+          "label": "The trail goes cold for an hour",
+          "op": "world.clock_advance",
+          "params": {
+            "amount": 1
+          }
+        }
+      ],
+      "fear": false,
+      "id": "nm.follow_lead",
+      "lesser_concessions": [],
+      "modifiers": [],
+      "objective_id": "nm.objective.follow_lead",
+      "relationship": {
+
+      },
+      "required_tools": [],
+      "requirements": [
+        {
+          "label": "At the clinic",
+          "op": "require.scene",
+          "params": {
+            "scene_id": "nm.clinic"
+          }
+        },
+        {
+          "label": "Know the passenger's lead",
+          "op": "require.knows_fact",
+          "params": {
+            "fact_id": "fact.passenger_lead"
+          }
+        }
+      ],
+      "retry_policy": "lock_until_change",
+      "revealable_facts": [
+        "fact.canal_footprints"
+      ],
+      "routine_requirements": [],
+      "stakes": {
+        "failure": "The trail goes cold for an hour.",
+        "success": "You find where the courier was taken."
+      },
+      "strong_benefits": [],
+      "success_effects": [
+        {
+          "label": "You find the canal crew's drop point",
+          "op": "fact.reveal",
+          "params": {
+            "fact_id": "fact.canal_lead"
+          }
+        },
+        {
+          "label": "Accomplishment recorded",
+          "op": "actor.accomplishment",
+          "params": {
+            "text": "Found the canal drop point"
+          }
+        }
+      ],
+      "tags": [],
+      "useful_tools": [],
+      "version": 1
+    },
+    {
+      "allow_assistance": true,
+      "allow_push": true,
+      "allow_resolve": true,
+      "allows_costly_success": false,
+      "alternate_evidence_sources": [],
+      "approaches": [
+        {
+          "facet": "empathy",
+          "id": "talk",
+          "label": "Talk it through",
+          "skill": "influence"
+        }
+      ],
+      "clock_cost": 0,
+      "consumable_substitutes": [],
+      "costly_options": [],
+      "default_benefit_id": "",
+      "description": "Make amends with the clinic's doctor about the delivery.",
+      "difficulty": {
+        "defender_id": "",
+        "defense_facet": "",
+        "defense_modifiers": [],
+        "defense_skill": "",
+        "kind": "fixed",
+        "target": 11
+      },
+      "display_name": "Settle things with the night doctor",
+      "failure_effects": [
+        {
+          "label": "Harsh words",
+          "op": "actor.strain",
+          "params": {
+            "amount": 1
+          }
+        }
+      ],
+      "fear": false,
+      "id": "nm.calm_doctor",
+      "lesser_concessions": [],
+      "modifiers": [
+        {
+          "factor_id": "delivery.late",
+          "label": "The package arrived late",
+          "scope": "situational",
+          "source_id": "package.late",
+          "value": -1,
+          "when": {
+            "op": "require.object_flag",
+            "params": {
+              "key": "late",
+              "object_id": "package",
+              "value": true
+            }
+          }
+        }
+      ],
+      "objective_id": "nm.objective.calm_doctor",
+      "relationship": {
+
+      },
+      "required_tools": [],
+      "requirements": [
+        {
+          "label": "At the clinic",
+          "op": "require.scene",
+          "params": {
+            "scene_id": "nm.clinic"
+          }
+        },
+        {
+          "label": "The doctor is not yet settled",
+          "op": "require.fact",
+          "params": {
+            "fact_id": "fact.doctor_calm",
+            "negate": true,
+            "value": true
+          }
+        }
+      ],
+      "retry_policy": "lock_until_change",
+      "revealable_facts": [],
+      "routine_requirements": [],
+      "stakes": {
+        "failure": "Harsh words (1 strain).",
+        "success": "The doctor will help you next time."
+      },
+      "strong_benefits": [],
+      "success_effects": [
+        {
+          "label": "The doctor is on your side",
+          "op": "fact.set",
+          "params": {
+            "fact_id": "fact.doctor_calm",
+            "label": "The doctor is on your side",
+            "value": true
+          }
+        }
+      ],
+      "tags": [],
+      "useful_tools": [],
+      "version": 1
+    }
+  ],
+  "admission_policy": {
+
+  },
+  "archetypes": [],
+  "compatibility": "Night Market Delivery demo for FACETS 0.1.0.",
+  "conditions": [],
+  "dependencies": {
+    "facets.core": "0.1.0"
+  },
+  "pack_id": "examples.night_market",
+  "ruleset_id": "facets.core",
+  "ruleset_version": "0.1.0",
+  "schema_version": 1,
+  "skills": [],
+  "talents": [],
+  "version": "0.1.0"
+}

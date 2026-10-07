@@ -1,0 +1,2 @@
+{"schema_version": 1, "pack_id": "examples.bad", "version": "0.1.0", "ruleset_id": "facets.core", "ruleset_version": "0.1.0",
+ "conditions": [{"id": "bad.blessed", "penalty": 2}]}

@@ -1,0 +1,9 @@
+{
+  "action_id": "nm.bypass_controller",
+  "actor_id": "demo.mara_vale",
+  "approach_id": "tech",
+  "display_text": "Let me get that door.",
+  "tool_ids": [
+    "tool.signal_kit"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "accepted": true,
+  "actor_id": "demo.mara_vale",
+  "after_revision": 3,
+  "amount": 1,
+  "award_key": "identity:demo.mara_vale:nm.gate",
+  "before_revision": 2,
+  "choices": [
+    {
+      "decision_id": "evt-000002:identity",
+      "kind": "identity",
+      "option_id": "accept"
+    }
+  ],
+  "decision": {
+
+  },
+  "disadvantage": "Miss the delivery window",
+  "event_id": "evt-000002",
+  "finalize_ops": [
+    {
+      "after": {
+        "label": "",
+        "value": true,
+        "visibility": "public"
+      },
+      "before": null,
+      "op": "set",
+      "path": [
+        "facts",
+        "fact.window_missed"
+      ]
+    },
+    {
+      "after": 3,
+      "before": 1,
+      "op": "set",
+      "path": [
+        "clock"
+      ]
+    },
+    {
+      "after": 2,
+      "before": 1,
+      "op": "set",
+      "path": [
+        "actors",
+        "demo.mara_vale",
+        "resolve"
+      ]
+    },
+    {
+      "after": 1,
+      "before": null,
+      "op": "set",
+      "path": [
+        "actors",
+        "demo.mara_vale",
+        "awards",
+        "identity:demo.mara_vale:nm.gate"
+      ]
+    }
+  ],
+  "kind": "identity",
+  "material": true,
+  "resource_deltas": {
+    "resolve": 1
+  },
+  "scene_id": "nm.gate",
+  "status": "final",
+  "trigger": {
+    "description": "The stranded passenger saw something. Stop and listen, even though the delivery window is closing.",
+    "disadvantage_effects": [
+      {
+        "label": "Delivery window missed",
+        "op": "fact.set",
+        "params": {
+          "fact_id": "fact.window_missed",
+          "value": true
+        }
+      },
+      {
+        "label": "Two hours pass",
+        "op": "world.clock_advance",
+        "params": {
+          "amount": 2
+        }
+      }
+    ],
+    "disadvantage_label": "Miss the delivery window",
+    "display_name": "Chase the disappearance lead",
+    "id": "mara.passenger_lead"
+  },
+  "trigger_id": "mara.passenger_lead",
+  "visibility": "public"
+}

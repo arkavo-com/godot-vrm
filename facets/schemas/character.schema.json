@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://facets.arkavo.dev/schemas/v1/character.schema.json",
+  "title": "FACETS portable character",
+  "description": "Identity plus a preferred build. Never carries live journey state. Registry membership (known skills and talents) and gameplay legality are checked by FACETS, not by this schema.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "character_id", "identity", "preferred_build"],
+  "oneOf": [
+    {"required": ["ruleset_id", "ruleset_version"], "not": {"required": ["ruleset"]}},
+    {"required": ["ruleset"], "not": {"anyOf": [{"required": ["ruleset_id"]}, {"required": ["ruleset_version"]}]}}
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "ruleset_id": {"const": "facets.core"},
+    "ruleset_version": {"const": "0.1.0"},
+    "ruleset": {"const": "gom.facets.core@0.1.0", "description": "Legacy source alias, migrated explicitly to facets.core 0.1.0."},
+    "character_id": {"$ref": "common.schema.json#/$defs/id"},
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1, "maxLength": 4096},
+        "drive": {"$ref": "common.schema.json#/$defs/text"},
+        "code": {"$ref": "common.schema.json#/$defs/text"},
+        "hindrance": {"$ref": "common.schema.json#/$defs/text"},
+        "tell": {"$ref": "common.schema.json#/$defs/text"},
+        "appearance_refs": {"type": "array", "maxItems": 128, "items": {"$ref": "common.schema.json#/$defs/text"}}
+      }
+    },
+    "preferred_build": {"$ref": "common.schema.json#/$defs/build"},
+    "memories": {
+      "type": "array",
+      "maxItems": 128,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source", "text"],
+        "properties": {
+          "id": {"$ref": "common.schema.json#/$defs/text"},
+          "source": {"type": "string", "minLength": 1, "maxLength": 4096},
+          "text": {"$ref": "common.schema.json#/$defs/text"}
+        }
+      }
+    },
+    "extensions": {
+      "type": "object",
+      "description": "Vendor-namespaced inert JSON, round-tripped untouched. FACETS never reads mechanics from it.",
+      "propertyNames": {"pattern": "^(?!facets\\.|core\\.)[^\\s.]+\\.[^\\s]+$"}
+    },
+    "growth": {"type": "integer", "minimum": 0, "description": "Imported accumulated Growth; dropped by standard admission."},
+    "equipment": {"type": "array", "maxItems": 128, "items": {"$ref": "common.schema.json#/$defs/text"}},
+    "accomplishments": {"type": "array", "maxItems": 128, "items": {"$ref": "common.schema.json#/$defs/text"}}
+  }
+}

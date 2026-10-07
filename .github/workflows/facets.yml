@@ -1,0 +1,74 @@
+name: FACETS
+
+on:
+  push:
+    paths:
+      - "facets/**"
+      - ".github/workflows/facets.yml"
+  pull_request:
+    paths:
+      - "facets/**"
+      - ".github/workflows/facets.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Godot 4.6.3 headless
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      GODOT_VERSION: "4.6.3"
+      # SHA-512 of Godot_v4.6.3-stable_linux.x86_64.zip from the official SHA512-SUMS.txt.
+      GODOT_SHA512: "a035258da32b77f966a5376f9fa29c30a6adde826a85ba918e1605bd1fc9823eba7d85f1dd5e748956bd2ba72827c0025ffa11bb82aec91128c407a2e723c99c"
+    defaults:
+      run:
+        working-directory: facets
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pinned Godot
+        run: |
+          curl -fsSL -o "$RUNNER_TEMP/godot.zip" "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
+          echo "${GODOT_SHA512}  $RUNNER_TEMP/godot.zip" | sha512sum --check
+          unzip -q "$RUNNER_TEMP/godot.zip" -d "$RUNNER_TEMP/godot"
+          echo "GODOT=$RUNNER_TEMP/godot/Godot_v${GODOT_VERSION}-stable_linux.x86_64" >> "$GITHUB_ENV"
+
+      - name: Import project
+        run: '"$GODOT" --headless --path . --editor --import'
+
+      - name: Parse check
+        run: '"$GODOT" --headless --path . --script tools/parse_check.gd'
+
+      - name: Rules, session, editor-model, demo and combat tests
+        run: '"$GODOT" --headless --path . --script tests/run_tests.gd'
+
+      - name: Editor self-test (plugin enable/disable, undo/redo)
+        run: tools/run_editor_selftest.sh
+
+      - name: Clean install of addons/facets
+        run: tools/verify_clean_install.sh
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: JSON Schemas and fixtures
+        run: |
+          python -m pip install --quiet "jsonschema>=4.18"
+          python tools/check_schemas.py
+
+      - name: Reference fixtures are reproducible
+        run: |
+          python tools/generate_rule_fixtures.py
+          git diff --exit-code -- tests/fixtures/rules
+
+      - name: Release archives
+        run: python tools/build_release.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: facets-release
+          path: facets/build/*.zip
+          if-no-files-found: error

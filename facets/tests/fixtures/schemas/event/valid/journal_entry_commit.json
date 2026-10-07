@@ -1,0 +1,29 @@
+{
+  "after_revision": 1,
+  "before_revision": 0,
+  "data": {
+    "action_id": "nm.bypass_controller",
+    "actor_id": "demo.mara_vale",
+    "approach_id": "tech",
+    "dice": [
+      3,
+      3
+    ],
+    "push": false,
+    "routine": false
+  },
+  "event_id": "evt-000001",
+  "format": 1,
+  "kind": "check.commit",
+  "ops": [
+    {
+      "after": 1,
+      "before": 0,
+      "op": "set",
+      "path": [
+        "clock"
+      ]
+    }
+  ],
+  "sequence": 1
+}

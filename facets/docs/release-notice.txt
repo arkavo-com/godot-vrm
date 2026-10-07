@@ -1,0 +1,10 @@
+FACETS 0.1.0 - narrative RPG rules framework for Godot 4.6
+
+Licensing: MIT is the recommended license for the original FACETS
+implementation and documentation, subject to the owner's approval before any
+public release. Until that approval is recorded in the repository, treat this
+archive as internal.
+
+Optional packages are distributed separately:
+  facets-ai-<version>.zip      addons/facets_ai (provider-neutral AI adapter)
+  facets-combat-<version>.zip  addons/facets_combat (zone combat, Bodyguard, Last Reserve)

@@ -1,0 +1,1158 @@
+{
+ "checkpoint": {
+  "sequence": 0,
+  "state": {
+   "actors": {
+    "demo.iris_kade": {
+     "actor_id": "demo.iris_kade",
+     "awards": {},
+     "base_build": {
+      "capabilities": [],
+      "facets": {
+       "agility": 2,
+       "cunning": 3,
+       "empathy": 4,
+       "force": 2,
+       "sense": 3,
+       "tenacity": 4
+      },
+      "skills": {
+       "athletics": 1,
+       "craft": 1,
+       "fighting": 1,
+       "influence": 2,
+       "investigation": 1,
+       "medicine": 2,
+       "performance": 2,
+       "survival": 2
+      },
+      "talents": [
+       "core.steady_voice",
+       "core.bargain_maker"
+      ]
+     },
+     "bonds": {
+      "demo.mara_vale": {
+       "affinity": 1,
+       "obligations": [],
+       "shared_events": [],
+       "trust": 2
+      }
+     },
+     "build": {
+      "capabilities": [],
+      "facets": {
+       "agility": 2,
+       "cunning": 3,
+       "empathy": 4,
+       "force": 2,
+       "sense": 3,
+       "tenacity": 4
+      },
+      "skills": {
+       "athletics": 1,
+       "craft": 1,
+       "fighting": 1,
+       "influence": 2,
+       "investigation": 1,
+       "medicine": 2,
+       "performance": 2,
+       "survival": 2
+      },
+      "talents": [
+       "core.steady_voice",
+       "core.bargain_maker"
+      ]
+     },
+     "conditions": [],
+     "controller": "player",
+     "display_name": "Iris Kade",
+     "flags": {},
+     "growth": 0,
+     "harm": 0,
+     "identity": {
+      "appearance_refs": [],
+      "code": "Talk first, always",
+      "drive": "Keep the market's people safe",
+      "hindrance": "Cannot walk away from someone in pain",
+      "name": "Iris Kade",
+      "tell": "Hums when she is nervous"
+     },
+     "identity_triggers": [
+      {
+       "description": "Someone nearby is hurt. Stop and treat them, whatever it costs your schedule.",
+       "disadvantage_effects": [
+        {
+         "label": "An hour passes",
+         "op": "world.clock_advance",
+         "params": {
+          "amount": 1
+         }
+        }
+       ],
+       "disadvantage_label": "Lose an hour treating strangers",
+       "display_name": "Stop for someone in pain",
+       "id": "iris.someone_in_pain"
+      }
+     ],
+     "items": {
+      "item.med_kit": 1
+     },
+     "known_facts": [],
+     "ledger": [],
+     "memories": [],
+     "profile": {
+      "accomplishments": []
+     },
+     "resolve": 1,
+     "strain": 0,
+     "trained_skills": [],
+     "usage": {},
+     "zone_id": "street"
+    },
+    "demo.mara_vale": {
+     "actor_id": "demo.mara_vale",
+     "awards": {},
+     "base_build": {
+      "capabilities": [],
+      "facets": {
+       "agility": 4,
+       "cunning": 3,
+       "empathy": 3,
+       "force": 2,
+       "sense": 4,
+       "tenacity": 2
+      },
+      "skills": {
+       "athletics": 1,
+       "influence": 2,
+       "investigation": 2,
+       "medicine": 1,
+       "sleight": 1,
+       "stealth": 2,
+       "survival": 1,
+       "technology": 2
+      },
+      "talents": [
+       "core.second_look",
+       "core.field_engineer"
+      ]
+     },
+     "bonds": {
+      "demo.iris_kade": {
+       "affinity": 1,
+       "obligations": [],
+       "shared_events": [],
+       "trust": 1
+      },
+      "npc.rook": {
+       "affinity": 1,
+       "obligations": [],
+       "shared_events": [],
+       "trust": 0
+      }
+     },
+     "build": {
+      "capabilities": [],
+      "facets": {
+       "agility": 4,
+       "cunning": 3,
+       "empathy": 3,
+       "force": 2,
+       "sense": 4,
+       "tenacity": 2
+      },
+      "skills": {
+       "athletics": 1,
+       "influence": 2,
+       "investigation": 2,
+       "medicine": 1,
+       "sleight": 1,
+       "stealth": 2,
+       "survival": 1,
+       "technology": 2
+      },
+      "talents": [
+       "core.second_look",
+       "core.field_engineer"
+      ]
+     },
+     "conditions": [],
+     "controller": "player",
+     "display_name": "Mara Vale",
+     "flags": {},
+     "growth": 0,
+     "harm": 0,
+     "identity": {
+      "appearance_refs": [],
+      "code": "Never abandon a passenger",
+      "drive": "Find the missing people from the night market",
+      "hindrance": "Pursues disappearance leads despite urgent deliveries",
+      "name": "Mara Vale",
+      "tell": "Touches the seal on her courier bag"
+     },
+     "identity_triggers": [
+      {
+       "description": "The stranded passenger saw something. Stop and listen, even though the delivery window is closing.",
+       "disadvantage_effects": [
+        {
+         "label": "Delivery window missed",
+         "op": "fact.set",
+         "params": {
+          "fact_id": "fact.window_missed",
+          "value": true
+         }
+        },
+        {
+         "label": "Two hours pass",
+         "op": "world.clock_advance",
+         "params": {
+          "amount": 2
+         }
+        }
+       ],
+       "disadvantage_label": "Miss the delivery window",
+       "display_name": "Chase the disappearance lead",
+       "id": "mara.passenger_lead"
+      }
+     ],
+     "items": {
+      "item.scrap_wire": 1,
+      "tool.signal_kit": 1
+     },
+     "known_facts": [],
+     "ledger": [],
+     "memories": [],
+     "profile": {
+      "accomplishments": []
+     },
+     "resolve": 1,
+     "strain": 0,
+     "trained_skills": [],
+     "usage": {},
+     "zone_id": "street"
+    },
+    "npc.rook": {
+     "actor_id": "npc.rook",
+     "awards": {},
+     "base_build": {
+      "capabilities": [],
+      "facets": {
+       "agility": 3,
+       "cunning": 2,
+       "empathy": 2,
+       "force": 3,
+       "sense": 4,
+       "tenacity": 4
+      },
+      "skills": {
+       "athletics": 2,
+       "fighting": 2,
+       "influence": 2,
+       "investigation": 2,
+       "marksmanship": 2,
+       "survival": 2
+      },
+      "talents": [
+       "core.trail_reader",
+       "core.second_look"
+      ]
+     },
+     "bonds": {},
+     "build": {
+      "capabilities": [],
+      "facets": {
+       "agility": 3,
+       "cunning": 2,
+       "empathy": 2,
+       "force": 3,
+       "sense": 4,
+       "tenacity": 4
+      },
+      "skills": {
+       "athletics": 2,
+       "fighting": 2,
+       "influence": 2,
+       "investigation": 2,
+       "marksmanship": 2,
+       "survival": 2
+      },
+      "talents": [
+       "core.trail_reader",
+       "core.second_look"
+      ]
+     },
+     "conditions": [],
+     "controller": "npc",
+     "display_name": "Rook",
+     "flags": {},
+     "growth": 0,
+     "harm": 0,
+     "identity": {
+      "appearance_refs": [],
+      "code": "Never open the fixer's office",
+      "drive": "Keep his post and his pension",
+      "hindrance": "Owes the fixer money",
+      "name": "Rook",
+      "tell": "Jingles his keys"
+     },
+     "identity_triggers": [],
+     "items": {},
+     "known_facts": [],
+     "ledger": [],
+     "memories": [],
+     "profile": {
+      "accomplishments": []
+     },
+     "resolve": 1,
+     "strain": 0,
+     "trained_skills": [],
+     "usage": {},
+     "zone_id": "street"
+    },
+    "npc.tamsin": {
+     "actor_id": "npc.tamsin",
+     "awards": {},
+     "base_build": {
+      "capabilities": [],
+      "facets": {
+       "agility": 3,
+       "cunning": 2,
+       "empathy": 4,
+       "force": 2,
+       "sense": 4,
+       "tenacity": 3
+      },
+      "skills": {
+       "athletics": 2,
+       "influence": 2,
+       "investigation": 2,
+       "medicine": 2,
+       "performance": 2,
+       "survival": 2
+      },
+      "talents": [
+       "core.trail_reader",
+       "core.steady_voice"
+      ]
+     },
+     "bonds": {},
+     "build": {
+      "capabilities": [],
+      "facets": {
+       "agility": 3,
+       "cunning": 2,
+       "empathy": 4,
+       "force": 2,
+       "sense": 4,
+       "tenacity": 3
+      },
+      "skills": {
+       "athletics": 2,
+       "influence": 2,
+       "investigation": 2,
+       "medicine": 2,
+       "performance": 2,
+       "survival": 2
+      },
+      "talents": [
+       "core.trail_reader",
+       "core.steady_voice"
+      ]
+     },
+     "conditions": [],
+     "controller": "npc",
+     "display_name": "Tamsin",
+     "flags": {},
+     "growth": 0,
+     "harm": 0,
+     "identity": {
+      "appearance_refs": [],
+      "code": "Tell the truth",
+      "drive": "Get home",
+      "hindrance": "Terrified of the canal crews",
+      "name": "Tamsin",
+      "tell": "Clutches a torn ticket"
+     },
+     "identity_triggers": [],
+     "items": {},
+     "known_facts": [],
+     "ledger": [],
+     "memories": [],
+     "profile": {
+      "accomplishments": []
+     },
+     "resolve": 1,
+     "strain": 0,
+     "trained_skills": [],
+     "usage": {},
+     "zone_id": "street"
+    }
+   },
+   "awards": {},
+   "chapter_id": "nm.chapter1",
+   "clock": 0,
+   "completed_chapters": [],
+   "counters": {
+    "patrol": 0
+   },
+   "expiring": [],
+   "facts": {
+    "fact.access_log": {
+     "label": "The access log shows the fixer's crew entered at dusk.",
+     "value": true,
+     "visibility": "private"
+    },
+    "fact.canal_footprints": {
+     "evidence_id": "evidence.mud",
+     "label": "Fresh boot prints lead under the pump house door.",
+     "value": true,
+     "visibility": "private"
+    },
+    "fact.canal_lead": {
+     "label": "The canal crew uses the old pump house as a drop point.",
+     "value": true,
+     "visibility": "private"
+    },
+    "fact.market_curfew": {
+     "label": "The night market locks down at curfew.",
+     "value": true,
+     "visibility": "public"
+    },
+    "fact.passenger_lead": {
+     "evidence_id": "evidence.bag_seal",
+     "label": "Tamsin saw a courier dragged toward the canal.",
+     "value": true,
+     "visibility": "private"
+    },
+    "fact.patrol_route": {
+     "label": "The patrol loops past the fish stalls every twenty minutes.",
+     "value": true,
+     "visibility": "private"
+    },
+    "fact.rooftop_view": {
+     "label": "Couriers are moved along the canal walkway.",
+     "value": true,
+     "visibility": "private"
+    },
+    "fact.rook_paid": {
+     "label": "Rook takes money from the fixer.",
+     "owner_id": "npc.rook",
+     "value": true,
+     "visibility": "private"
+    }
+   },
+   "grants": {},
+   "objective_epochs": {},
+   "objects": {
+    "controller": {
+     "accessible": true,
+     "locked": false
+    },
+    "market_gate": {
+     "open": false
+    },
+    "package": {
+     "delivered": false,
+     "late": false
+    },
+    "passenger": {
+     "helped": false
+    },
+    "roof_hatch": {
+     "reachable": true
+    },
+    "service_door": {
+     "open": false
+    }
+   },
+   "opportunities": {},
+   "refusals": {
+    "npc.rook": [
+     "fixer_office"
+    ]
+   },
+   "retry_locks": {},
+   "revision": 0,
+   "scene_id": "nm.gate",
+   "zones": {
+    "canal": {
+     "adjacent": [
+      "street"
+     ]
+    },
+    "hall": {
+     "adjacent": [
+      "street"
+     ]
+    },
+    "roof": {
+     "adjacent": [
+      "street",
+      "hall"
+     ]
+    },
+    "street": {
+     "adjacent": [
+      "hall",
+      "roof"
+     ]
+    }
+   }
+  }
+ },
+ "event_counter": 1,
+ "events": {},
+ "journal": [
+  {
+   "after_revision": 1,
+   "before_revision": 0,
+   "data": {
+    "action_id": "nm.bypass_controller",
+    "actor_id": "demo.mara_vale",
+    "approach_id": "tech",
+    "dice": [
+     3,
+     3
+    ],
+    "push": false,
+    "routine": false
+   },
+   "event_id": "evt-000001",
+   "format": 1,
+   "kind": "check.commit",
+   "ops": [
+    {
+     "after": 1,
+     "before": 0,
+     "op": "set",
+     "path": [
+      "clock"
+     ]
+    }
+   ],
+   "sequence": 1
+  }
+ ],
+ "last_sequence": 1,
+ "packs": {
+  "examples.night_market": "0.1.0",
+  "facets.core": "0.1.0"
+ },
+ "pending": {
+  "action": {
+   "allow_assistance": true,
+   "allow_push": true,
+   "allow_resolve": true,
+   "allows_costly_success": true,
+   "alternate_evidence_sources": [],
+   "approaches": [
+    {
+     "facet": "cunning",
+     "id": "tech",
+     "label": "Work the controller",
+     "skill": "technology"
+    }
+   ],
+   "clock_cost": 1,
+   "consumable_substitutes": [
+    "item.scrap_wire"
+   ],
+   "costly_options": [
+    {
+     "effects": [
+      {
+       "label": "You leave a trace in the grid",
+       "op": "world.mark_trace",
+       "params": {
+        "label": "A trace in the market grid",
+        "trace_id": "fact.grid_trace"
+       }
+      }
+     ],
+     "id": "trace",
+     "label": "Leave a trace in the market grid"
+    }
+   ],
+   "default_benefit_id": "silent",
+   "description": "Splice into the service door's controller and open it.",
+   "difficulty": {
+    "defender_id": "",
+    "defense_facet": "",
+    "defense_modifiers": [],
+    "defense_skill": "",
+    "kind": "fixed",
+    "target": 13
+   },
+   "display_name": "Bypass the service door controller",
+   "failure_effects": [
+    {
+     "label": "The patrol advances",
+     "op": "world.counter_add",
+     "params": {
+      "amount": 1,
+      "counter_id": "patrol"
+     }
+    },
+    {
+     "label": "The controller locks down",
+     "op": "object.set_flag",
+     "params": {
+      "key": "locked",
+      "object_id": "controller",
+      "value": true
+     }
+    }
+   ],
+   "fear": false,
+   "id": "nm.bypass_controller",
+   "lesser_concessions": [],
+   "modifiers": [],
+   "objective_id": "nm.objective.bypass_controller",
+   "relationship": {},
+   "required_tools": [
+    "tool.signal_kit"
+   ],
+   "requirements": [
+    {
+     "label": "At the market gate",
+     "op": "require.scene",
+     "params": {
+      "scene_id": "nm.gate"
+     }
+    },
+    {
+     "label": "Still outside the market hall",
+     "op": "require.actor_zone",
+     "params": {
+      "zone_id": "street"
+     }
+    },
+    {
+     "label": "The controller is reachable and not locked down",
+     "op": "require.accessible_controller",
+     "params": {
+      "object_id": "controller"
+     }
+    },
+    {
+     "label": "The service door is still closed",
+     "op": "require.object_flag",
+     "params": {
+      "key": "open",
+      "object_id": "service_door",
+      "value": false
+     }
+    }
+   ],
+   "retry_policy": "lock_until_change",
+   "revealable_facts": [],
+   "routine_requirements": [],
+   "stakes": {
+    "failure": "The patrol advances and the controller locks down.",
+    "success": "The service door opens."
+   },
+   "strong_benefits": [
+    {
+     "effects": [
+      {
+       "label": "Nobody noticed you",
+       "op": "actor.flag",
+       "params": {
+        "key": "silent_entry",
+        "value": true
+       }
+      }
+     ],
+     "id": "silent",
+     "label": "Silent entry",
+     "requires_consent": false
+    },
+    {
+     "effects": [
+      {
+       "label": "You copy the access log",
+       "op": "fact.reveal",
+       "params": {
+        "fact_id": "fact.access_log"
+       }
+      }
+     ],
+     "id": "log",
+     "label": "Copy the access log",
+     "requires_consent": false
+    }
+   ],
+   "success_effects": [
+    {
+     "label": "The service door opens",
+     "op": "object.set_flag",
+     "params": {
+      "key": "open",
+      "object_id": "service_door",
+      "value": true
+     }
+    },
+    {
+     "label": "You step into the market hall",
+     "op": "actor.zone",
+     "params": {
+      "zone_id": "hall"
+     }
+    }
+   ],
+   "tags": [
+    "technical",
+    "route"
+   ],
+   "useful_tools": [],
+   "version": 1
+  },
+  "action_digest": "202617a89fbb98e7d40cddd58d8cee47c818c4c7e265daea60004dee4927c820",
+  "action_id": "nm.bypass_controller",
+  "action_version": 1,
+  "actor_id": "demo.mara_vale",
+  "after_revision": 1,
+  "approach": {
+   "facet": "cunning",
+   "id": "tech",
+   "label": "Work the controller",
+   "skill": "technology"
+  },
+  "approach_id": "tech",
+  "base": {
+   "allows_costly_success": true,
+   "band": "costly_offer",
+   "dice": [
+    3,
+    3
+   ],
+   "facet": 3,
+   "margin": -2,
+   "modifier_applied": 0,
+   "modifier_raw": 0,
+   "push_bonus": 0,
+   "resolve_bonus": 0,
+   "skill": 2,
+   "target": 13,
+   "total": 11
+  },
+  "before_revision": 0,
+  "check": {
+   "allows_costly_success": true,
+   "facet": 3,
+   "facet_id": "cunning",
+   "skill": 2,
+   "skill_id": "technology",
+   "target": 13
+  },
+  "choices": [],
+  "commit_ops": [
+   {
+    "after": 1,
+    "before": 0,
+    "op": "set",
+    "path": [
+     "clock"
+    ]
+   }
+  ],
+  "decision": {
+   "decision_id": "evt-000001:resolve",
+   "event_id": "evt-000001",
+   "kind": "resolve",
+   "options": [
+    {
+     "band_after": "success",
+     "changes_band": true,
+     "id": "spend",
+     "label": "Spend 1 Resolve: total 13, success"
+    },
+    {
+     "band_after": "costly_offer",
+     "changes_band": false,
+     "id": "decline",
+     "label": "Keep Resolve: total 11, costly-success offer"
+    }
+   ],
+   "prompt": "Total 11 vs 13 (costly-success offer). Spend 1 Resolve for +2? It would become success."
+  },
+  "dice": [
+   7,
+   0
+  ],
+  "evaluation": {
+   "allows_costly_success": true,
+   "band": "costly_offer",
+   "dice": [
+    3,
+    3
+   ],
+   "facet": 3,
+   "margin": -2,
+   "modifier_applied": 0,
+   "modifier_raw": 0,
+   "push_bonus": 0,
+   "resolve_bonus": 0,
+   "skill": 2,
+   "target": 13,
+   "total": 11
+  },
+  "event_id": "evt-000001",
+  "fingerprint": "e461ece7e1595eb4a24fcd9aa92b0bc68e819b1441ca7ec8392481a46af70cb4",
+  "helper_id": "",
+  "kind": "check",
+  "lock_key": "lock:ed6c3c857477881b12d7f6325ea2e1ff",
+  "modifier_applied": 0,
+  "modifier_lines": [],
+  "modifier_raw": 0,
+  "objective_id": "nm.objective.bypass_controller",
+  "push": false,
+  "request": {
+   "action_id": "nm.bypass_controller",
+   "actor_id": "demo.mara_vale",
+   "approach_id": "tech",
+   "evidence_id": "",
+   "expected_revision": -1,
+   "helper_ids": [],
+   "talent_ids": [],
+   "target_ids": [],
+   "tool_ids": [
+    "tool.signal_kit"
+   ]
+  },
+  "resolve_available": true,
+  "resource_deltas": {
+   "resolve": 0,
+   "strain": 0
+  },
+  "routine": false,
+  "scene_id": "nm.gate",
+  "second_look": {},
+  "status": "pending",
+  "target_explanation": [
+   "Target 13 (demanding)."
+  ],
+  "tool_substitution": {},
+  "visibility": "public"
+ },
+ "requests": {
+  "commit-0-479296-1": {
+   "digest": "7b8977df264a294a2f3b4939971e09a6b46caaeb9d4a9dfcea80da0e2002fb6c",
+   "response": {
+    "action": {
+     "allow_assistance": true,
+     "allow_push": true,
+     "allow_resolve": true,
+     "allows_costly_success": true,
+     "alternate_evidence_sources": [],
+     "approaches": [
+      {
+       "facet": "cunning",
+       "id": "tech",
+       "label": "Work the controller",
+       "skill": "technology"
+      }
+     ],
+     "clock_cost": 1,
+     "consumable_substitutes": [
+      "item.scrap_wire"
+     ],
+     "costly_options": [
+      {
+       "effects": [
+        {
+         "label": "You leave a trace in the grid",
+         "op": "world.mark_trace",
+         "params": {
+          "label": "A trace in the market grid",
+          "trace_id": "fact.grid_trace"
+         }
+        }
+       ],
+       "id": "trace",
+       "label": "Leave a trace in the market grid"
+      }
+     ],
+     "default_benefit_id": "silent",
+     "description": "Splice into the service door's controller and open it.",
+     "difficulty": {
+      "defender_id": "",
+      "defense_facet": "",
+      "defense_modifiers": [],
+      "defense_skill": "",
+      "kind": "fixed",
+      "target": 13
+     },
+     "display_name": "Bypass the service door controller",
+     "failure_effects": [
+      {
+       "label": "The patrol advances",
+       "op": "world.counter_add",
+       "params": {
+        "amount": 1,
+        "counter_id": "patrol"
+       }
+      },
+      {
+       "label": "The controller locks down",
+       "op": "object.set_flag",
+       "params": {
+        "key": "locked",
+        "object_id": "controller",
+        "value": true
+       }
+      }
+     ],
+     "fear": false,
+     "id": "nm.bypass_controller",
+     "lesser_concessions": [],
+     "modifiers": [],
+     "objective_id": "nm.objective.bypass_controller",
+     "relationship": {},
+     "required_tools": [
+      "tool.signal_kit"
+     ],
+     "requirements": [
+      {
+       "label": "At the market gate",
+       "op": "require.scene",
+       "params": {
+        "scene_id": "nm.gate"
+       }
+      },
+      {
+       "label": "Still outside the market hall",
+       "op": "require.actor_zone",
+       "params": {
+        "zone_id": "street"
+       }
+      },
+      {
+       "label": "The controller is reachable and not locked down",
+       "op": "require.accessible_controller",
+       "params": {
+        "object_id": "controller"
+       }
+      },
+      {
+       "label": "The service door is still closed",
+       "op": "require.object_flag",
+       "params": {
+        "key": "open",
+        "object_id": "service_door",
+        "value": false
+       }
+      }
+     ],
+     "retry_policy": "lock_until_change",
+     "revealable_facts": [],
+     "routine_requirements": [],
+     "stakes": {
+      "failure": "The patrol advances and the controller locks down.",
+      "success": "The service door opens."
+     },
+     "strong_benefits": [
+      {
+       "effects": [
+        {
+         "label": "Nobody noticed you",
+         "op": "actor.flag",
+         "params": {
+          "key": "silent_entry",
+          "value": true
+         }
+        }
+       ],
+       "id": "silent",
+       "label": "Silent entry",
+       "requires_consent": false
+      },
+      {
+       "effects": [
+        {
+         "label": "You copy the access log",
+         "op": "fact.reveal",
+         "params": {
+          "fact_id": "fact.access_log"
+         }
+        }
+       ],
+       "id": "log",
+       "label": "Copy the access log",
+       "requires_consent": false
+      }
+     ],
+     "success_effects": [
+      {
+       "label": "The service door opens",
+       "op": "object.set_flag",
+       "params": {
+        "key": "open",
+        "object_id": "service_door",
+        "value": true
+       }
+      },
+      {
+       "label": "You step into the market hall",
+       "op": "actor.zone",
+       "params": {
+        "zone_id": "hall"
+       }
+      }
+     ],
+     "tags": [
+      "technical",
+      "route"
+     ],
+     "useful_tools": [],
+     "version": 1
+    },
+    "action_digest": "202617a89fbb98e7d40cddd58d8cee47c818c4c7e265daea60004dee4927c820",
+    "action_id": "nm.bypass_controller",
+    "action_version": 1,
+    "actor_id": "demo.mara_vale",
+    "after_revision": 1,
+    "approach": {
+     "facet": "cunning",
+     "id": "tech",
+     "label": "Work the controller",
+     "skill": "technology"
+    },
+    "approach_id": "tech",
+    "base": {
+     "allows_costly_success": true,
+     "band": "costly_offer",
+     "dice": [
+      3,
+      3
+     ],
+     "facet": 3,
+     "margin": -2,
+     "modifier_applied": 0,
+     "modifier_raw": 0,
+     "push_bonus": 0,
+     "resolve_bonus": 0,
+     "skill": 2,
+     "target": 13,
+     "total": 11
+    },
+    "before_revision": 0,
+    "check": {
+     "allows_costly_success": true,
+     "facet": 3,
+     "facet_id": "cunning",
+     "skill": 2,
+     "skill_id": "technology",
+     "target": 13
+    },
+    "choices": [],
+    "commit_ops": [
+     {
+      "after": 1,
+      "before": 0,
+      "op": "set",
+      "path": [
+       "clock"
+      ]
+     }
+    ],
+    "decision": {
+     "decision_id": "evt-000001:resolve",
+     "event_id": "evt-000001",
+     "kind": "resolve",
+     "options": [
+      {
+       "band_after": "success",
+       "changes_band": true,
+       "id": "spend",
+       "label": "Spend 1 Resolve: total 13, success"
+      },
+      {
+       "band_after": "costly_offer",
+       "changes_band": false,
+       "id": "decline",
+       "label": "Keep Resolve: total 11, costly-success offer"
+      }
+     ],
+     "prompt": "Total 11 vs 13 (costly-success offer). Spend 1 Resolve for +2? It would become success."
+    },
+    "dice": [
+     3,
+     3
+    ],
+    "evaluation": {
+     "allows_costly_success": true,
+     "band": "costly_offer",
+     "dice": [
+      3,
+      3
+     ],
+     "facet": 3,
+     "margin": -2,
+     "modifier_applied": 0,
+     "modifier_raw": 0,
+     "push_bonus": 0,
+     "resolve_bonus": 0,
+     "skill": 2,
+     "target": 13,
+     "total": 11
+    },
+    "event_id": "evt-000001",
+    "fingerprint": "e461ece7e1595eb4a24fcd9aa92b0bc68e819b1441ca7ec8392481a46af70cb4",
+    "helper_id": "",
+    "kind": "check",
+    "lock_key": "lock:ed6c3c857477881b12d7f6325ea2e1ff",
+    "modifier_applied": 0,
+    "modifier_lines": [],
+    "modifier_raw": 0,
+    "objective_id": "nm.objective.bypass_controller",
+    "push": false,
+    "request": {
+     "action_id": "nm.bypass_controller",
+     "actor_id": "demo.mara_vale",
+     "approach_id": "tech",
+     "evidence_id": "",
+     "expected_revision": -1,
+     "helper_ids": [],
+     "talent_ids": [],
+     "target_ids": [],
+     "tool_ids": [
+      "tool.signal_kit"
+     ]
+    },
+    "resolve_available": true,
+    "resource_deltas": {
+     "resolve": 0,
+     "strain": 0
+    },
+    "routine": false,
+    "scene_id": "nm.gate",
+    "second_look": {},
+    "status": "pending",
+    "target_explanation": [
+     "Target 13 (demanding)."
+    ],
+    "tool_substitution": {},
+    "visibility": "public"
+   }
+  }
+ },
+ "revision": 1,
+ "rng": {
+  "draws": 1,
+  "kind": "fixed",
+  "queue": [
+   [
+    5,
+    5
+   ]
+  ]
+ },
+ "ruleset_id": "facets.core",
+ "ruleset_version": "0.1.0",
+ "save_kind": "facets.session",
+ "schema_version": 1,
+ "session_id": "night_market",
+ "state_digest": "29428ab295fca654331daa65177d9fb7657c99440901b836afd204de7d3e4feb"
+}

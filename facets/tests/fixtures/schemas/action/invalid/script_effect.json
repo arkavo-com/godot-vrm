@@ -1,0 +1,1 @@
+{"id": "bad.script", "version": 1, "approaches": [{"id": "a", "facet": "cunning", "skill": "technology"}], "difficulty": {"kind": "fixed", "target": 11}, "retry_policy": "repeatable", "success_effects": [{"op": "object.set_flag", "params": {}, "script": "res://evil.gd"}]}

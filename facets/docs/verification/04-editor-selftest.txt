@@ -1,0 +1,18 @@
+$ tools/run_editor_selftest.sh
+FACETS editor self-test (Godot 4.6.3-stable (official))
+  ok   FACETS plugin enabled at startup
+  ok   two FACETS docks registered (found 2)
+  ok   cycle 0: disable removes docks
+  ok   cycle 0: enable restores exactly two docks (found 2)
+  ok   cycle 1: disable removes docks
+  ok   cycle 1: enable restores exactly two docks (found 2)
+  ok   cycle 2: disable removes docks
+  ok   cycle 2: enable restores exactly two docks (found 2)
+  ok   enable/disable leaves unrelated project settings unchanged
+  ok   exactly one FACETS inspector panel (found 1)
+  ok   authoring edit applied
+  ok   undo restores the facet
+  ok   redo reapplies the facet
+  ok   skill edit undone
+FACETS editor self-test: 14 checks, 0 failures
+exit 0

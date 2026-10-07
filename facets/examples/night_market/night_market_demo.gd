@@ -23,7 +23,10 @@ const SCENE_CLINIC := "nm.clinic"
 const CHAPTER := "nm.chapter1"
 ## Delivery window: the package must arrive while the clock is at most this.
 const DEADLINE := 3
-const DEFAULT_SAVE := "user://night_market/save.json"
+## Written on every transaction and resumed on launch.
+const AUTOSAVE := "user://night_market/autosave.json"
+## Manual save slot used by Save and Load.
+const SAVE_SLOT := "user://night_market/save.json"
 
 var registry: FacetsRegistry
 var session: FacetsSession
@@ -34,12 +37,24 @@ var log_lines: Array[String] = []
 var _request_counter: int = 0
 
 
-## Options: "store" (FacetsSessionStore; default a file store), "seed" (int),
-## "dice" (Array of [d1, d2] pairs for scripted runs).
+## Options: "store" (FacetsSessionStore written on every transaction;
+## default the autosave file), "resume" (continue from that store when it
+## holds a valid save), "seed" (int), "dice" (Array of [d1, d2] pairs for
+## scripted runs).
 static func create(options: Dictionary = {}) -> FacetsReply:
 	var demo := NightMarketDemo.new()
 	demo.registry = build_registry()
-	var reply := demo.new_journey(options)
+	var autosave: FacetsSessionStore = options.get("store") if options.get("store") is FacetsSessionStore else FacetsFileStore.at(AUTOSAVE)
+	if bool(options.get("resume", false)) and autosave.has_save():
+		var resumed := FacetsSession.restore(autosave, demo.registry)
+		if resumed.ok:
+			demo.session = resumed.value
+			demo.store = autosave
+			demo._log("Journey resumed from the autosave.%s" % (" A choice is still waiting." if demo.session.has_pending() else ""))
+			return FacetsReply.success(demo)
+	var with_store := options.duplicate()
+	with_store["store"] = autosave
+	var reply := demo.new_journey(with_store)
 	if not reply.ok:
 		return reply
 	return FacetsReply.success(demo)
@@ -100,7 +115,7 @@ func new_journey(options: Dictionary = {}) -> FacetsReply:
 			profiles[actor_id] = world.actor(actor_id).profile.duplicate(true)
 	var target_store: Variant = options.get("store", store)
 	if target_store == null:
-		target_store = FacetsFileStore.at(DEFAULT_SAVE)
+		target_store = FacetsFileStore.at(AUTOSAVE)
 	var dice: FacetsDiceSource
 	if options.has("dice"):
 		dice = FacetsDiceSource.fixed(options["dice"])
@@ -290,15 +305,19 @@ func consequences() -> Array[String]:
 	return lines
 
 
+## Writes the manual save slot (or [param target]). The autosave keeps
+## running separately.
 func save_game(target: FacetsSessionStore = null) -> FacetsReply:
-	var reply := session.save(target if target != null else store)
+	var reply := session.save(target if target != null else FacetsFileStore.at(SAVE_SLOT))
 	_log("Saved." if reply.ok else "Save failed: %s" % reply.error.message)
 	return reply
 
 
+## Restores the manual save slot (or [param source]); play continues with
+## the autosave store attached.
 func load_game(source: FacetsSessionStore = null, dice: FacetsDiceSource = null) -> FacetsReply:
-	var from := source if source != null else store
-	var options := {"store": from}
+	var from := source if source != null else FacetsFileStore.at(SAVE_SLOT)
+	var options := {"store": store if store != null else from}
 	if dice != null:
 		options["dice"] = dice
 	var reply := FacetsSession.restore(from, registry, options)
@@ -306,7 +325,9 @@ func load_game(source: FacetsSessionStore = null, dice: FacetsDiceSource = null)
 		_log("Load failed: %s" % reply.error.message)
 		return reply
 	session = reply.value
-	store = from
+	var persisted := session.save(store) if store != null else FacetsReply.success(true)
+	if not persisted.ok:
+		_log("Loaded, but the autosave could not be updated: %s" % persisted.error.message)
 	_log("Loaded.%s" % (" A choice is still waiting." if session.has_pending() else ""))
 	changed.emit()
 	return reply

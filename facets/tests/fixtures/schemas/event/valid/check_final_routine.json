@@ -1,0 +1,191 @@
+{
+  "action": {
+    "allow_assistance": true,
+    "allow_push": true,
+    "allow_resolve": true,
+    "allows_costly_success": false,
+    "alternate_evidence_sources": [],
+    "approaches": [
+      {
+        "facet": "empathy",
+        "id": "hand_over",
+        "label": "Hand it over",
+        "skill": "influence"
+      }
+    ],
+    "clock_cost": 0,
+    "consumable_substitutes": [],
+    "costly_options": [],
+    "default_benefit_id": "",
+    "description": "Hand the package to the clinic's night doctor inside the hall.",
+    "difficulty": {
+      "defender_id": "",
+      "defense_facet": "",
+      "defense_modifiers": [],
+      "defense_skill": "",
+      "kind": "routine",
+      "target": 11
+    },
+    "display_name": "Deliver the sealed package",
+    "failure_effects": [],
+    "fear": false,
+    "id": "nm.deliver_package",
+    "lesser_concessions": [],
+    "modifiers": [],
+    "objective_id": "nm.objective.deliver_package",
+    "relationship": {
+
+    },
+    "required_tools": [],
+    "requirements": [
+      {
+        "label": "At the market gate",
+        "op": "require.scene",
+        "params": {
+          "scene_id": "nm.gate"
+        }
+      },
+      {
+        "label": "Inside the market hall",
+        "op": "require.actor_zone",
+        "params": {
+          "zone_id": "hall"
+        }
+      },
+      {
+        "label": "Not yet delivered",
+        "op": "require.object_flag",
+        "params": {
+          "key": "delivered",
+          "object_id": "package",
+          "value": false
+        }
+      }
+    ],
+    "retry_policy": "repeatable",
+    "revealable_facts": [],
+    "routine_requirements": [],
+    "stakes": {
+      "failure": "",
+      "success": "Routine: the delivery is made."
+    },
+    "strong_benefits": [],
+    "success_effects": [
+      {
+        "label": "Package delivered",
+        "op": "object.set_flag",
+        "params": {
+          "key": "delivered",
+          "object_id": "package",
+          "value": true
+        }
+      }
+    ],
+    "tags": [],
+    "useful_tools": [],
+    "version": 1
+  },
+  "action_digest": "46e0b46dd1692eaf4f7b5855eea353cc46bd2ee835bbf423d870c882ecd18de5",
+  "action_id": "nm.deliver_package",
+  "action_version": 1,
+  "actor_id": "demo.mara_vale",
+  "after_revision": 6,
+  "approach": {
+    "facet": "empathy",
+    "id": "hand_over",
+    "label": "Hand it over",
+    "skill": "influence"
+  },
+  "approach_id": "hand_over",
+  "base": {
+    "band": "success",
+    "dice": [],
+    "facet": 3,
+    "margin": 0,
+    "routine": true,
+    "skill": 2,
+    "target": 11,
+    "total": 0
+  },
+  "before_revision": 4,
+  "check": {
+    "allows_costly_success": false,
+    "facet": 3,
+    "facet_id": "empathy",
+    "skill": 2,
+    "skill_id": "influence",
+    "target": 11
+  },
+  "choices": [],
+  "commit_ops": [],
+  "decision": {
+
+  },
+  "dice": [],
+  "effect_labels": [
+    "Package delivered"
+  ],
+  "evaluation": {
+    "band": "success",
+    "dice": [],
+    "facet": 3,
+    "margin": 0,
+    "routine": true,
+    "skill": 2,
+    "target": 11,
+    "total": 0
+  },
+  "event_id": "evt-000004",
+  "final_band": "success",
+  "finalize_ops": [
+    {
+      "after": true,
+      "before": false,
+      "op": "set",
+      "path": [
+        "objects",
+        "package",
+        "delivered"
+      ]
+    }
+  ],
+  "fingerprint": "7915e9edbf9c274819c3da5e1cb67a68f2bd5b65a6bf78d5cd66c19c1663cd79",
+  "helper_id": "",
+  "kind": "check",
+  "lock_key": "lock:6d169355aeefe10edb731d7e406425d1",
+  "modifier_applied": 0,
+  "modifier_lines": [],
+  "modifier_raw": 0,
+  "objective_id": "nm.objective.deliver_package",
+  "push": false,
+  "request": {
+    "action_id": "nm.deliver_package",
+    "actor_id": "demo.mara_vale",
+    "approach_id": "hand_over",
+    "evidence_id": "",
+    "expected_revision": -1,
+    "helper_ids": [],
+    "talent_ids": [],
+    "target_ids": [],
+    "tool_ids": []
+  },
+  "resolve_available": false,
+  "resource_deltas": {
+    "resolve": 0,
+    "strain": 0
+  },
+  "routine": true,
+  "scene_id": "nm.gate",
+  "second_look": {
+
+  },
+  "status": "final",
+  "talent_notes": [],
+  "target_explanation": [
+    "Routine: succeeds without a roll."
+  ],
+  "tool_substitution": {
+
+  },
+  "visibility": "public"
+}

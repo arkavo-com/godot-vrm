@@ -214,6 +214,8 @@ func test_t30_offline_fake_ai_flow() -> void:
 func test_t30_fixed_dice_debug_only_and_ui_smoke() -> void:
 	assert_false(NightMarketDemo.fixed_dice_allowed(false), "absent from release exports")
 	assert_true(NightMarketDemo.fixed_dice_allowed(true))
+	var autosave := FacetsFileStore.at(NightMarketDemo.AUTOSAVE)
+	autosave.delete_all()
 	var tree := Engine.get_main_loop() as SceneTree
 	var scene: Control = (load("res://examples/night_market/night_market.tscn") as PackedScene).instantiate()
 	tree.root.add_child(scene)
@@ -230,3 +232,22 @@ func test_t30_fixed_dice_debug_only_and_ui_smoke() -> void:
 	assert_eq(scene.demo.session.snapshot().object_flag("service_door", "open"), true)
 	scene.get_parent().remove_child(scene)
 	scene.free()
+	var resumed: NightMarketDemo = assert_ok(NightMarketDemo.create({"store": autosave, "resume": true}))
+	assert_eq(resumed.session.snapshot().object_flag("service_door", "open"), true, "UI progress was autosaved")
+	autosave.delete_all()
+
+
+func test_t30_resume_from_autosave_keeps_pending_choice() -> void:
+	var autosave := FacetsMemoryStore.new()
+	var demo: NightMarketDemo = assert_ok(NightMarketDemo.create({"store": autosave, "dice": [[3, 3]]}))
+	assert_ok(demo.commit(demo.preview(MARA, "nm.bypass_controller", "tech").value, false))
+	var relaunched: NightMarketDemo = assert_ok(NightMarketDemo.create({"store": autosave, "resume": true}))
+	assert_true(relaunched.pending() != null, "pending choice survives a relaunch")
+	assert_eq(relaunched.pending().dice, [3, 3])
+	var manual := FacetsMemoryStore.new()
+	assert_ok(relaunched.save_game(manual))
+	assert_ok(relaunched.choose("spend"))
+	assert_ok(relaunched.load_game(manual, FacetsDiceSource.fixed([])))
+	assert_true(relaunched.pending() != null, "manual load returns to the saved choice")
+	var fresh: NightMarketDemo = assert_ok(NightMarketDemo.create({"store": autosave, "resume": true}))
+	assert_true(fresh.pending() != null, "the load was written through to the autosave")

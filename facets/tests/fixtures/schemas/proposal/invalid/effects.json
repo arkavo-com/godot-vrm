@@ -1,0 +1,1 @@
+{"actor_id": "demo.mara_vale", "action_id": "nm.bypass_controller", "approach_id": "tech", "effects": [{"op": "object.set_flag", "params": {"object_id": "service_door", "key": "open", "value": true}}]}

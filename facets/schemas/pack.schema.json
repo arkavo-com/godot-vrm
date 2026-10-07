@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://facets.arkavo.dev/schemas/v1/pack.schema.json",
+  "title": "FACETS rules pack",
+  "description": "Versioned content pack with exact dependency versions. Talent behavior comes from registered typed hooks named by hook_id; packs never carry scripts.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "pack_id", "version", "ruleset_id", "ruleset_version"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "pack_id": {"$ref": "common.schema.json#/$defs/namespaced_id"},
+    "version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+    "ruleset_id": {"const": "facets.core"},
+    "ruleset_version": {"const": "0.1.0"},
+    "dependencies": {"type": "object", "additionalProperties": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"}},
+    "compatibility": {"$ref": "common.schema.json#/$defs/text"},
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id"],
+        "properties": {
+          "id": {"$ref": "common.schema.json#/$defs/id"},
+          "display_name": {"$ref": "common.schema.json#/$defs/text"},
+          "description": {"$ref": "common.schema.json#/$defs/text"},
+          "genre": {"type": "boolean"}
+        }
+      }
+    },
+    "talents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "version", "hook_id", "parameters", "usage_scope"],
+        "properties": {
+          "id": {"$ref": "common.schema.json#/$defs/id"},
+          "version": {"type": "integer", "minimum": 1},
+          "display_name": {"$ref": "common.schema.json#/$defs/text"},
+          "description": {"$ref": "common.schema.json#/$defs/text"},
+          "hook_id": {"$ref": "common.schema.json#/$defs/id"},
+          "parameters": {"type": "object"},
+          "prerequisites": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "facets": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0, "maximum": 10}},
+              "skills": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0, "maximum": 10}},
+              "talents": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/id"}}
+            }
+          },
+          "usage_scope": {"enum": ["passive", "per_check", "per_scene", "per_round", "per_encounter"]},
+          "uses": {"type": "integer", "minimum": 0},
+          "repeatable": {"type": "boolean"},
+          "package": {"type": "string"}
+        }
+      }
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "penalty"],
+        "properties": {
+          "id": {"$ref": "common.schema.json#/$defs/id"},
+          "display_name": {"$ref": "common.schema.json#/$defs/text"},
+          "description": {"$ref": "common.schema.json#/$defs/text"},
+          "applicability_tags": {"type": "array", "items": {"type": "string"}},
+          "applies_to_facets": {"type": "array", "items": {"$ref": "common.schema.json#/$defs/facet"}},
+          "penalty": {"type": "integer", "minimum": -2, "maximum": 0},
+          "restrictions": {"type": "array", "items": {"enum": ["no_push", "no_reactions", "cannot_act", "limited_turn", "cannot_communicate", "no_move"]}},
+          "removal_operation": {"type": "string"}
+        }
+      }
+    },
+    "actions": {"type": "array", "items": {"$ref": "action.schema.json"}},
+    "archetypes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "build"],
+        "properties": {
+          "id": {"$ref": "common.schema.json#/$defs/id"},
+          "display_name": {"$ref": "common.schema.json#/$defs/text"},
+          "description": {"$ref": "common.schema.json#/$defs/text"},
+          "build": {"$ref": "common.schema.json#/$defs/build"}
+        }
+      }
+    },
+    "admission_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"$ref": "common.schema.json#/$defs/id"},
+        "kind": {"enum": ["standard", "custom"]},
+        "facet_min": {"type": "integer"},
+        "facet_cap": {"type": "integer"},
+        "facet_total": {"type": "integer"},
+        "skill_points": {"type": "integer"},
+        "skill_cap": {"type": "integer"},
+        "talent_count": {"type": "integer"},
+        "allowed_capabilities": {"type": "array", "items": {"type": "string"}},
+        "allowed_equipment": {"type": "array", "items": {"type": "string"}},
+        "reset_fields": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

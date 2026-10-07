@@ -1,0 +1,4 @@
+$ godot --headless --path . --script tools/parse_check.gd
+
+parse_check: 101 scripts, 0 failures
+exit 0

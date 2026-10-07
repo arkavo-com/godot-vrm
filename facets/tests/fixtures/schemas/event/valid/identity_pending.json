@@ -1,0 +1,51 @@
+{
+  "actor_id": "demo.mara_vale",
+  "after_revision": 2,
+  "before_revision": 2,
+  "choices": [],
+  "decision": {
+    "decision_id": "evt-000002:identity",
+    "event_id": "evt-000002",
+    "kind": "identity",
+    "options": [
+      {
+        "id": "accept",
+        "label": "Accept: Miss the delivery window"
+      },
+      {
+        "id": "reject",
+        "label": "Decline"
+      }
+    ],
+    "prompt": "The stranded passenger saw something. Stop and listen, even though the delivery window is closing."
+  },
+  "event_id": "evt-000002",
+  "kind": "identity",
+  "scene_id": "nm.gate",
+  "status": "pending",
+  "trigger": {
+    "description": "The stranded passenger saw something. Stop and listen, even though the delivery window is closing.",
+    "disadvantage_effects": [
+      {
+        "label": "Delivery window missed",
+        "op": "fact.set",
+        "params": {
+          "fact_id": "fact.window_missed",
+          "value": true
+        }
+      },
+      {
+        "label": "Two hours pass",
+        "op": "world.clock_advance",
+        "params": {
+          "amount": 2
+        }
+      }
+    ],
+    "disadvantage_label": "Miss the delivery window",
+    "display_name": "Chase the disappearance lead",
+    "id": "mara.passenger_lead"
+  },
+  "trigger_id": "mara.passenger_lead",
+  "visibility": "public"
+}

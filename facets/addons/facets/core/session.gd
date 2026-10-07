@@ -1096,6 +1096,9 @@ static func from_save_dict(source: Dictionary, p_registry: FacetsRegistry, optio
 	var data: Dictionary = migrated.value["data"]
 	if str(data.get("save_kind", "")) != SAVE_KIND:
 		return FacetsReply.fail(FacetsError.MALFORMED, "Not a FACETS session save.", "save_kind")
+	var shape_errors := FacetsSaveValidator.validate_save(data)
+	if not shape_errors.is_empty():
+		return FacetsReply.failures(shape_errors)
 	var packs: Dictionary = data.get("packs", {})
 	var available := p_registry.pack_versions()
 	for pack_id in packs:
