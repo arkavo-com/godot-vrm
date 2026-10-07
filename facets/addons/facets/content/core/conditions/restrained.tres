@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FacetsConditionResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/condition_resource.gd" id="1_k7ej5"]
+
+[resource]
+script = ExtResource("1_k7ej5")
+id = "core.restrained"
+display_name = "Restrained"
+description = "Held or bound. Cannot move; -2 to physical checks."
+applicability_tags = Array[String](["checks", "physical"])
+applies_to_facets = Array[String](["force", "agility"])
+penalty = -2
+restrictions = Array[String](["no_move"])

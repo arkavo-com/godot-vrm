@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="FacetsSkillResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/skill_resource.gd" id="1_wpdvu"]
+
+[resource]
+script = ExtResource("1_wpdvu")
+id = "stealth"
+display_name = "Stealth"
+description = "Moving unseen and unheard, hiding and shadowing."

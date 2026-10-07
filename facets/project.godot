@@ -1,0 +1,21 @@
+; Engine configuration file.
+; FACETS development and example project. Pinned baseline: Godot 4.6.3-stable.
+
+config_version=5
+
+[application]
+
+config/name="FACETS"
+config/description="Deterministic, data-driven narrative RPG rules for Godot."
+run/main_scene="res://examples/night_market/night_market.tscn"
+config/features=PackedStringArray("4.6")
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=800
+window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/facets/plugin.cfg")

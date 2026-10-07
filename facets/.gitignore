@@ -1,0 +1,3 @@
+# Godot caches are ignored by the repository root .gitignore (.godot/, .import/).
+/build/
+/tests/.tmp/

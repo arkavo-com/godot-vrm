@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="FacetsSkillResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/skill_resource.gd" id="1_o1rjq"]
+
+[resource]
+script = ExtResource("1_o1rjq")
+id = "craft"
+display_name = "Craft"
+description = "Building, repairing and improvising physical things."

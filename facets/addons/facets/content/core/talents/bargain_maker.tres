@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="FacetsTalentResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/talent_resource.gd" id="1_0b7ly"]
+
+[resource]
+script = ExtResource("1_0b7ly")
+id = "core.bargain_maker"
+display_name = "Bargain Maker"
+description = "On a strong success with Influence, take a listed lesser concession in place of the strong benefit."
+hook_id = "bargain_maker"
+parameters = {
+"skills": ["influence"],
+"uses_per_scene": 1
+}
+prerequisite_skills = {
+"influence": 1
+}

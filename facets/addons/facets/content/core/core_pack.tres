@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="FacetsRulesPack" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/action_resource.gd" id="1_jk1i8"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/standard_admission.tres" id="2_owh5e"]
+[ext_resource type="Script" path="res://addons/facets/resources/archetype_resource.gd" id="3_ijlpy"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/archetypes/courier.tres" id="4_fia85"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/archetypes/investigator.tres" id="5_w8sw5"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/archetypes/mediator.tres" id="6_0cbq3"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/archetypes/protector.tres" id="7_oeim6"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/archetypes/tinkerer.tres" id="8_dlb1l"]
+[ext_resource type="Script" path="res://addons/facets/resources/condition_resource.gd" id="9_5r64k"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/conditions/overwhelmed.tres" id="10_34f74"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/conditions/injured.tres" id="11_ucjpp"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/conditions/incapacitated.tres" id="12_slftb"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/conditions/shaken.tres" id="13_3alnj"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/conditions/restrained.tres" id="14_8ed1w"]
+[ext_resource type="Script" path="res://addons/facets/resources/rules_pack.gd" id="15_s4jtt"]
+[ext_resource type="Script" path="res://addons/facets/resources/skill_resource.gd" id="16_oixec"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/skills/athletics.tres" id="17_xnkjq"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/skills/fighting.tres" id="18_g7jsm"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/skills/marksmanship.tres" id="19_q8jlr"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/skills/stealth.tres" id="20_d5plf"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/skills/sleight.tres" id="21_klss6"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/skills/investigation.tres" id="22_w8v3e"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/skills/survival.tres" id="23_guaty"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/skills/technology.tres" id="24_ku3b4"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/skills/craft.tres" id="25_hueuu"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/skills/medicine.tres" id="26_gjkor"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/skills/influence.tres" id="27_hes6p"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/skills/performance.tres" id="28_f88ay"]
+[ext_resource type="Script" path="res://addons/facets/resources/talent_resource.gd" id="29_6kkqb"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/talents/second_look.tres" id="30_lb24t"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/talents/quiet_hands.tres" id="31_jpjji"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/talents/field_engineer.tres" id="32_dtdd0"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/talents/steady_voice.tres" id="33_yqbdk"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/talents/bargain_maker.tres" id="34_w07a0"]
+[ext_resource type="Resource" path="res://addons/facets/content/core/talents/trail_reader.tres" id="35_tuwsa"]
+
+[resource]
+script = ExtResource("15_s4jtt")
+pack_id = "facets.core"
+compatibility = "FACETS rules draft v0.1; Godot 4.6.3 baseline."
+skills = Array[ExtResource("16_oixec")]([ExtResource("17_xnkjq"), ExtResource("18_g7jsm"), ExtResource("19_q8jlr"), ExtResource("20_d5plf"), ExtResource("21_klss6"), ExtResource("22_w8v3e"), ExtResource("23_guaty"), ExtResource("24_ku3b4"), ExtResource("25_hueuu"), ExtResource("26_gjkor"), ExtResource("27_hes6p"), ExtResource("28_f88ay")])
+talents = Array[ExtResource("29_6kkqb")]([ExtResource("30_lb24t"), ExtResource("31_jpjji"), ExtResource("32_dtdd0"), ExtResource("33_yqbdk"), ExtResource("34_w07a0"), ExtResource("35_tuwsa")])
+conditions = Array[ExtResource("9_5r64k")]([ExtResource("10_34f74"), ExtResource("11_ucjpp"), ExtResource("12_slftb"), ExtResource("13_3alnj"), ExtResource("14_8ed1w")])
+archetypes = Array[ExtResource("3_ijlpy")]([ExtResource("4_fia85"), ExtResource("5_w8sw5"), ExtResource("6_0cbq3"), ExtResource("7_oeim6"), ExtResource("8_dlb1l")])
+admission_policy = ExtResource("2_owh5e")

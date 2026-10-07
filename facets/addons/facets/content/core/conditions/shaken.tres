@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FacetsConditionResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/condition_resource.gd" id="1_ym8sq"]
+
+[resource]
+script = ExtResource("1_ym8sq")
+id = "core.shaken"
+display_name = "Shaken"
+description = "Rattled by fear. -1 to Empathy and Tenacity checks."
+applies_to_facets = Array[String](["empathy", "tenacity"])
+penalty = -1
+removal_operation = "breather"

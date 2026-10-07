@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "note": "Standard creation: facets start at 2, +6 points, cap 4, total 18; skills spend exactly 12, max 2 each; exactly two talents. expected_errors lists codes that must be present.",
+  "cases": [
+    {
+      "name": "mara_vale_source_build",
+      "build": {
+        "facets": {"force": 2, "agility": 4, "cunning": 3, "empathy": 3, "tenacity": 2, "sense": 4},
+        "skills": {"stealth": 2, "investigation": 2, "influence": 2, "technology": 2, "athletics": 1, "sleight": 1, "survival": 1, "medicine": 1},
+        "talents": ["core.second_look", "core.field_engineer"],
+        "capabilities": []
+      },
+      "valid": true,
+      "expected_errors": []
+    },
+    {
+      "name": "iris_kade_empathy_tenacity",
+      "build": {
+        "facets": {"force": 2, "agility": 2, "cunning": 3, "empathy": 4, "tenacity": 4, "sense": 3},
+        "skills": {"influence": 2, "medicine": 2, "performance": 2, "survival": 2, "investigation": 1, "athletics": 1, "fighting": 1, "craft": 1},
+        "talents": ["core.steady_voice", "core.bargain_maker"],
+        "capabilities": []
+      },
+      "valid": true,
+      "expected_errors": []
+    },
+    {
+      "name": "facet_overspend",
+      "build": {
+        "facets": {"force": 3, "agility": 4, "cunning": 3, "empathy": 3, "tenacity": 2, "sense": 4},
+        "skills": {"stealth": 2, "investigation": 2, "influence": 2, "technology": 2, "athletics": 1, "sleight": 1, "survival": 1, "medicine": 1},
+        "talents": ["core.second_look", "core.field_engineer"],
+        "capabilities": []
+      },
+      "valid": false,
+      "expected_errors": ["BUDGET"]
+    },
+    {
+      "name": "facet_above_creation_cap",
+      "build": {
+        "facets": {"force": 2, "agility": 5, "cunning": 2, "empathy": 3, "tenacity": 2, "sense": 4},
+        "skills": {"stealth": 2, "investigation": 2, "influence": 2, "technology": 2, "athletics": 1, "sleight": 1, "survival": 1, "medicine": 1},
+        "talents": ["core.second_look", "core.field_engineer"],
+        "capabilities": []
+      },
+      "valid": false,
+      "expected_errors": ["OUT_OF_RANGE"]
+    },
+    {
+      "name": "lowered_facet_refund",
+      "note": "Lowering force to 1 to buy another point elsewhere is rejected even though the total is 18.",
+      "build": {
+        "facets": {"force": 1, "agility": 4, "cunning": 4, "empathy": 3, "tenacity": 2, "sense": 4},
+        "skills": {"stealth": 2, "investigation": 2, "influence": 2, "technology": 2, "athletics": 1, "sleight": 1, "survival": 1, "medicine": 1},
+        "talents": ["core.second_look", "core.field_engineer"],
+        "capabilities": []
+      },
+      "valid": false,
+      "expected_errors": ["OUT_OF_RANGE"]
+    },
+    {
+      "name": "negative_skill_rank",
+      "build": {
+        "facets": {"force": 2, "agility": 4, "cunning": 3, "empathy": 3, "tenacity": 2, "sense": 4},
+        "skills": {"stealth": 2, "investigation": 2, "influence": 2, "technology": 2, "athletics": 2, "sleight": 2, "survival": 1, "medicine": -1},
+        "talents": ["core.second_look", "core.field_engineer"],
+        "capabilities": []
+      },
+      "valid": false,
+      "expected_errors": ["OUT_OF_RANGE"]
+    },
+    {
+      "name": "skill_overspend",
+      "build": {
+        "facets": {"force": 2, "agility": 4, "cunning": 3, "empathy": 3, "tenacity": 2, "sense": 4},
+        "skills": {"stealth": 2, "investigation": 2, "influence": 2, "technology": 2, "athletics": 2, "sleight": 1, "survival": 1, "medicine": 1},
+        "talents": ["core.second_look", "core.field_engineer"],
+        "capabilities": []
+      },
+      "valid": false,
+      "expected_errors": ["BUDGET"]
+    },
+    {
+      "name": "skill_above_creation_cap",
+      "build": {
+        "facets": {"force": 2, "agility": 4, "cunning": 3, "empathy": 3, "tenacity": 2, "sense": 4},
+        "skills": {"stealth": 3, "investigation": 2, "influence": 2, "technology": 2, "athletics": 1, "sleight": 1, "survival": 1},
+        "talents": ["core.second_look", "core.field_engineer"],
+        "capabilities": []
+      },
+      "valid": false,
+      "expected_errors": ["OUT_OF_RANGE"]
+    },
+    {
+      "name": "unknown_skill",
+      "build": {
+        "facets": {"force": 2, "agility": 4, "cunning": 3, "empathy": 3, "tenacity": 2, "sense": 4},
+        "skills": {"stealth": 2, "investigation": 2, "influence": 2, "technology": 2, "athletics": 1, "sleight": 1, "survival": 1, "hacking": 1},
+        "talents": ["core.second_look", "core.field_engineer"],
+        "capabilities": []
+      },
+      "valid": false,
+      "expected_errors": ["UNKNOWN_ID"]
+    },
+    {
+      "name": "three_talents",
+      "build": {
+        "facets": {"force": 2, "agility": 4, "cunning": 3, "empathy": 3, "tenacity": 2, "sense": 4},
+        "skills": {"stealth": 2, "investigation": 2, "influence": 2, "technology": 2, "athletics": 1, "sleight": 1, "survival": 1, "medicine": 1},
+        "talents": ["core.second_look", "core.field_engineer", "core.trail_reader"],
+        "capabilities": []
+      },
+      "valid": false,
+      "expected_errors": ["BUDGET"]
+    },
+    {
+      "name": "duplicate_non_repeatable_talent",
+      "build": {
+        "facets": {"force": 2, "agility": 4, "cunning": 3, "empathy": 3, "tenacity": 2, "sense": 4},
+        "skills": {"stealth": 2, "investigation": 2, "influence": 2, "technology": 2, "athletics": 1, "sleight": 1, "survival": 1, "medicine": 1},
+        "talents": ["core.second_look", "core.second_look"],
+        "capabilities": []
+      },
+      "valid": false,
+      "expected_errors": ["DUPLICATE"]
+    },
+    {
+      "name": "talent_prerequisite_unmet",
+      "note": "Steady Voice needs Empathy 3; Mara's alternate build has Empathy 2.",
+      "build": {
+        "facets": {"force": 2, "agility": 4, "cunning": 4, "empathy": 2, "tenacity": 2, "sense": 4},
+        "skills": {"stealth": 2, "investigation": 2, "influence": 2, "technology": 2, "athletics": 1, "sleight": 1, "survival": 1, "medicine": 1},
+        "talents": ["core.second_look", "core.steady_voice"],
+        "capabilities": []
+      },
+      "valid": false,
+      "expected_errors": ["PREREQUISITE"]
+    },
+    {
+      "name": "unadmitted_capability",
+      "build": {
+        "facets": {"force": 2, "agility": 4, "cunning": 3, "empathy": 3, "tenacity": 2, "sense": 4},
+        "skills": {"stealth": 2, "investigation": 2, "influence": 2, "technology": 2, "athletics": 1, "sleight": 1, "survival": 1, "medicine": 1},
+        "talents": ["core.second_look", "core.field_engineer"],
+        "capabilities": ["ext.telekinesis"]
+      },
+      "valid": false,
+      "expected_errors": ["NOT_AUTHORIZED"]
+    }
+  ]
+}

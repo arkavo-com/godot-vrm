@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FacetsConditionResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/condition_resource.gd" id="1_nhqif"]
+
+[resource]
+script = ExtResource("1_nhqif")
+id = "core.injured"
+display_name = "Injured"
+description = "Harm 3 or more. -1 to physical checks."
+applicability_tags = Array[String](["checks", "physical"])
+applies_to_facets = Array[String](["force", "agility"])
+penalty = -1
+removal_operation = "harm_below_3"

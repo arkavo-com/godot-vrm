@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="FacetsTalentResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/talent_resource.gd" id="1_2bxig"]
+
+[resource]
+script = ExtResource("1_2bxig")
+id = "core.quiet_hands"
+display_name = "Quiet Hands"
+description = "On a strong success with Stealth or Sleight, leaving no trace may replace the strong benefit."
+hook_id = "quiet_hands"
+parameters = {
+"benefit_id": "quiet_hands.no_trace",
+"effects": [{
+"label": "No trace left",
+"op": "actor.flag",
+"params": {
+"key": "left_no_trace",
+"value": true
+}
+}],
+"label": "Quiet Hands: leave no trace of the attempt",
+"skills": ["stealth", "sleight"]
+}
+prerequisite_skills = {
+"sleight": 1
+}

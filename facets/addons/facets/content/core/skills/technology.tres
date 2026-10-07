@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="FacetsSkillResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/skill_resource.gd" id="1_4uw3t"]
+
+[resource]
+script = ExtResource("1_4uw3t")
+id = "technology"
+display_name = "Technology"
+description = "Operating, bypassing and repairing devices and systems."

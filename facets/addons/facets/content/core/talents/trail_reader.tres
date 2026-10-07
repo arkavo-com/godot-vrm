@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="FacetsTalentResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/talent_resource.gd" id="1_onnlg"]
+
+[resource]
+script = ExtResource("1_onnlg")
+id = "core.trail_reader"
+display_name = "Trail Reader"
+description = "On a success with Survival or Investigation, also learn one permitted fact the evidence supports. Once per scene."
+hook_id = "trail_reader"
+parameters = {
+"skills": ["survival", "investigation"],
+"uses_per_scene": 1
+}
+prerequisite_skills = {
+"survival": 1
+}

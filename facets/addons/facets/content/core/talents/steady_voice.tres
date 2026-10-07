@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="FacetsTalentResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/talent_resource.gd" id="1_c328m"]
+
+[resource]
+script = ExtResource("1_c328m")
+id = "core.steady_voice"
+display_name = "Steady Voice"
+description = "Spend an action to remove 2 strain from a willing ally who can hear you after a fear setback. Once per scene."
+hook_id = "steady_voice"
+parameters = {
+"strain_removed": 2,
+"uses_per_scene": 1
+}
+prerequisite_facets = {
+"empathy": 3
+}

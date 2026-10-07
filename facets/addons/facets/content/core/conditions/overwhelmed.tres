@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FacetsConditionResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/condition_resource.gd" id="1_3c714"]
+
+[resource]
+script = ExtResource("1_3c714")
+id = "core.overwhelmed"
+display_name = "Overwhelmed"
+description = "Strain has reached capacity. -1 to checks; no pushing and no combat reactions. Removed when strain falls below capacity."
+penalty = -1
+restrictions = Array[String](["no_push", "no_reactions", "limited_turn"])
+removal_operation = "strain_below_capacity"

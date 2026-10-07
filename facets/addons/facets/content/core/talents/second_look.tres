@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FacetsTalentResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/talent_resource.gd" id="1_hb08a"]
+
+[resource]
+script = ExtResource("1_hb08a")
+id = "core.second_look"
+display_name = "Second Look"
+description = "After a failed attempt, try again once per scene by examining an alternate authored evidence source and spending an extra interval. Never a free unchanged reroll."
+hook_id = "second_look"
+parameters = {
+"interval": 1,
+"skills": ["investigation"],
+"uses_per_scene": 1
+}
+prerequisite_skills = {
+"investigation": 1
+}

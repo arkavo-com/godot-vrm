@@ -1,0 +1,336 @@
+{
+ "cases": [
+  {
+   "check": {
+    "allows_costly_success": true,
+    "facet": 3,
+    "skill": 2,
+    "target": 13
+   },
+   "dice": [
+    3,
+    3
+   ],
+   "expected": {
+    "band": "costly_offer",
+    "margin": -2,
+    "total": 11
+   },
+   "modifier_sum": 0,
+   "name": "spec_api_example",
+   "note": "Spec section 5 example: total 11, margin -2, costly offer",
+   "push": false,
+   "resolve": false
+  },
+  {
+   "check": {
+    "allows_costly_success": true,
+    "facet": 3,
+    "skill": 2,
+    "target": 13
+   },
+   "dice": [
+    3,
+    3
+   ],
+   "expected": {
+    "band": "success",
+    "margin": 0,
+    "total": 13
+   },
+   "modifier_sum": 0,
+   "name": "mara_branch_c_resolve",
+   "note": "Branch C: +2 Resolve gives total 13, clean success",
+   "push": false,
+   "resolve": true
+  },
+  {
+   "check": {
+    "allows_costly_success": true,
+    "facet": 3,
+    "skill": 2,
+    "target": 13
+   },
+   "dice": [
+    1,
+    4
+   ],
+   "expected": {
+    "band": "failure",
+    "margin": -3,
+    "total": 10
+   },
+   "modifier_sum": 0,
+   "name": "margin_minus_3",
+   "note": "",
+   "push": false,
+   "resolve": false
+  },
+  {
+   "check": {
+    "allows_costly_success": true,
+    "facet": 3,
+    "skill": 2,
+    "target": 13
+   },
+   "dice": [
+    2,
+    4
+   ],
+   "expected": {
+    "band": "costly_offer",
+    "margin": -2,
+    "total": 11
+   },
+   "modifier_sum": 0,
+   "name": "margin_minus_2",
+   "note": "",
+   "push": false,
+   "resolve": false
+  },
+  {
+   "check": {
+    "allows_costly_success": true,
+    "facet": 3,
+    "skill": 2,
+    "target": 13
+   },
+   "dice": [
+    3,
+    4
+   ],
+   "expected": {
+    "band": "costly_offer",
+    "margin": -1,
+    "total": 12
+   },
+   "modifier_sum": 0,
+   "name": "margin_minus_1",
+   "note": "",
+   "push": false,
+   "resolve": false
+  },
+  {
+   "check": {
+    "allows_costly_success": true,
+    "facet": 3,
+    "skill": 2,
+    "target": 13
+   },
+   "dice": [
+    4,
+    4
+   ],
+   "expected": {
+    "band": "success",
+    "margin": 0,
+    "total": 13
+   },
+   "modifier_sum": 0,
+   "name": "margin_0",
+   "note": "",
+   "push": false,
+   "resolve": false
+  },
+  {
+   "check": {
+    "allows_costly_success": true,
+    "facet": 3,
+    "skill": 2,
+    "target": 13
+   },
+   "dice": [
+    5,
+    6
+   ],
+   "expected": {
+    "band": "success",
+    "margin": 3,
+    "total": 16
+   },
+   "modifier_sum": 0,
+   "name": "margin_3",
+   "note": "",
+   "push": false,
+   "resolve": false
+  },
+  {
+   "check": {
+    "allows_costly_success": true,
+    "facet": 3,
+    "skill": 2,
+    "target": 13
+   },
+   "dice": [
+    6,
+    6
+   ],
+   "expected": {
+    "band": "strong_success",
+    "margin": 4,
+    "total": 17
+   },
+   "modifier_sum": 0,
+   "name": "margin_4",
+   "note": "",
+   "push": false,
+   "resolve": false
+  },
+  {
+   "check": {
+    "allows_costly_success": false,
+    "facet": 3,
+    "skill": 2,
+    "target": 13
+   },
+   "dice": [
+    2,
+    4
+   ],
+   "expected": {
+    "band": "failure",
+    "margin": -2,
+    "total": 11
+   },
+   "modifier_sum": 0,
+   "name": "margin_minus_2_costly_disabled",
+   "note": "",
+   "push": false,
+   "resolve": false
+  },
+  {
+   "check": {
+    "allows_costly_success": true,
+    "facet": 5,
+    "skill": 4,
+    "target": 9
+   },
+   "dice": [
+    1,
+    1
+   ],
+   "expected": {
+    "band": "success",
+    "margin": 2,
+    "total": 11
+   },
+   "modifier_sum": 0,
+   "name": "snake_eyes_no_critical",
+   "note": "Natural 2 is not an automatic failure",
+   "push": false,
+   "resolve": false
+  },
+  {
+   "check": {
+    "allows_costly_success": true,
+    "facet": 2,
+    "skill": 0,
+    "target": 19
+   },
+   "dice": [
+    6,
+    6
+   ],
+   "expected": {
+    "band": "failure",
+    "margin": -5,
+    "total": 14
+   },
+   "modifier_sum": 0,
+   "name": "boxcars_no_critical",
+   "note": "Natural 12 is not an automatic success",
+   "push": false,
+   "resolve": false
+  },
+  {
+   "check": {
+    "allows_costly_success": true,
+    "facet": 3,
+    "skill": 2,
+    "target": 13
+   },
+   "dice": [
+    3,
+    3
+   ],
+   "expected": {
+    "band": "success",
+    "margin": 1,
+    "total": 14
+   },
+   "modifier_sum": 5,
+   "name": "modifier_cap_positive",
+   "note": "",
+   "push": false,
+   "resolve": false
+  },
+  {
+   "check": {
+    "allows_costly_success": true,
+    "facet": 3,
+    "skill": 2,
+    "target": 13
+   },
+   "dice": [
+    3,
+    3
+   ],
+   "expected": {
+    "band": "failure",
+    "margin": -5,
+    "total": 8
+   },
+   "modifier_sum": -6,
+   "name": "modifier_cap_negative",
+   "note": "",
+   "push": false,
+   "resolve": false
+  },
+  {
+   "check": {
+    "allows_costly_success": true,
+    "facet": 3,
+    "skill": 2,
+    "target": 13
+   },
+   "dice": [
+    3,
+    3
+   ],
+   "expected": {
+    "band": "success",
+    "margin": 2,
+    "total": 15
+   },
+   "modifier_sum": 4,
+   "name": "push_outside_cap",
+   "note": "",
+   "push": true,
+   "resolve": false
+  },
+  {
+   "check": {
+    "allows_costly_success": true,
+    "facet": 3,
+    "skill": 2,
+    "target": 13
+   },
+   "dice": [
+    2,
+    2
+   ],
+   "expected": {
+    "band": "success",
+    "margin": 2,
+    "total": 15
+   },
+   "modifier_sum": 3,
+   "name": "push_and_resolve_outside_cap",
+   "note": "",
+   "push": true,
+   "resolve": true
+  }
+ ],
+ "generator": "tools/generate_rule_fixtures.py",
+ "schema_version": 1
+}

@@ -1,0 +1,7859 @@
+{
+ "generator": "tools/generate_rule_fixtures.py",
+ "rows": [
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 21,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 21,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 15,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 1,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 6,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 0,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 3,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 21,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 15,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 15,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 3,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 10,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 15,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 21,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 21,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 0,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 15,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 15,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 3,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 10,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 0,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 3,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 0,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 1,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 15,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 21,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 3,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 10,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 1,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 6,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 21,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 21,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 15,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 21,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 15,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 1,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 21,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 3,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 10,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 1,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 6,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 0,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 1,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 26,
+    "success": 10
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 26,
+    "success": 10
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 21,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 21,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 15,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 1,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 6,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 0,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 3,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 21,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 15,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 15,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 3,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 10,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 15,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 21,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 21,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 2,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 2,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 3,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 15,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 3,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 1,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 3,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 6,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 3,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 0,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 3,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 3,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 3,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 26,
+    "success": 10
+   },
+   "facet": 3,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 26,
+    "success": 10
+   },
+   "facet": 3,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 30,
+    "success": 6
+   },
+   "facet": 3,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 30,
+    "success": 6
+   },
+   "facet": 3,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 15,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 3,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 3,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 3,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 15,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 3,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 3,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 3,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 10,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 3,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 0,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 3,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 3,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 3,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 0,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 3,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 1,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 3,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 3,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 3,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 15,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 3,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 3,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 3,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 21,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 3,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 3,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 3,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 10,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 3,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 1,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 3,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 6,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 3,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 3,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 3,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 3,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 3,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 21,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 3,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 3,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 3,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 21,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 3,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 3,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 15,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 3,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 3,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 3,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 3,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 3,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 3,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 3,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 21,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 3,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 3,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 15,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 3,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 3,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 3,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 3,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 3,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 3,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 3,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 3,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 3,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 3,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 3,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 3,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 3,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 10,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 0,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 3,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 0,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 1,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 30,
+    "success": 6
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 30,
+    "success": 6
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 33,
+    "success": 3
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 33,
+    "success": 3
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 21,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 3,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 10,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 1,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 6,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 0,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 1,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 26,
+    "success": 10
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 26,
+    "success": 10
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 21,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 21,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 15,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 1,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 6,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 0,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 3,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 21,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 15,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 15,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 3,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 10,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 15,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 21,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 21,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 2,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 1,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 6,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 0,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 1,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 26,
+    "success": 10
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 26,
+    "success": 10
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 33,
+    "success": 3
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 33,
+    "success": 3
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 35,
+    "success": 1
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 35,
+    "success": 1
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 15,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 1,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 6,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 0,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 3,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 26,
+    "success": 10
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 26,
+    "success": 10
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 30,
+    "success": 6
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 30,
+    "success": 6
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 15,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 15,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 3,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 10,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 0,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 3,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 0,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 1,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 15,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 21,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 3,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 10,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 1,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 6,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 21,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 21,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 15,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 4,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 4,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 4,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 21,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 4,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 15,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 4,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 0,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 3,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 26,
+    "success": 10
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 26,
+    "success": 10
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 30,
+    "success": 6
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 30,
+    "success": 6
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 35,
+    "success": 1
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 35,
+    "success": 1
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 36,
+    "success": 0
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 36,
+    "success": 0
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 3,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 10,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 0,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 3,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 0,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 1,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 30,
+    "success": 6
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 30,
+    "success": 6
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 33,
+    "success": 3
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 33,
+    "success": 3
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 21,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 3,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 10,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 1,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 6,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 0,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 1,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 26,
+    "success": 10
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 26,
+    "success": 10
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 21,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 21,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 15,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 1,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 6,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 0,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 3,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 21,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 15,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 15,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 3,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 10,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 35,
+    "strong_success": 0,
+    "success": 1
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 15,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 21,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 3,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 0,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 1,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 30,
+    "success": 6
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 30,
+    "success": 6
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 33,
+    "success": 3
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 33,
+    "success": 3
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 36,
+    "success": 0
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 36,
+    "success": 0
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 36,
+    "success": 0
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 36,
+    "success": 0
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 9,
+   "tier": "favorable"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 1,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 6,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 0,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 1,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 26,
+    "success": 10
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 26,
+    "success": 10
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 33,
+    "success": 3
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 33,
+    "success": 3
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 35,
+    "success": 1
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 35,
+    "success": 1
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 11,
+   "tier": "standard"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 15,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 1,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 6,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 0,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 3,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 26,
+    "success": 10
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 26,
+    "success": 10
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 30,
+    "success": 6
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 0,
+    "strong_success": 30,
+    "success": 6
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 13,
+   "tier": "demanding"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 15,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 15,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 3,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 10,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 0,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 3,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 0,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 1,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 15,
+   "tier": "severe"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 15,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 10
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 21,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 3,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 10,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 1,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 6,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 17,
+   "tier": "extreme"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 36,
+    "strong_success": 0,
+    "success": 0
+   },
+   "facet": 5,
+   "modifier_sum": -4,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 26,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 33,
+    "strong_success": 0,
+    "success": 3
+   },
+   "facet": 5,
+   "modifier_sum": -1,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 21,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 30,
+    "strong_success": 0,
+    "success": 6
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 21,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": 2,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": false,
+   "expected": {
+    "costly_offer": 0,
+    "failure": 15,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": 5,
+   "push": false,
+   "resolve": false,
+   "skill": 4,
+   "target": 19,
+   "tier": "legendary"
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 3,
+   "modifier_sum": 0,
+   "push": true,
+   "resolve": false,
+   "skill": 2,
+   "target": 13,
+   "tier": ""
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 1,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": true,
+   "resolve": false,
+   "skill": 3,
+   "target": 14,
+   "tier": ""
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 11,
+    "failure": 10,
+    "strong_success": 1,
+    "success": 14
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": true,
+   "resolve": false,
+   "skill": 0,
+   "target": 11,
+   "tier": ""
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 3,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 3,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": true,
+   "skill": 2,
+   "target": 13,
+   "tier": ""
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 3,
+    "failure": 0,
+    "strong_success": 15,
+    "success": 18
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": true,
+   "skill": 3,
+   "target": 14,
+   "tier": ""
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 9,
+    "failure": 6,
+    "strong_success": 3,
+    "success": 18
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": false,
+   "resolve": true,
+   "skill": 0,
+   "target": 11,
+   "tier": ""
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 5,
+    "failure": 1,
+    "strong_success": 10,
+    "success": 20
+   },
+   "facet": 3,
+   "modifier_sum": 0,
+   "push": true,
+   "resolve": true,
+   "skill": 2,
+   "target": 13,
+   "tier": ""
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 1,
+    "failure": 0,
+    "strong_success": 21,
+    "success": 14
+   },
+   "facet": 5,
+   "modifier_sum": 0,
+   "push": true,
+   "resolve": true,
+   "skill": 3,
+   "target": 14,
+   "tier": ""
+  },
+  {
+   "allows_costly_success": true,
+   "expected": {
+    "costly_offer": 7,
+    "failure": 3,
+    "strong_success": 6,
+    "success": 20
+   },
+   "facet": 2,
+   "modifier_sum": 0,
+   "push": true,
+   "resolve": true,
+   "skill": 0,
+   "target": 11,
+   "tier": ""
+  }
+ ],
+ "schema_version": 1,
+ "spec_fixture": {
+  "facet": 5,
+  "modifier_sum": 0,
+  "name": "pitch_correction_cunning5_technology3_vs14",
+  "note": "Spec section 7 fixture; advanced build (facet 5, skill 3 exceed standard creation).",
+  "percent_with_costly": {
+   "costly_offer": "19.44%",
+   "failure": "8.33%",
+   "strong_success": "16.67%",
+   "success": "55.56%"
+  },
+  "percent_without_costly": {
+   "failure": "27.78%"
+  },
+  "skill": 3,
+  "target": 14,
+  "with_costly": {
+   "costly_offer": 7,
+   "failure": 3,
+   "strong_success": 6,
+   "success": 20
+  },
+  "without_costly": {
+   "costly_offer": 0,
+   "failure": 10,
+   "strong_success": 6,
+   "success": 20
+  }
+ }
+}

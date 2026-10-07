@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="FacetsSkillResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/skill_resource.gd" id="1_2d377"]
+
+[resource]
+script = ExtResource("1_2d377")
+id = "fighting"
+display_name = "Fighting"
+description = "Close combat with hands or melee weapons, and close defense."

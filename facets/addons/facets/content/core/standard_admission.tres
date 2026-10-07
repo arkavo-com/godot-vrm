@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="FacetsAdmissionPolicy" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/admission_policy.gd" id="1_xjoek"]
+
+[resource]
+script = ExtResource("1_xjoek")

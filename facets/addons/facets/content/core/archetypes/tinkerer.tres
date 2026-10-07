@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="FacetsArchetypeResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/archetype_resource.gd" id="1_2qm1o"]
+
+[resource]
+script = ExtResource("1_2qm1o")
+id = "core.archetype.tinkerer"
+display_name = "Tinkerer"
+description = "Fixes, bypasses and improvises with whatever is at hand."
+facets = {
+"agility": 3,
+"cunning": 4,
+"empathy": 2,
+"force": 2,
+"sense": 4,
+"tenacity": 3
+}
+skills = {
+"athletics": 1,
+"craft": 2,
+"investigation": 2,
+"medicine": 1,
+"sleight": 2,
+"stealth": 1,
+"survival": 1,
+"technology": 2
+}
+talents = Array[String](["core.field_engineer", "core.quiet_hands"])

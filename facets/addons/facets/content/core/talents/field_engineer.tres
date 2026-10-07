@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="FacetsTalentResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/talent_resource.gd" id="1_i627v"]
+
+[resource]
+script = ExtResource("1_i627v")
+id = "core.field_engineer"
+display_name = "Field Engineer"
+description = "Substitute an authored consumable for a required tool on a Technology or Craft action. The improvised repair expires at scene end."
+hook_id = "field_engineer"
+parameters = {
+"skills": ["technology", "craft"],
+"uses_per_scene": 1
+}
+prerequisite_skills = {
+"technology": 1
+}

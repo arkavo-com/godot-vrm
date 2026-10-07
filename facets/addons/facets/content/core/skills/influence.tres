@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="FacetsSkillResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/skill_resource.gd" id="1_empkl"]
+
+[resource]
+script = ExtResource("1_empkl")
+id = "influence"
+display_name = "Influence"
+description = "Persuasion, negotiation, intimidation and reading motives."

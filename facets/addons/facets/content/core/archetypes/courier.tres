@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="FacetsArchetypeResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/archetype_resource.gd" id="1_3jh1e"]
+
+[resource]
+script = ExtResource("1_3jh1e")
+id = "core.archetype.courier"
+display_name = "Courier"
+description = "Fast, quiet and hard to pin down."
+facets = {
+"agility": 4,
+"cunning": 3,
+"empathy": 2,
+"force": 2,
+"sense": 4,
+"tenacity": 3
+}
+skills = {
+"athletics": 2,
+"fighting": 1,
+"influence": 1,
+"investigation": 1,
+"medicine": 1,
+"sleight": 1,
+"stealth": 2,
+"survival": 2,
+"technology": 1
+}
+talents = Array[String](["core.trail_reader", "core.quiet_hands"])
