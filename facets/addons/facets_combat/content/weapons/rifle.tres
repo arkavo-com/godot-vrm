@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="FacetsWeaponResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/approach_resource.gd" id="1_oy2mf"]
+[ext_resource type="Script" path="res://addons/facets_combat/weapon_resource.gd" id="2_t8gh3"]
+
+[sub_resource type="Resource" id="Resource_8b542"]
+script = ExtResource("1_oy2mf")
+id = "aim"
+facet = "sense"
+skill = "marksmanship"
+
+[resource]
+script = ExtResource("2_t8gh3")
+id = "weapon.rifle"
+display_name = "Long rifle"
+range_band = "long"
+harm_class = "heavy"
+ammo_type = "ammo.rifle"
+approaches = Array[ExtResource("1_oy2mf")]([SubResource("Resource_8b542")])

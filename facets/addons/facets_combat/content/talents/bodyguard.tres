@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FacetsTalentResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/talent_resource.gd" id="1_y45l1"]
+
+[resource]
+script = ExtResource("1_y45l1")
+id = "combat.bodyguard"
+display_name = "Bodyguard"
+description = "Use your reaction to take a hit meant for an ally in your zone along a clear path. Your armor applies. Once per round; interceptions never chain."
+hook_id = "bodyguard"
+parameters = {
+"uses_per_round": 1
+}
+prerequisite_skills = {
+"fighting": 1
+}
+usage_scope = "per_round"
+package = "combat"

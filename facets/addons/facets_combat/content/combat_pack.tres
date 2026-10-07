@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="FacetsRulesPack" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/action_resource.gd" id="1_my8gw"]
+[ext_resource type="Script" path="res://addons/facets/resources/archetype_resource.gd" id="2_3itr0"]
+[ext_resource type="Script" path="res://addons/facets/resources/condition_resource.gd" id="3_mmtbo"]
+[ext_resource type="Script" path="res://addons/facets/resources/rules_pack.gd" id="4_mu1rp"]
+[ext_resource type="Script" path="res://addons/facets/resources/skill_resource.gd" id="5_yu7f3"]
+[ext_resource type="Script" path="res://addons/facets/resources/talent_resource.gd" id="6_kqbkf"]
+[ext_resource type="Resource" path="res://addons/facets_combat/content/talents/bodyguard.tres" id="7_2ly8b"]
+[ext_resource type="Resource" path="res://addons/facets_combat/content/talents/last_reserve.tres" id="8_u1yve"]
+
+[resource]
+script = ExtResource("4_mu1rp")
+pack_id = "facets.combat"
+dependencies = {
+"facets.core": "0.1.0"
+}
+compatibility = "Optional zone combat for FACETS 0.1.0."
+talents = Array[ExtResource("6_kqbkf")]([ExtResource("7_2ly8b"), ExtResource("8_u1yve")])

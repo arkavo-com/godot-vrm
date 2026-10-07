@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="FacetsWeaponResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/approach_resource.gd" id="1_pda1p"]
+[ext_resource type="Script" path="res://addons/facets_combat/weapon_resource.gd" id="2_wj7kb"]
+
+[sub_resource type="Resource" id="Resource_qis7l"]
+script = ExtResource("1_pda1p")
+id = "aim"
+facet = "sense"
+skill = "marksmanship"
+
+[sub_resource type="Resource" id="Resource_x6s1o"]
+script = ExtResource("1_pda1p")
+id = "snap"
+facet = "agility"
+skill = "marksmanship"
+
+[resource]
+script = ExtResource("2_wj7kb")
+id = "weapon.pistol"
+display_name = "Pistol"
+range_band = "ranged"
+ammo_type = "ammo.9mm"
+approaches = Array[ExtResource("1_pda1p")]([SubResource("Resource_qis7l"), SubResource("Resource_x6s1o")])

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="FacetsTalentResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/talent_resource.gd" id="1_lhwjc"]
+
+[resource]
+script = ExtResource("1_lhwjc")
+id = "combat.last_reserve"
+display_name = "Last Reserve"
+description = "While Overwhelmed, take one normal turn (move and action) once per scene. It does not restore your reaction or let you act while Incapacitated."
+hook_id = "last_reserve"
+parameters = {
+"uses_per_scene": 1
+}
+prerequisite_facets = {
+"tenacity": 3
+}
+package = "combat"

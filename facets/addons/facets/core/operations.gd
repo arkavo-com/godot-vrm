@@ -241,6 +241,7 @@ func _register_core_effects() -> void:
 	register(KIND_EFFECT, "actor.flag", 1, {"key": "string", "value": "scalar", "target": "string?"}, _eff_actor_flag, "Set an actor flag.")
 	register(KIND_EFFECT, "bond.adjust", 1, {"other_id": "string", "dimension": "string", "amount": "int", "target": "string?"}, _eff_bond_adjust, "Adjust bond trust or affinity (-2..+2).")
 	register(KIND_EFFECT, "bond.add_obligation", 1, {"other_id": "string", "obligation": "string", "target": "string?"}, _eff_bond_obligation, "Record an obligation.")
+	register(KIND_EFFECT, "actor.harm", 1, {"amount": "int", "target": "string?"}, _eff_actor_harm, "Add or remove combat harm (Injured at 3, Incapacitated at 6).")
 	register(KIND_EFFECT, "actor.accomplishment", 1, {"text": "string", "target": "string?"}, _eff_accomplishment, "Record a profile accomplishment (survives journey resets).")
 	register(KIND_EFFECT, "npc.grant", 1, {"npc_id": "string", "topic": "string"}, _eff_npc_grant, "An NPC grants a request unless it is a hard refusal.")
 	register(KIND_EFFECT, "npc.disposition", 1, {"npc_id": "string", "key": "string", "value": "scalar"}, _eff_npc_disposition, "Change an NPC's disposition; never a player's beliefs.")
@@ -337,6 +338,13 @@ func _eff_bond_adjust(context: FacetsOpContext, txn: FacetsTxn, params: Dictiona
 func _eff_bond_obligation(context: FacetsOpContext, txn: FacetsTxn, params: Dictionary) -> bool:
 	for actor_id in _targets(context, txn, params):
 		txn.add_obligation(actor_id, params["other_id"], params["obligation"])
+	return not txn.failed()
+
+
+func _eff_actor_harm(context: FacetsOpContext, txn: FacetsTxn, params: Dictionary) -> bool:
+	for actor_id in _targets(context, txn, params):
+		txn.add_harm(actor_id, int(params["amount"]))
+		txn.sync_harm_conditions(actor_id)
 	return not txn.failed()
 
 
