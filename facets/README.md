@@ -20,8 +20,8 @@ independent of the VRM addon in the rest of this repository.
 
 ## Requirements
 
-* **Godot 4.6.3-stable** (the pinned baseline; no other version is claimed —
-  see `docs/compatibility.md`).
+* **Godot 4.6.3-stable** (the pinned baseline) or **4.7.2-stable** (also
+  tested in CI). No other version is claimed — see `docs/compatibility.md`.
 * Typed GDScript only: no engine fork, C++ module, GDExtension, mandatory
   autoload or scene tree.
 
@@ -68,8 +68,9 @@ Run the demo: open this folder in Godot 4.6.3 and press Play
 
 ## Developer commands
 
-Verified with the official `Godot_v4.6.3-stable_linux.x86_64` binary (use it
-wherever `godot` appears):
+Verified with the official `Godot_v4.6.3-stable_linux.x86_64` and
+`Godot_v4.7.2-stable_linux.x86_64` binaries (use one wherever `godot`
+appears):
 
 ```sh
 godot --headless --path . --editor --import                 # import / class cache
@@ -84,7 +85,7 @@ python3 tools/build_release.py                               # build/*.zip
 Filter tests with `-- --filter=t08`. The runner fails any test that raises an
 engine or script error, and fails the run if any acceptance group has no
 tests. CI (`.github/workflows/facets.yml` at the repository root) runs all of
-the above on the pinned binary.
+the above on the pinned 4.6.3 binary and the Godot steps again on 4.7.2.
 
 Latest verified results are in `docs/verification/` and summarized in
 `docs/milestones.md`.

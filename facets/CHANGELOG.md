@@ -39,3 +39,4 @@ First implementation of the FACETS v0.1 implementation brief.
   reference for probability fixtures.
 - Headless test runner (138 tests, T01–T30 and C01–C04), real-editor
   self-test, clean-install check, release archive builder, CI workflow.
+- Baseline Godot 4.6.3; also verified on Godot 4.7.2 (CI matrix).

@@ -13,6 +13,7 @@ binary (`4.6.3.stable.official.7d41c59c4`, Linux x86_64). Raw output is in
 | `05-clean-install.txt` | `tools/verify_clean_install.sh` | core runs in a blank project with the plugin disabled; enabling it loads without script errors |
 | `06-schemas.txt` | `python3 tools/check_schemas.py` | 8 schemas, 52 fixtures, 0 failures |
 | `07-release.txt` | `python3 tools/build_release.py` | four archives built; the example-project archive was also extracted, imported and passed the full suite |
+| `godot-4.7.2.txt` | import, parse check, tests, editor self-test and clean install on **Godot 4.7.2-stable** | all pass (138 tests, 14 self-test checks); no project files rewritten |
 
 The test runner fails a test on any engine or script error and fails the run
 when an acceptance group has no tests, so no gate is stubbed or skipped.
@@ -85,7 +86,7 @@ decisions (D-016 – D-018), pending the source draft.
 ## Remaining known limitations
 
 * Source rules draft missing; every *pending source* decision needs review.
-* Only Linux x86_64 tested. No macOS/Windows runs, no desktop export smoke
+* Only Linux x86_64 tested (Godot 4.6.3 and 4.7.2). No macOS/Windows runs, no desktop export smoke
   tests, no gameplay export test with the plugin disabled (export templates
   were not available).
 * No manual editor UX review.

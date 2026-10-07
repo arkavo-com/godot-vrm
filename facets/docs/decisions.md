@@ -7,7 +7,7 @@ placeholder; see its header) before FACETS is described as conformant.
 
 | ID | Decision | Why |
 |---|---|---|
-| D-001 | Baseline **Godot 4.6.3-stable** (official Linux x86_64 build, SHA-512 pinned in CI). No other version is claimed. | Brief §1: pin an exact stable patch. 4.6.3 was the latest 4.6 patch available on 2026-10-07. |
+| D-001 | Baseline **Godot 4.6.3-stable** (official Linux x86_64 build, SHA-512 pinned in CI). **4.7.2-stable** is an additional tested version, run in CI. No other version is claimed. | Brief §1: target 4.6 as the initial baseline and pin an exact stable patch (4.6.3 was the latest 4.6 patch on 2026-10-07); test another stable version only when claiming it. 4.7.2 was the latest stable release on that date and passes the full pipeline. |
 | D-002 | The six noncombat and two combat talents are implemented from the brief's one-line summaries (§3.4, §9). Their prerequisite values (e.g. Second Look needs Investigation 1, Steady Voice needs Empathy 3) are authored content in `.tres` files. **Pending source.** | The source §6 was not supplied. |
 | D-003 | `FacetsActionRequest` carries two optional fields beyond the brief's list: `talent_ids` (declared talent use, currently only `core.second_look`) and `evidence_id` (Second Look's alternate evidence). | Second Look needs an alternate authored evidence source chosen by the player. |
 | D-004 | Every state change is journaled as low-level ops (`set` with before/after, `append`, `remove`, `add_actor`, `note`). Replay applies these ops and checks every `before` value; it never consults dice or content scripts. | Brief §6: replay uses recorded dice and ordered effects; corrupt sequences stop with actionable errors. |
