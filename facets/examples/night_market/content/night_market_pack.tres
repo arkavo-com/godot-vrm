@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="FacetsRulesPack" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/action_resource.gd" id="1_jl88o"]
+[ext_resource type="Resource" path="res://examples/night_market/content/actions/ask_guard.tres" id="2_a534u"]
+[ext_resource type="Resource" path="res://examples/night_market/content/actions/bypass_controller.tres" id="3_41ndp"]
+[ext_resource type="Resource" path="res://examples/night_market/content/actions/rooftop_entry.tres" id="4_nqs72"]
+[ext_resource type="Resource" path="res://examples/night_market/content/actions/help_passenger.tres" id="5_hlnir"]
+[ext_resource type="Resource" path="res://examples/night_market/content/actions/deliver_package.tres" id="6_te10m"]
+[ext_resource type="Resource" path="res://examples/night_market/content/actions/slip_away.tres" id="7_8f4o3"]
+[ext_resource type="Resource" path="res://examples/night_market/content/actions/follow_lead.tres" id="8_cx3jp"]
+[ext_resource type="Resource" path="res://examples/night_market/content/actions/calm_doctor.tres" id="9_llwfv"]
+[ext_resource type="Script" path="res://addons/facets/resources/archetype_resource.gd" id="10_7h2ye"]
+[ext_resource type="Script" path="res://addons/facets/resources/condition_resource.gd" id="11_1ppg0"]
+[ext_resource type="Script" path="res://addons/facets/resources/rules_pack.gd" id="12_alwj2"]
+[ext_resource type="Script" path="res://addons/facets/resources/skill_resource.gd" id="13_v6l2d"]
+[ext_resource type="Script" path="res://addons/facets/resources/talent_resource.gd" id="14_pf7fr"]
+
+[resource]
+script = ExtResource("12_alwj2")
+pack_id = "examples.night_market"
+dependencies = {
+"facets.core": "0.1.0"
+}
+compatibility = "Night Market Delivery demo for FACETS 0.1.0."
+actions = Array[ExtResource("1_jl88o")]([ExtResource("2_a534u"), ExtResource("3_41ndp"), ExtResource("4_nqs72"), ExtResource("5_hlnir"), ExtResource("6_te10m"), ExtResource("7_8f4o3"), ExtResource("8_cx3jp"), ExtResource("9_llwfv")])

@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="FacetsCharacterResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/bond_resource.gd" id="1_hcnlv"]
+[ext_resource type="Script" path="res://addons/facets/resources/facet_set.gd" id="2_gj357"]
+[ext_resource type="Script" path="res://addons/facets/resources/identity_resource.gd" id="3_phud4"]
+[ext_resource type="Script" path="res://addons/facets/resources/identity_trigger_resource.gd" id="4_fbfjk"]
+[ext_resource type="Script" path="res://addons/facets/resources/operation_ref.gd" id="5_rokq5"]
+[ext_resource type="Script" path="res://addons/facets/resources/character_resource.gd" id="6_08cit"]
+
+[sub_resource type="Resource" id="Resource_2pqn6"]
+script = ExtResource("1_hcnlv")
+other_id = "demo.mara_vale"
+trust = 2
+affinity = 1
+
+[sub_resource type="Resource" id="Resource_04gmo"]
+script = ExtResource("2_gj357")
+cunning = 3
+empathy = 4
+tenacity = 4
+sense = 3
+
+[sub_resource type="Resource" id="Resource_miab7"]
+script = ExtResource("3_phud4")
+name = "Iris Kade"
+drive = "Keep the market's people safe"
+code = "Talk first, always"
+hindrance = "Cannot walk away from someone in pain"
+tell = "Hums when she is nervous"
+
+[sub_resource type="Resource" id="Resource_p2k8g"]
+script = ExtResource("5_rokq5")
+op = "world.clock_advance"
+params = {
+"amount": 1
+}
+label = "An hour passes"
+
+[sub_resource type="Resource" id="Resource_y54tm"]
+script = ExtResource("4_fbfjk")
+id = "iris.someone_in_pain"
+display_name = "Stop for someone in pain"
+description = "Someone nearby is hurt. Stop and treat them, whatever it costs your schedule."
+disadvantage_label = "Lose an hour treating strangers"
+disadvantage_effects = Array[ExtResource("5_rokq5")]([SubResource("Resource_p2k8g")])
+
+[resource]
+script = ExtResource("6_08cit")
+id = "demo.iris_kade"
+display_name = "Iris Kade"
+identity = SubResource("Resource_miab7")
+facet_set = SubResource("Resource_04gmo")
+skills = {
+"athletics": 1,
+"craft": 1,
+"fighting": 1,
+"influence": 2,
+"investigation": 1,
+"medicine": 2,
+"performance": 2,
+"survival": 2
+}
+talents = Array[String](["core.steady_voice", "core.bargain_maker"])
+bonds = Array[ExtResource("1_hcnlv")]([SubResource("Resource_2pqn6")])
+identity_triggers = Array[ExtResource("4_fbfjk")]([SubResource("Resource_y54tm")])
+items = {
+"item.med_kit": 1
+}

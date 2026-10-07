@@ -9,11 +9,28 @@ extends SceneTree
 ## test method named test_<group>_*.
 
 const CASES_DIR := "res://tests/cases"
+
+
+## Captures engine and script errors so a runtime error inside a test (which
+## GDScript does not propagate to the caller) fails that test.
+class ErrorCapture:
+	extends Logger
+	var errors: Array[String] = []
+
+	func _log_error(function: String, file: String, line: int, code: String, rationale: String, _editor_notify: bool, error_type: int, _script_backtraces: Array[ScriptBacktrace]) -> void:
+		if error_type == ERROR_TYPE_WARNING:
+			return
+		errors.append("%s:%d in %s: %s %s" % [file, line, function, code, rationale])
+
+	func _log_message(_message: String, _error: bool) -> void:
+		pass
 const REQUIRED_GROUPS_CORE := 30
 const REQUIRED_GROUPS_COMBAT := 4
 
 
 func _initialize() -> void:
+	# Let the root viewport enter the tree so UI smoke tests get _ready().
+	await process_frame
 	var filter := ""
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--filter="):
@@ -23,10 +40,15 @@ func _initialize() -> void:
 	var failed := 0
 	var total_assertions := 0
 	var groups := {}
+	var capture := ErrorCapture.new()
+	OS.add_logger(capture)
 	for path in _case_files():
+		capture.errors.clear()
 		var script := load(path) as GDScript
-		if script == null or not script.can_instantiate():
-			print("  FAIL %s :: could not load (parse error)" % path)
+		if script == null or not script.can_instantiate() or not capture.errors.is_empty():
+			print("  FAIL %s :: could not load" % path)
+			for message in capture.errors:
+				print("         - %s" % message)
 			failed += 1
 			continue
 		for method in script.get_script_method_list():
@@ -37,12 +59,17 @@ func _initialize() -> void:
 			if not filter.is_empty() and not name.contains(filter) and not path.contains(filter):
 				continue
 			groups[group] = int(groups.get(group, 0)) + 1
+			capture.errors.clear()
 			var instance: FacetsTestCase = script.new()
 			if instance.has_method("before_each"):
 				instance.call("before_each")
 			instance.call(name)
 			if instance.has_method("after_each"):
 				instance.call("after_each")
+			for message in capture.errors:
+				instance.failures.append("engine/script error: " + message)
+			if instance.assertions == 0 and instance.failures.is_empty():
+				instance.failures.append("test made no assertions")
 			total_assertions += instance.assertions
 			if instance.failures.is_empty():
 				passed += 1
@@ -62,6 +89,7 @@ func _initialize() -> void:
 			var group := "c%02d" % index
 			if not groups.has(group):
 				missing.append(group.to_upper())
+	OS.remove_logger(capture)
 	var elapsed := Time.get_ticks_msec() - started
 	print("")
 	print("FACETS tests: %d passed, %d failed, %d assertions, %d groups, %d ms (Godot %s)" % [passed, failed, total_assertions, groups.size(), elapsed, Engine.get_version_info().string])

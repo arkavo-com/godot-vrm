@@ -1,0 +1,84 @@
+[gd_resource type="Resource" script_class="FacetsActionResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/approach_resource.gd" id="1_1v071"]
+[ext_resource type="Script" path="res://addons/facets/resources/cost_option.gd" id="2_ak5rx"]
+[ext_resource type="Script" path="res://addons/facets/resources/operation_ref.gd" id="3_fx7ca"]
+[ext_resource type="Script" path="res://addons/facets/resources/benefit_option.gd" id="4_6ai7t"]
+[ext_resource type="Script" path="res://addons/facets/resources/action_resource.gd" id="5_xec7e"]
+
+[sub_resource type="Resource" id="Resource_227ry"]
+script = ExtResource("1_1v071")
+id = "sneak"
+facet = "agility"
+skill = "stealth"
+label = "Blend into the crowd"
+
+[sub_resource type="Resource" id="Resource_sh3ef"]
+script = ExtResource("3_fx7ca")
+op = "fact.set"
+params = {
+"fact_id": "fact.face_seen",
+"label": "Your face was seen",
+"value": true
+}
+label = "Someone saw your face"
+
+[sub_resource type="Resource" id="Resource_7e1dn"]
+script = ExtResource("2_ak5rx")
+id = "seen"
+label = "Someone glimpses your face"
+effects = Array[ExtResource("3_fx7ca")]([SubResource("Resource_sh3ef")])
+
+[sub_resource type="Resource" id="Resource_023ce"]
+script = ExtResource("3_fx7ca")
+op = "actor.strain"
+params = {
+"amount": 1
+}
+label = "You are followed for a while"
+
+[sub_resource type="Resource" id="Resource_ybvx8"]
+script = ExtResource("3_fx7ca")
+op = "require.scene"
+params = {
+"scene_id": "nm.clinic"
+}
+label = "At the clinic"
+
+[sub_resource type="Resource" id="Resource_a3xot"]
+script = ExtResource("3_fx7ca")
+op = "actor.zone"
+params = {
+"zone_id": "canal"
+}
+label = "You reach the canal path unseen"
+
+[resource]
+script = ExtResource("5_xec7e")
+id = "nm.slip_away"
+display_name = "Slip out past the fixer's watchers"
+description = "Leave the clinic without being followed."
+objective_id = "nm.objective.slip_away"
+approaches = Array[ExtResource("1_1v071")]([SubResource("Resource_227ry")])
+requirements = Array[ExtResource("3_fx7ca")]([SubResource("Resource_ybvx8")])
+modifiers = Array[Dictionary]([{
+"factor_id": "watch.grid_trace",
+"label": "The grid trace put watchers on you",
+"scope": "situational",
+"source_id": "fact.grid_trace",
+"value": -1,
+"when": {
+"op": "require.fact",
+"params": {
+"fact_id": "fact.grid_trace",
+"value": true
+}
+}
+}])
+allows_costly_success = true
+costly_options = Array[ExtResource("2_ak5rx")]([SubResource("Resource_7e1dn")])
+success_effects = Array[ExtResource("3_fx7ca")]([SubResource("Resource_a3xot")])
+failure_effects = Array[ExtResource("3_fx7ca")]([SubResource("Resource_023ce")])
+success_stakes = "You reach the canal path unseen."
+failure_stakes = "You are followed (1 strain)."
+fear = true

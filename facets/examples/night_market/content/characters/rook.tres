@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="FacetsCharacterResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/bond_resource.gd" id="1_2slwa"]
+[ext_resource type="Script" path="res://addons/facets/resources/facet_set.gd" id="2_n3n74"]
+[ext_resource type="Script" path="res://addons/facets/resources/identity_resource.gd" id="3_tig8d"]
+[ext_resource type="Script" path="res://addons/facets/resources/identity_trigger_resource.gd" id="4_kus5b"]
+[ext_resource type="Script" path="res://addons/facets/resources/character_resource.gd" id="5_es7cq"]
+
+[sub_resource type="Resource" id="Resource_p6rhd"]
+script = ExtResource("2_n3n74")
+force = 3
+agility = 3
+tenacity = 4
+sense = 4
+
+[sub_resource type="Resource" id="Resource_oxjhy"]
+script = ExtResource("3_tig8d")
+name = "Rook"
+drive = "Keep his post and his pension"
+code = "Never open the fixer's office"
+hindrance = "Owes the fixer money"
+tell = "Jingles his keys"
+
+[resource]
+script = ExtResource("5_es7cq")
+id = "npc.rook"
+display_name = "Rook"
+controller = "npc"
+identity = SubResource("Resource_oxjhy")
+facet_set = SubResource("Resource_p6rhd")
+skills = {
+"athletics": 2,
+"fighting": 2,
+"influence": 2,
+"investigation": 2,
+"marksmanship": 2,
+"survival": 2
+}
+talents = Array[String](["core.trail_reader", "core.second_look"])

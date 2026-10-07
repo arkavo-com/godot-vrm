@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="FacetsCharacterResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/bond_resource.gd" id="1_ox28l"]
+[ext_resource type="Script" path="res://addons/facets/resources/facet_set.gd" id="2_id4t1"]
+[ext_resource type="Script" path="res://addons/facets/resources/identity_resource.gd" id="3_rrlpd"]
+[ext_resource type="Script" path="res://addons/facets/resources/identity_trigger_resource.gd" id="4_xk54i"]
+[ext_resource type="Script" path="res://addons/facets/resources/character_resource.gd" id="5_mosc6"]
+
+[sub_resource type="Resource" id="Resource_1ghu0"]
+script = ExtResource("2_id4t1")
+agility = 3
+empathy = 4
+tenacity = 3
+sense = 4
+
+[sub_resource type="Resource" id="Resource_4is0q"]
+script = ExtResource("3_rrlpd")
+name = "Tamsin"
+drive = "Get home"
+code = "Tell the truth"
+hindrance = "Terrified of the canal crews"
+tell = "Clutches a torn ticket"
+
+[resource]
+script = ExtResource("5_mosc6")
+id = "npc.tamsin"
+display_name = "Tamsin"
+controller = "npc"
+identity = SubResource("Resource_4is0q")
+facet_set = SubResource("Resource_1ghu0")
+skills = {
+"athletics": 2,
+"influence": 2,
+"investigation": 2,
+"medicine": 2,
+"performance": 2,
+"survival": 2
+}
+talents = Array[String](["core.trail_reader", "core.steady_voice"])

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "name": "night_market_mara_controller_bypass",
+  "note": "Mandatory scripted walkthrough (spec section 10). Explicit dice; any conformant implementation must reproduce these outcomes.",
+  "actor_id": "demo.mara_vale",
+  "action_id": "nm.bypass_controller",
+  "approach_id": "tech",
+  "expected_preview": {"facet_id": "cunning", "facet_rating": 3, "skill_id": "technology", "skill_rank": 2, "target": 13},
+  "dice": [3, 3],
+  "expected_roll": {"total": 11, "margin": -2, "band": "costly_offer"},
+  "first_decision": "resolve",
+  "save_during_choice": true,
+  "branches": {
+    "A": {
+      "description": "Accept the trace: the door opens.",
+      "choices": ["decline", "accept:trace"],
+      "final_band": "success_with_cost",
+      "final_total": 11,
+      "resolve_after": 1,
+      "world": {"objects.service_door.open": true, "facts.fact.grid_trace": true, "objects.controller.locked": false, "counters.patrol": 0}
+    },
+    "B": {
+      "description": "Decline the cost: failure advances the patrol and locks the controller.",
+      "choices": ["decline", "decline"],
+      "final_band": "failure",
+      "final_total": 11,
+      "resolve_after": 1,
+      "world": {"objects.service_door.open": false, "facts.fact.grid_trace": null, "objects.controller.locked": true, "counters.patrol": 1}
+    },
+    "C": {
+      "description": "Spend 1 Resolve: total 13, clean success.",
+      "choices": ["spend"],
+      "final_band": "success",
+      "final_total": 13,
+      "resolve_after": 0,
+      "world": {"objects.service_door.open": true, "facts.fact.grid_trace": null, "objects.controller.locked": false, "counters.patrol": 0}
+    }
+  },
+  "passenger": {
+    "trigger_id": "mara.passenger_lead",
+    "resolve_before": 1,
+    "resolve_after": 2,
+    "window_missed": true,
+    "duplicate_award": 0
+  }
+}

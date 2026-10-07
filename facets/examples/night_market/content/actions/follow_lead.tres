@@ -1,0 +1,76 @@
+[gd_resource type="Resource" script_class="FacetsActionResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/approach_resource.gd" id="1_kx4ls"]
+[ext_resource type="Script" path="res://addons/facets/resources/cost_option.gd" id="2_ktna1"]
+[ext_resource type="Script" path="res://addons/facets/resources/operation_ref.gd" id="3_hbaap"]
+[ext_resource type="Script" path="res://addons/facets/resources/benefit_option.gd" id="4_3sypx"]
+[ext_resource type="Script" path="res://addons/facets/resources/action_resource.gd" id="5_b6nod"]
+
+[sub_resource type="Resource" id="Resource_tk8cg"]
+script = ExtResource("1_kx4ls")
+id = "search"
+facet = "sense"
+label = "Search for signs"
+
+[sub_resource type="Resource" id="Resource_7lasx"]
+script = ExtResource("1_kx4ls")
+id = "track"
+facet = "sense"
+skill = "survival"
+label = "Track the route"
+
+[sub_resource type="Resource" id="Resource_0qt0e"]
+script = ExtResource("3_hbaap")
+op = "world.clock_advance"
+params = {
+"amount": 1
+}
+label = "The trail goes cold for an hour"
+
+[sub_resource type="Resource" id="Resource_ybvx8"]
+script = ExtResource("3_hbaap")
+op = "require.scene"
+params = {
+"scene_id": "nm.clinic"
+}
+label = "At the clinic"
+
+[sub_resource type="Resource" id="Resource_v014b"]
+script = ExtResource("3_hbaap")
+op = "require.knows_fact"
+params = {
+"fact_id": "fact.passenger_lead"
+}
+label = "Know the passenger's lead"
+
+[sub_resource type="Resource" id="Resource_igrfk"]
+script = ExtResource("3_hbaap")
+op = "fact.reveal"
+params = {
+"fact_id": "fact.canal_lead"
+}
+label = "You find the canal crew's drop point"
+
+[sub_resource type="Resource" id="Resource_i77bk"]
+script = ExtResource("3_hbaap")
+op = "actor.accomplishment"
+params = {
+"text": "Found the canal drop point"
+}
+label = "Accomplishment recorded"
+
+[resource]
+script = ExtResource("5_b6nod")
+id = "nm.follow_lead"
+display_name = "Follow the passenger's lead"
+description = "Tamsin saw a courier dragged toward the canal. Find where."
+objective_id = "nm.objective.follow_lead"
+approaches = Array[ExtResource("1_kx4ls")]([SubResource("Resource_tk8cg"), SubResource("Resource_7lasx")])
+requirements = Array[ExtResource("3_hbaap")]([SubResource("Resource_ybvx8"), SubResource("Resource_v014b")])
+target = 13
+success_effects = Array[ExtResource("3_hbaap")]([SubResource("Resource_igrfk"), SubResource("Resource_i77bk")])
+failure_effects = Array[ExtResource("3_hbaap")]([SubResource("Resource_0qt0e")])
+success_stakes = "You find where the courier was taken."
+failure_stakes = "The trail goes cold for an hour."
+alternate_evidence_sources = Array[String](["evidence.bag_seal", "evidence.cctv"])
+revealable_facts = Array[String](["fact.canal_footprints"])

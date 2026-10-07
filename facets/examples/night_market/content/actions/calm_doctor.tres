@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="FacetsActionResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/approach_resource.gd" id="1_k8lb6"]
+[ext_resource type="Script" path="res://addons/facets/resources/cost_option.gd" id="2_3nicb"]
+[ext_resource type="Script" path="res://addons/facets/resources/operation_ref.gd" id="3_ikk1b"]
+[ext_resource type="Script" path="res://addons/facets/resources/benefit_option.gd" id="4_jqyd6"]
+[ext_resource type="Script" path="res://addons/facets/resources/action_resource.gd" id="5_h5hp1"]
+
+[sub_resource type="Resource" id="Resource_mwhhw"]
+script = ExtResource("1_k8lb6")
+id = "talk"
+facet = "empathy"
+skill = "influence"
+label = "Talk it through"
+
+[sub_resource type="Resource" id="Resource_nvq1h"]
+script = ExtResource("3_ikk1b")
+op = "actor.strain"
+params = {
+"amount": 1
+}
+label = "Harsh words"
+
+[sub_resource type="Resource" id="Resource_ybvx8"]
+script = ExtResource("3_ikk1b")
+op = "require.scene"
+params = {
+"scene_id": "nm.clinic"
+}
+label = "At the clinic"
+
+[sub_resource type="Resource" id="Resource_8qb55"]
+script = ExtResource("3_ikk1b")
+op = "require.fact"
+params = {
+"fact_id": "fact.doctor_calm",
+"negate": true,
+"value": true
+}
+label = "The doctor is not yet settled"
+
+[sub_resource type="Resource" id="Resource_mwt8e"]
+script = ExtResource("3_ikk1b")
+op = "fact.set"
+params = {
+"fact_id": "fact.doctor_calm",
+"label": "The doctor is on your side",
+"value": true
+}
+label = "The doctor is on your side"
+
+[resource]
+script = ExtResource("5_h5hp1")
+id = "nm.calm_doctor"
+display_name = "Settle things with the night doctor"
+description = "Make amends with the clinic's doctor about the delivery."
+objective_id = "nm.objective.calm_doctor"
+approaches = Array[ExtResource("1_k8lb6")]([SubResource("Resource_mwhhw")])
+requirements = Array[ExtResource("3_ikk1b")]([SubResource("Resource_ybvx8"), SubResource("Resource_8qb55")])
+modifiers = Array[Dictionary]([{
+"factor_id": "delivery.late",
+"label": "The package arrived late",
+"scope": "situational",
+"source_id": "package.late",
+"value": -1,
+"when": {
+"op": "require.object_flag",
+"params": {
+"key": "late",
+"object_id": "package",
+"value": true
+}
+}
+}])
+success_effects = Array[ExtResource("3_ikk1b")]([SubResource("Resource_mwt8e")])
+failure_effects = Array[ExtResource("3_ikk1b")]([SubResource("Resource_nvq1h")])
+success_stakes = "The doctor will help you next time."
+failure_stakes = "Harsh words (1 strain)."

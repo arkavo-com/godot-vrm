@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="FacetsActionResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/approach_resource.gd" id="1_gyuom"]
+[ext_resource type="Script" path="res://addons/facets/resources/cost_option.gd" id="2_fys0e"]
+[ext_resource type="Script" path="res://addons/facets/resources/operation_ref.gd" id="3_8mb1g"]
+[ext_resource type="Script" path="res://addons/facets/resources/benefit_option.gd" id="4_1qi63"]
+[ext_resource type="Script" path="res://addons/facets/resources/action_resource.gd" id="5_klce5"]
+
+[sub_resource type="Resource" id="Resource_do18b"]
+script = ExtResource("1_gyuom")
+id = "hand_over"
+facet = "empathy"
+skill = "influence"
+label = "Hand it over"
+
+[sub_resource type="Resource" id="Resource_ws43a"]
+script = ExtResource("3_8mb1g")
+op = "require.scene"
+params = {
+"scene_id": "nm.gate"
+}
+label = "At the market gate"
+
+[sub_resource type="Resource" id="Resource_o60ke"]
+script = ExtResource("3_8mb1g")
+op = "require.actor_zone"
+params = {
+"zone_id": "hall"
+}
+label = "Inside the market hall"
+
+[sub_resource type="Resource" id="Resource_web6s"]
+script = ExtResource("3_8mb1g")
+op = "require.object_flag"
+params = {
+"key": "delivered",
+"object_id": "package",
+"value": false
+}
+label = "Not yet delivered"
+
+[sub_resource type="Resource" id="Resource_g2re0"]
+script = ExtResource("3_8mb1g")
+op = "object.set_flag"
+params = {
+"key": "delivered",
+"object_id": "package",
+"value": true
+}
+label = "Package delivered"
+
+[resource]
+script = ExtResource("5_klce5")
+id = "nm.deliver_package"
+display_name = "Deliver the sealed package"
+description = "Hand the package to the clinic's night doctor inside the hall."
+objective_id = "nm.objective.deliver_package"
+approaches = Array[ExtResource("1_gyuom")]([SubResource("Resource_do18b")])
+requirements = Array[ExtResource("3_8mb1g")]([SubResource("Resource_ws43a"), SubResource("Resource_o60ke"), SubResource("Resource_web6s")])
+difficulty_kind = "routine"
+success_effects = Array[ExtResource("3_8mb1g")]([SubResource("Resource_g2re0")])
+success_stakes = "Routine: the delivery is made."
+retry_policy = "repeatable"

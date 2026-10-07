@@ -1,0 +1,131 @@
+[gd_resource type="Resource" script_class="FacetsActionResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/approach_resource.gd" id="1_xgxyy"]
+[ext_resource type="Script" path="res://addons/facets/resources/cost_option.gd" id="2_0veh0"]
+[ext_resource type="Script" path="res://addons/facets/resources/operation_ref.gd" id="3_4f7b3"]
+[ext_resource type="Script" path="res://addons/facets/resources/benefit_option.gd" id="4_f6pw5"]
+[ext_resource type="Script" path="res://addons/facets/resources/action_resource.gd" id="5_pb52u"]
+
+[sub_resource type="Resource" id="Resource_haieg"]
+script = ExtResource("1_xgxyy")
+id = "climb"
+facet = "agility"
+skill = "athletics"
+label = "Climb and drop"
+
+[sub_resource type="Resource" id="Resource_mebld"]
+script = ExtResource("3_4f7b3")
+op = "actor.strain"
+params = {
+"amount": 2
+}
+label = "You wrench your shoulder"
+
+[sub_resource type="Resource" id="Resource_c5p7i"]
+script = ExtResource("2_0veh0")
+id = "strain"
+label = "Wrench your shoulder (2 strain)"
+effects = Array[ExtResource("3_4f7b3")]([SubResource("Resource_mebld")])
+
+[sub_resource type="Resource" id="Resource_hha2f"]
+script = ExtResource("3_4f7b3")
+op = "actor.strain"
+params = {
+"amount": 2
+}
+label = "You fall hard"
+
+[sub_resource type="Resource" id="Resource_ct3f7"]
+script = ExtResource("3_4f7b3")
+op = "world.counter_add"
+params = {
+"amount": 1,
+"counter_id": "patrol"
+}
+label = "The noise draws the patrol"
+
+[sub_resource type="Resource" id="Resource_bwa4s"]
+script = ExtResource("3_4f7b3")
+op = "object.set_flag"
+params = {
+"key": "reachable",
+"object_id": "roof_hatch",
+"value": false
+}
+label = "The stack of crates collapses"
+
+[sub_resource type="Resource" id="Resource_ws43a"]
+script = ExtResource("3_4f7b3")
+op = "require.scene"
+params = {
+"scene_id": "nm.gate"
+}
+label = "At the market gate"
+
+[sub_resource type="Resource" id="Resource_l3x3i"]
+script = ExtResource("3_4f7b3")
+op = "require.actor_zone"
+params = {
+"zone_id": "street"
+}
+label = "Still outside the market hall"
+
+[sub_resource type="Resource" id="Resource_tv06s"]
+script = ExtResource("3_4f7b3")
+op = "require.object_flag"
+params = {
+"key": "reachable",
+"object_id": "roof_hatch",
+"value": true
+}
+label = "The roof hatch is reachable"
+
+[sub_resource type="Resource" id="Resource_qacnl"]
+script = ExtResource("3_4f7b3")
+op = "require.no_condition"
+params = {
+"condition_id": "core.injured"
+}
+label = "Not injured"
+
+[sub_resource type="Resource" id="Resource_g5wcl"]
+script = ExtResource("3_4f7b3")
+op = "fact.reveal"
+params = {
+"fact_id": "fact.rooftop_view"
+}
+label = "You see where the couriers go"
+
+[sub_resource type="Resource" id="Resource_ei3uv"]
+script = ExtResource("4_f6pw5")
+id = "view"
+label = "Spot the courier route from above"
+effects = Array[ExtResource("3_4f7b3")]([SubResource("Resource_g5wcl")])
+
+[sub_resource type="Resource" id="Resource_rymj4"]
+script = ExtResource("3_4f7b3")
+op = "actor.zone"
+params = {
+"zone_id": "hall"
+}
+label = "You drop into the market hall"
+
+[resource]
+script = ExtResource("5_pb52u")
+id = "nm.rooftop_entry"
+display_name = "Climb in through the roof hatch"
+description = "Scale the stalls and drop in through the roof hatch."
+objective_id = "nm.objective.rooftop_entry"
+tags = Array[String](["physical", "route"])
+approaches = Array[ExtResource("1_xgxyy")]([SubResource("Resource_haieg")])
+requirements = Array[ExtResource("3_4f7b3")]([SubResource("Resource_ws43a"), SubResource("Resource_l3x3i"), SubResource("Resource_tv06s"), SubResource("Resource_qacnl")])
+target = 13
+clock_cost = 1
+allows_costly_success = true
+costly_options = Array[ExtResource("2_0veh0")]([SubResource("Resource_c5p7i")])
+success_effects = Array[ExtResource("3_4f7b3")]([SubResource("Resource_rymj4")])
+failure_effects = Array[ExtResource("3_4f7b3")]([SubResource("Resource_hha2f"), SubResource("Resource_ct3f7"), SubResource("Resource_bwa4s")])
+strong_benefits = Array[ExtResource("4_f6pw5")]([SubResource("Resource_ei3uv")])
+success_stakes = "You get inside unseen."
+failure_stakes = "You fall (2 strain), the patrol hears, and the route collapses."
+fear = true

@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="FacetsCharacterResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/bond_resource.gd" id="1_u71jn"]
+[ext_resource type="Script" path="res://addons/facets/resources/facet_set.gd" id="2_ttav7"]
+[ext_resource type="Script" path="res://addons/facets/resources/identity_resource.gd" id="3_i4pyb"]
+[ext_resource type="Script" path="res://addons/facets/resources/identity_trigger_resource.gd" id="4_ks0ra"]
+[ext_resource type="Script" path="res://addons/facets/resources/operation_ref.gd" id="5_anbrt"]
+[ext_resource type="Script" path="res://addons/facets/resources/character_resource.gd" id="6_dmdwe"]
+
+[sub_resource type="Resource" id="Resource_kr7vv"]
+script = ExtResource("1_u71jn")
+other_id = "demo.iris_kade"
+trust = 1
+affinity = 1
+
+[sub_resource type="Resource" id="Resource_00lbp"]
+script = ExtResource("1_u71jn")
+other_id = "npc.rook"
+affinity = 1
+
+[sub_resource type="Resource" id="Resource_uqphe"]
+script = ExtResource("2_ttav7")
+agility = 4
+cunning = 3
+empathy = 3
+sense = 4
+
+[sub_resource type="Resource" id="Resource_p0t7t"]
+script = ExtResource("3_i4pyb")
+name = "Mara Vale"
+drive = "Find the missing people from the night market"
+code = "Never abandon a passenger"
+hindrance = "Pursues disappearance leads despite urgent deliveries"
+tell = "Touches the seal on her courier bag"
+
+[sub_resource type="Resource" id="Resource_h2ba1"]
+script = ExtResource("5_anbrt")
+op = "fact.set"
+params = {
+"fact_id": "fact.window_missed",
+"value": true
+}
+label = "Delivery window missed"
+
+[sub_resource type="Resource" id="Resource_dxo10"]
+script = ExtResource("5_anbrt")
+op = "world.clock_advance"
+params = {
+"amount": 2
+}
+label = "Two hours pass"
+
+[sub_resource type="Resource" id="Resource_7wpdm"]
+script = ExtResource("4_ks0ra")
+id = "mara.passenger_lead"
+display_name = "Chase the disappearance lead"
+description = "The stranded passenger saw something. Stop and listen, even though the delivery window is closing."
+disadvantage_label = "Miss the delivery window"
+disadvantage_effects = Array[ExtResource("5_anbrt")]([SubResource("Resource_h2ba1"), SubResource("Resource_dxo10")])
+
+[resource]
+script = ExtResource("6_dmdwe")
+id = "demo.mara_vale"
+display_name = "Mara Vale"
+identity = SubResource("Resource_p0t7t")
+facet_set = SubResource("Resource_uqphe")
+skills = {
+"athletics": 1,
+"influence": 2,
+"investigation": 2,
+"medicine": 1,
+"sleight": 1,
+"stealth": 2,
+"survival": 1,
+"technology": 2
+}
+talents = Array[String](["core.second_look", "core.field_engineer"])
+bonds = Array[ExtResource("1_u71jn")]([SubResource("Resource_kr7vv"), SubResource("Resource_00lbp")])
+identity_triggers = Array[ExtResource("4_ks0ra")]([SubResource("Resource_7wpdm")])
+items = {
+"item.scrap_wire": 1,
+"tool.signal_kit": 1
+}

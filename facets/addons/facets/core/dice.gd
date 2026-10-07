@@ -39,14 +39,16 @@ static func fixed(pairs: Array) -> FacetsDiceSource:
 
 
 ## Draws one pair. Returns Vector2i.ZERO when a fixed source is exhausted;
-## callers must treat that as a hard error, never as a roll.
+## callers must treat that as a hard error, never as a roll. An RNG source
+## first consumes any pairs queued with [method push_fixed] (debug and
+## demo tooling only).
 func roll_pair() -> Vector2i:
 	draws += 1
-	if kind == KIND_FIXED:
-		if _queue.is_empty():
-			_exhausted = true
-			return Vector2i.ZERO
+	if not _queue.is_empty():
 		return _queue.pop_front()
+	if kind == KIND_FIXED:
+		_exhausted = true
+		return Vector2i.ZERO
 	return Vector2i(_rng.randi_range(1, 6), _rng.randi_range(1, 6))
 
 
@@ -64,21 +66,21 @@ func is_exhausted() -> bool:
 
 ## Metadata persisted in saves so a failed commit can restore the stream.
 func get_state() -> Dictionary:
+	var queue: Array = []
+	for pair in _queue:
+		queue.append([pair.x, pair.y])
 	if kind == KIND_FIXED:
-		var queue: Array = []
-		for pair in _queue:
-			queue.append([pair.x, pair.y])
 		return {"kind": KIND_FIXED, "queue": queue, "draws": draws}
-	return {"kind": KIND_RNG, "seed": str(_seed), "state": str(_rng.state), "draws": draws}
+	return {"kind": KIND_RNG, "seed": str(_seed), "state": str(_rng.state), "queue": queue, "draws": draws}
 
 
 func set_state(state: Dictionary) -> void:
 	draws = int(state.get("draws", 0))
+	_queue.clear()
+	for pair in state.get("queue", []):
+		_queue.append(Vector2i(int(pair[0]), int(pair[1])))
 	if str(state.get("kind", KIND_RNG)) == KIND_FIXED:
 		kind = KIND_FIXED
-		_queue.clear()
-		for pair in state.get("queue", []):
-			_queue.append(Vector2i(int(pair[0]), int(pair[1])))
 		return
 	kind = KIND_RNG
 	_seed = str(state.get("seed", "0")).to_int()

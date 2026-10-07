@@ -1,0 +1,171 @@
+[gd_resource type="Resource" script_class="FacetsActionResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/approach_resource.gd" id="1_wnchq"]
+[ext_resource type="Script" path="res://addons/facets/resources/cost_option.gd" id="2_jpmdq"]
+[ext_resource type="Script" path="res://addons/facets/resources/operation_ref.gd" id="3_ylvs5"]
+[ext_resource type="Script" path="res://addons/facets/resources/benefit_option.gd" id="4_gihwr"]
+[ext_resource type="Script" path="res://addons/facets/resources/action_resource.gd" id="5_1eh3u"]
+
+[sub_resource type="Resource" id="Resource_do01c"]
+script = ExtResource("1_wnchq")
+id = "plead"
+facet = "empathy"
+skill = "influence"
+label = "Appeal to Rook's decency"
+
+[sub_resource type="Resource" id="Resource_svhvc"]
+script = ExtResource("3_ylvs5")
+op = "bond.add_obligation"
+params = {
+"obligation": "Owes Rook a favor",
+"other_id": "npc.rook"
+}
+label = "You owe Rook a favor"
+
+[sub_resource type="Resource" id="Resource_plode"]
+script = ExtResource("2_jpmdq")
+id = "favor"
+label = "Promise Rook a favor later"
+effects = Array[ExtResource("3_ylvs5")]([SubResource("Resource_svhvc")])
+
+[sub_resource type="Resource" id="Resource_bh8vu"]
+script = ExtResource("3_ylvs5")
+op = "fact.set"
+params = {
+"fact_id": "fact.rook_alerted",
+"label": "Rook raised the alarm",
+"value": true
+}
+label = "Rook raises the alarm"
+
+[sub_resource type="Resource" id="Resource_0ckrc"]
+script = ExtResource("3_ylvs5")
+op = "world.counter_add"
+params = {
+"amount": 1,
+"counter_id": "patrol"
+}
+label = "The patrol is called"
+
+[sub_resource type="Resource" id="Resource_6rf4r"]
+script = ExtResource("3_ylvs5")
+op = "actor.item_add"
+params = {
+"amount": 1,
+"item_id": "item.side_pass"
+}
+label = "You get a side pass"
+
+[sub_resource type="Resource" id="Resource_do1mn"]
+script = ExtResource("4_gihwr")
+id = "pass"
+label = "A one-time side pass"
+effects = Array[ExtResource("3_ylvs5")]([SubResource("Resource_6rf4r")])
+
+[sub_resource type="Resource" id="Resource_ws43a"]
+script = ExtResource("3_ylvs5")
+op = "require.scene"
+params = {
+"scene_id": "nm.gate"
+}
+label = "At the market gate"
+
+[sub_resource type="Resource" id="Resource_l3x3i"]
+script = ExtResource("3_ylvs5")
+op = "require.actor_zone"
+params = {
+"zone_id": "street"
+}
+label = "Still outside the market hall"
+
+[sub_resource type="Resource" id="Resource_06ukh"]
+script = ExtResource("3_ylvs5")
+op = "require.object_flag"
+params = {
+"key": "open",
+"object_id": "market_gate",
+"value": false
+}
+label = "The side gate is still closed"
+
+[sub_resource type="Resource" id="Resource_n5q3r"]
+script = ExtResource("3_ylvs5")
+op = "require.fact"
+params = {
+"fact_id": "fact.rook_alerted",
+"negate": true,
+"value": true
+}
+label = "Rook has not raised the alarm"
+
+[sub_resource type="Resource" id="Resource_5ybik"]
+script = ExtResource("3_ylvs5")
+op = "fact.reveal"
+params = {
+"fact_id": "fact.patrol_route"
+}
+label = "You learn the patrol route"
+
+[sub_resource type="Resource" id="Resource_sau7v"]
+script = ExtResource("4_gihwr")
+id = "route"
+label = "Rook mentions the patrol route"
+effects = Array[ExtResource("3_ylvs5")]([SubResource("Resource_5ybik")])
+
+[sub_resource type="Resource" id="Resource_7oecq"]
+script = ExtResource("3_ylvs5")
+op = "bond.adjust"
+params = {
+"amount": 1,
+"dimension": "trust",
+"other_id": "npc.rook"
+}
+label = "Rook trusts you more"
+
+[sub_resource type="Resource" id="Resource_i6noa"]
+script = ExtResource("4_gihwr")
+id = "vouch"
+label = "Rook will vouch for you later"
+effects = Array[ExtResource("3_ylvs5")]([SubResource("Resource_7oecq")])
+
+[sub_resource type="Resource" id="Resource_61umf"]
+script = ExtResource("3_ylvs5")
+op = "object.set_flag"
+params = {
+"key": "open",
+"object_id": "market_gate",
+"value": true
+}
+label = "Rook unlocks the side gate"
+
+[sub_resource type="Resource" id="Resource_w6m6o"]
+script = ExtResource("3_ylvs5")
+op = "actor.zone"
+params = {
+"zone_id": "hall"
+}
+label = "You slip into the market hall"
+
+[resource]
+script = ExtResource("5_1eh3u")
+id = "nm.ask_guard"
+display_name = "Ask Rook to open the side gate"
+description = "Talk the guard into letting you through the side gate before curfew."
+objective_id = "nm.objective.ask_guard"
+tags = Array[String](["social", "route"])
+approaches = Array[ExtResource("1_wnchq")]([SubResource("Resource_do01c")])
+requirements = Array[ExtResource("3_ylvs5")]([SubResource("Resource_ws43a"), SubResource("Resource_l3x3i"), SubResource("Resource_06ukh"), SubResource("Resource_n5q3r")])
+relationship = {
+"dimension": "trust",
+"other_id": "npc.rook"
+}
+clock_cost = 1
+allows_costly_success = true
+costly_options = Array[ExtResource("2_jpmdq")]([SubResource("Resource_plode")])
+success_effects = Array[ExtResource("3_ylvs5")]([SubResource("Resource_61umf"), SubResource("Resource_w6m6o")])
+failure_effects = Array[ExtResource("3_ylvs5")]([SubResource("Resource_bh8vu"), SubResource("Resource_0ckrc")])
+strong_benefits = Array[ExtResource("4_gihwr")]([SubResource("Resource_sau7v"), SubResource("Resource_i6noa")])
+default_benefit_id = "route"
+lesser_concessions = Array[ExtResource("4_gihwr")]([SubResource("Resource_do1mn")])
+success_stakes = "The side gate opens and you are inside."
+failure_stakes = "Rook raises the alarm and the patrol is called."

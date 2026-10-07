@@ -1,0 +1,82 @@
+[gd_resource type="Resource" script_class="FacetsActionResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/approach_resource.gd" id="1_p4b0h"]
+[ext_resource type="Script" path="res://addons/facets/resources/cost_option.gd" id="2_3unnc"]
+[ext_resource type="Script" path="res://addons/facets/resources/operation_ref.gd" id="3_pckbp"]
+[ext_resource type="Script" path="res://addons/facets/resources/benefit_option.gd" id="4_fycbn"]
+[ext_resource type="Script" path="res://addons/facets/resources/action_resource.gd" id="5_pagfr"]
+
+[sub_resource type="Resource" id="Resource_fcact"]
+script = ExtResource("1_p4b0h")
+id = "treat"
+facet = "empathy"
+skill = "medicine"
+label = "Treat and reassure"
+
+[sub_resource type="Resource" id="Resource_8g5d4"]
+script = ExtResource("3_pckbp")
+op = "world.clock_advance"
+params = {
+"amount": 1
+}
+label = "An hour passes"
+
+[sub_resource type="Resource" id="Resource_nq6ja"]
+script = ExtResource("2_3unnc")
+id = "time"
+label = "It takes an extra hour"
+effects = Array[ExtResource("3_pckbp")]([SubResource("Resource_8g5d4")])
+
+[sub_resource type="Resource" id="Resource_mwxla"]
+script = ExtResource("3_pckbp")
+op = "actor.strain"
+params = {
+"amount": 1
+}
+label = "Her panic gets to you"
+
+[sub_resource type="Resource" id="Resource_ws43a"]
+script = ExtResource("3_pckbp")
+op = "require.scene"
+params = {
+"scene_id": "nm.gate"
+}
+label = "At the market gate"
+
+[sub_resource type="Resource" id="Resource_a4sre"]
+script = ExtResource("3_pckbp")
+op = "require.object_flag"
+params = {
+"key": "helped",
+"object_id": "passenger",
+"value": false
+}
+label = "Tamsin still needs help"
+
+[sub_resource type="Resource" id="Resource_5k3c7"]
+script = ExtResource("3_pckbp")
+op = "object.set_flag"
+params = {
+"key": "helped",
+"object_id": "passenger",
+"value": true
+}
+label = "Tamsin is safe"
+
+[resource]
+script = ExtResource("5_pagfr")
+id = "nm.help_passenger"
+display_name = "Help the stranded passenger"
+description = "Tamsin is hurt and shaking. Patch her up and get her somewhere safe."
+objective_id = "nm.objective.help_passenger"
+tags = Array[String](["social"])
+approaches = Array[ExtResource("1_p4b0h")]([SubResource("Resource_fcact")])
+requirements = Array[ExtResource("3_pckbp")]([SubResource("Resource_ws43a"), SubResource("Resource_a4sre")])
+clock_cost = 1
+allows_costly_success = true
+costly_options = Array[ExtResource("2_3unnc")]([SubResource("Resource_nq6ja")])
+success_effects = Array[ExtResource("3_pckbp")]([SubResource("Resource_5k3c7")])
+failure_effects = Array[ExtResource("3_pckbp")]([SubResource("Resource_mwxla")])
+success_stakes = "Tamsin is safe and will make it to the clinic."
+failure_stakes = "Her panic gets to you (1 strain)."
+fear = true

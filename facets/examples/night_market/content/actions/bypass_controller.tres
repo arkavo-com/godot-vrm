@@ -1,0 +1,150 @@
+[gd_resource type="Resource" script_class="FacetsActionResource" format=3]
+
+[ext_resource type="Script" path="res://addons/facets/resources/approach_resource.gd" id="1_0ace4"]
+[ext_resource type="Script" path="res://addons/facets/resources/cost_option.gd" id="2_8jqdp"]
+[ext_resource type="Script" path="res://addons/facets/resources/operation_ref.gd" id="3_pmbsr"]
+[ext_resource type="Script" path="res://addons/facets/resources/benefit_option.gd" id="4_e8s6x"]
+[ext_resource type="Script" path="res://addons/facets/resources/action_resource.gd" id="5_e2tbx"]
+
+[sub_resource type="Resource" id="Resource_k1ayv"]
+script = ExtResource("1_0ace4")
+id = "tech"
+skill = "technology"
+label = "Work the controller"
+
+[sub_resource type="Resource" id="Resource_d184g"]
+script = ExtResource("3_pmbsr")
+op = "world.mark_trace"
+params = {
+"label": "A trace in the market grid",
+"trace_id": "fact.grid_trace"
+}
+label = "You leave a trace in the grid"
+
+[sub_resource type="Resource" id="Resource_vlrpt"]
+script = ExtResource("2_8jqdp")
+id = "trace"
+label = "Leave a trace in the market grid"
+effects = Array[ExtResource("3_pmbsr")]([SubResource("Resource_d184g")])
+
+[sub_resource type="Resource" id="Resource_r067d"]
+script = ExtResource("3_pmbsr")
+op = "world.counter_add"
+params = {
+"amount": 1,
+"counter_id": "patrol"
+}
+label = "The patrol advances"
+
+[sub_resource type="Resource" id="Resource_de26x"]
+script = ExtResource("3_pmbsr")
+op = "object.set_flag"
+params = {
+"key": "locked",
+"object_id": "controller",
+"value": true
+}
+label = "The controller locks down"
+
+[sub_resource type="Resource" id="Resource_ws43a"]
+script = ExtResource("3_pmbsr")
+op = "require.scene"
+params = {
+"scene_id": "nm.gate"
+}
+label = "At the market gate"
+
+[sub_resource type="Resource" id="Resource_l3x3i"]
+script = ExtResource("3_pmbsr")
+op = "require.actor_zone"
+params = {
+"zone_id": "street"
+}
+label = "Still outside the market hall"
+
+[sub_resource type="Resource" id="Resource_gcy7u"]
+script = ExtResource("3_pmbsr")
+op = "require.accessible_controller"
+params = {
+"object_id": "controller"
+}
+label = "The controller is reachable and not locked down"
+
+[sub_resource type="Resource" id="Resource_eow6v"]
+script = ExtResource("3_pmbsr")
+op = "require.object_flag"
+params = {
+"key": "open",
+"object_id": "service_door",
+"value": false
+}
+label = "The service door is still closed"
+
+[sub_resource type="Resource" id="Resource_3lxfa"]
+script = ExtResource("3_pmbsr")
+op = "actor.flag"
+params = {
+"key": "silent_entry",
+"value": true
+}
+label = "Nobody noticed you"
+
+[sub_resource type="Resource" id="Resource_kpyfu"]
+script = ExtResource("4_e8s6x")
+id = "silent"
+label = "Silent entry"
+effects = Array[ExtResource("3_pmbsr")]([SubResource("Resource_3lxfa")])
+
+[sub_resource type="Resource" id="Resource_hb7bl"]
+script = ExtResource("3_pmbsr")
+op = "fact.reveal"
+params = {
+"fact_id": "fact.access_log"
+}
+label = "You copy the access log"
+
+[sub_resource type="Resource" id="Resource_ep4vg"]
+script = ExtResource("4_e8s6x")
+id = "log"
+label = "Copy the access log"
+effects = Array[ExtResource("3_pmbsr")]([SubResource("Resource_hb7bl")])
+
+[sub_resource type="Resource" id="Resource_qkllp"]
+script = ExtResource("3_pmbsr")
+op = "object.set_flag"
+params = {
+"key": "open",
+"object_id": "service_door",
+"value": true
+}
+label = "The service door opens"
+
+[sub_resource type="Resource" id="Resource_4xt4n"]
+script = ExtResource("3_pmbsr")
+op = "actor.zone"
+params = {
+"zone_id": "hall"
+}
+label = "You step into the market hall"
+
+[resource]
+script = ExtResource("5_e2tbx")
+id = "nm.bypass_controller"
+display_name = "Bypass the service door controller"
+description = "Splice into the service door's controller and open it."
+objective_id = "nm.objective.bypass_controller"
+tags = Array[String](["technical", "route"])
+approaches = Array[ExtResource("1_0ace4")]([SubResource("Resource_k1ayv")])
+requirements = Array[ExtResource("3_pmbsr")]([SubResource("Resource_ws43a"), SubResource("Resource_l3x3i"), SubResource("Resource_gcy7u"), SubResource("Resource_eow6v")])
+required_tools = Array[String](["tool.signal_kit"])
+consumable_substitutes = Array[String](["item.scrap_wire"])
+target = 13
+clock_cost = 1
+allows_costly_success = true
+costly_options = Array[ExtResource("2_8jqdp")]([SubResource("Resource_vlrpt")])
+success_effects = Array[ExtResource("3_pmbsr")]([SubResource("Resource_qkllp"), SubResource("Resource_4xt4n")])
+failure_effects = Array[ExtResource("3_pmbsr")]([SubResource("Resource_r067d"), SubResource("Resource_de26x")])
+strong_benefits = Array[ExtResource("4_e8s6x")]([SubResource("Resource_kpyfu"), SubResource("Resource_ep4vg")])
+default_benefit_id = "silent"
+success_stakes = "The service door opens."
+failure_stakes = "The patrol advances and the controller locks down."
