@@ -4,11 +4,26 @@ extends Resource
 ## A bond stores trust and affinity separately (each -2..+2), plus
 ## obligations and shared-event references. There is no additive bond bonus.
 
-@export var other_id: String = ""
-@export_range(-2, 2) var trust: int = 0
-@export_range(-2, 2) var affinity: int = 0
-@export var obligations: Array[String] = []
-@export var shared_event_refs: Array[String] = []
+@export var other_id: String = "":
+	set(value):
+		other_id = value
+		emit_changed()
+@export_range(-2, 2) var trust: int = 0:
+	set(value):
+		trust = value
+		emit_changed()
+@export_range(-2, 2) var affinity: int = 0:
+	set(value):
+		affinity = value
+		emit_changed()
+@export var obligations: Array[String] = []:
+	set(value):
+		obligations = value
+		emit_changed()
+@export var shared_event_refs: Array[String] = []:
+	set(value):
+		shared_event_refs = value
+		emit_changed()
 
 
 func to_dict() -> Dictionary:

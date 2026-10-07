@@ -3,12 +3,30 @@ class_name FacetsIdentityResource
 extends Resource
 ## Narrative identity. Mechanics are never inferred from this prose.
 
-@export var name: String = ""
-@export_multiline var drive: String = ""
-@export_multiline var code: String = ""
-@export_multiline var hindrance: String = ""
-@export_multiline var tell: String = ""
-@export var appearance_refs: Array[String] = []
+@export var name: String = "":
+	set(value):
+		name = value
+		emit_changed()
+@export_multiline var drive: String = "":
+	set(value):
+		drive = value
+		emit_changed()
+@export_multiline var code: String = "":
+	set(value):
+		code = value
+		emit_changed()
+@export_multiline var hindrance: String = "":
+	set(value):
+		hindrance = value
+		emit_changed()
+@export_multiline var tell: String = "":
+	set(value):
+		tell = value
+		emit_changed()
+@export var appearance_refs: Array[String] = []:
+	set(value):
+		appearance_refs = value
+		emit_changed()
 
 
 func to_dict() -> Dictionary:

@@ -5,21 +5,57 @@ extends Resource
 ## sessions copy it into [FacetsActorState] through an explicit factory, so
 ## several sessions can share one definition safely.
 
-@export var id: String = ""
-@export var display_name: String = ""
-@export_enum("player", "npc") var controller: String = "player"
-@export var identity: FacetsIdentityResource
-@export var facet_set: FacetsFacetSet
+@export var id: String = "":
+	set(value):
+		id = value
+		emit_changed()
+@export var display_name: String = "":
+	set(value):
+		display_name = value
+		emit_changed()
+@export_enum("player", "npc") var controller: String = "player":
+	set(value):
+		controller = value
+		emit_changed()
+@export var identity: FacetsIdentityResource:
+	set(value):
+		identity = value
+		emit_changed()
+@export var facet_set: FacetsFacetSet:
+	set(value):
+		facet_set = value
+		emit_changed()
 ## skill_id -> rank. Missing known skills mean rank 0.
-@export var skills: Dictionary = {}
-@export var talents: Array[String] = []
-@export var capabilities: Array[String] = []
-@export var bonds: Array[FacetsBondResource] = []
-@export var identity_triggers: Array[FacetsIdentityTriggerResource] = []
+@export var skills: Dictionary = {}:
+	set(value):
+		skills = value
+		emit_changed()
+@export var talents: Array[String] = []:
+	set(value):
+		talents = value
+		emit_changed()
+@export var capabilities: Array[String] = []:
+	set(value):
+		capabilities = value
+		emit_changed()
+@export var bonds: Array[FacetsBondResource] = []:
+	set(value):
+		bonds = value
+		emit_changed()
+@export var identity_triggers: Array[FacetsIdentityTriggerResource] = []:
+	set(value):
+		identity_triggers = value
+		emit_changed()
 ## Starting tools and consumables: item_id -> count.
-@export var items: Dictionary = {}
+@export var items: Dictionary = {}:
+	set(value):
+		items = value
+		emit_changed()
 ## Optional admission preferences; empty means "the build above".
-@export var preferred_build: Dictionary = {}
+@export var preferred_build: Dictionary = {}:
+	set(value):
+		preferred_build = value
+		emit_changed()
 
 
 func build() -> FacetsBuild:
