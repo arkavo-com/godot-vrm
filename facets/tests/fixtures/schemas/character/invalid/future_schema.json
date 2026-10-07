@@ -1,0 +1,8 @@
+{
+  "schema_version": 2,
+  "ruleset_id": "facets.core",
+  "ruleset_version": "0.1.0",
+  "character_id": "demo.future",
+  "identity": {"name": "From The Future"},
+  "preferred_build": {"facets": {"force": 2, "agility": 2, "cunning": 2, "empathy": 2, "tenacity": 2, "sense": 2}, "skills": {}, "talents": [], "capabilities": []}
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "ruleset_id": "facets.core",
+  "ruleset_version": "0.1.0",
+  "character_id": "demo.mara_vale",
+  "identity": {
+    "name": "Mara Vale",
+    "drive": "Find the missing people from the night market",
+    "code": "Never abandon a passenger",
+    "hindrance": "Pursues disappearance leads despite urgent deliveries",
+    "tell": "Touches the seal on her courier bag"
+  },
+  "preferred_build": {
+    "facets": {"force": 2, "agility": 4, "cunning": 3, "empathy": 3, "tenacity": 2, "sense": 4},
+    "skills": {"stealth": 2, "investigation": 2, "influence": 2, "technology": 2, "athletics": 1, "sleight": 1, "survival": 1, "medicine": 1},
+    "talents": ["core.second_look", "core.field_engineer"],
+    "capabilities": []
+  },
+  "memories": [],
+  "extensions": {}
+}

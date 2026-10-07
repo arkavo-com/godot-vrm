@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "ruleset_id": "facets.core",
+  "ruleset_version": "0.1.0",
+  "character_id": "elsewhere.captain_oro",
+  "identity": {
+    "name": "Captain Oro",
+    "drive": "Bring the crew home",
+    "code": "No one is left behind",
+    "hindrance": "Trusts old friends too easily",
+    "tell": "Taps the brass compass twice",
+    "appearance_refs": ["vrm:oro_v2"]
+  },
+  "preferred_build": {
+    "facets": {"force": 5, "agility": 5, "cunning": 4, "empathy": 3, "tenacity": 3, "sense": 2},
+    "skills": {"fighting": 4, "athletics": 3, "marksmanship": 3, "influence": 2, "survival": 2, "medicine": 1, "craft": 1},
+    "talents": ["core.trail_reader", "core.steady_voice", "core.bargain_maker"],
+    "capabilities": ["elsewhere.storm_call"]
+  },
+  "memories": [
+    {"id": "m1", "source": "elsewhere.campaign_7", "text": "Sank the dreadnought at Kesh Reef."}
+  ],
+  "extensions": {
+    "elsewhere.ship": {"name": "Gull", "hull": 4}
+  },
+  "growth": 14,
+  "equipment": ["elsewhere.storm_blade", "tool.signal_kit"],
+  "accomplishments": ["Hero of Kesh Reef"]
+}

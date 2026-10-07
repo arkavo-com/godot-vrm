@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "ruleset_id": "facets.core",
+  "ruleset_version": "0.2.0",
+  "character_id": "demo.unknown_version",
+  "identity": {"name": "Unknown Version"},
+  "preferred_build": {"facets": {"force": 2, "agility": 2, "cunning": 2, "empathy": 2, "tenacity": 2, "sense": 2}, "skills": {}, "talents": [], "capabilities": []}
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "ruleset": "gom.facets.core@0.1.0",
+  "character_id": "demo.legacy_courier",
+  "identity": {"name": "Legacy Courier"},
+  "preferred_build": {
+    "facets": {"force": 2, "agility": 4, "cunning": 3, "empathy": 2, "tenacity": 3, "sense": 4},
+    "skills": {"athletics": 2, "stealth": 2, "survival": 2, "influence": 1, "investigation": 1, "technology": 1, "sleight": 1, "medicine": 1, "fighting": 1},
+    "talents": ["core.trail_reader", "core.quiet_hands"],
+    "capabilities": []
+  }
+}

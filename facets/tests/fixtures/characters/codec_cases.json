@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "note": "Schema-valid documents that FACETS rules reject (registry membership is not expressible in JSON Schema).",
+  "cases": [
+    {
+      "name": "unknown_skill",
+      "expected_error": "UNKNOWN_ID",
+      "document": {
+        "schema_version": 1, "ruleset_id": "facets.core", "ruleset_version": "0.1.0", "character_id": "demo.hacker",
+        "identity": {"name": "Hacker"},
+        "preferred_build": {"facets": {"force": 2, "agility": 2, "cunning": 4, "empathy": 2, "tenacity": 4, "sense": 4}, "skills": {"hacking": 2}, "talents": [], "capabilities": []}
+      }
+    },
+    {
+      "name": "unknown_talent",
+      "expected_error": "UNKNOWN_ID",
+      "document": {
+        "schema_version": 1, "ruleset_id": "facets.core", "ruleset_version": "0.1.0", "character_id": "demo.magus",
+        "identity": {"name": "Magus"},
+        "preferred_build": {"facets": {"force": 2, "agility": 2, "cunning": 4, "empathy": 2, "tenacity": 4, "sense": 4}, "skills": {}, "talents": ["core.fireball"], "capabilities": []}
+      }
+    }
+  ]
+}
