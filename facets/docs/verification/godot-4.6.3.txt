@@ -1,6 +1,6 @@
-# Additional version check: Godot 4.7.2-stable (baseline remains 4.6.3)
+# Additional version check: Godot 4.6.3-stable (baseline is 4.7.2)
 $ godot --version
-4.7.2.stable.official.ed1daf0bf
+4.6.3.stable.official.7d41c59c4
 $ godot --headless --path . --editor --import
 exit 0
 $ godot --headless --path . --script tools/parse_check.gd
@@ -10,7 +10,7 @@ exit 0
 $ godot --headless --path . --script tests/run_tests.gd
   ok   test_transport :: test_t27_event_fixtures (15)
 
-FACETS tests: 138 passed, 0 failed, 3169 assertions, 35 groups, 7262 ms (Godot 4.7.2-stable (official))
+FACETS tests: 138 passed, 0 failed, 3169 assertions, 35 groups, 7375 ms (Godot 4.6.3-stable (official))
 exit 0
 $ tools/run_editor_selftest.sh
 FACETS editor self-test: 14 checks, 0 failures

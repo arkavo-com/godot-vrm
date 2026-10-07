@@ -1,4 +1,4 @@
-FACETS 0.1.0 - narrative RPG rules framework for Godot 4.6
+FACETS 0.1.0 - narrative RPG rules framework for Godot 4.7
 
 Licensing: MIT is the recommended license for the original FACETS
 implementation and documentation, subject to the owner's approval before any

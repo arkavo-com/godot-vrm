@@ -5,9 +5,7 @@
       "actors": {
         "demo.iris_kade": {
           "actor_id": "demo.iris_kade",
-          "awards": {
-
-          },
+          "awards": {},
           "base_build": {
             "capabilities": [],
             "facets": {
@@ -69,9 +67,7 @@
           "conditions": [],
           "controller": "player",
           "display_name": "Iris Kade",
-          "flags": {
-
-          },
+          "flags": {},
           "growth": 0,
           "harm": 0,
           "identity": {
@@ -111,16 +107,12 @@
           "resolve": 1,
           "strain": 0,
           "trained_skills": [],
-          "usage": {
-
-          },
+          "usage": {},
           "zone_id": "street"
         },
         "demo.mara_vale": {
           "actor_id": "demo.mara_vale",
-          "awards": {
-
-          },
+          "awards": {},
           "base_build": {
             "capabilities": [],
             "facets": {
@@ -188,9 +180,7 @@
           "conditions": [],
           "controller": "player",
           "display_name": "Mara Vale",
-          "flags": {
-
-          },
+          "flags": {},
           "growth": 0,
           "harm": 0,
           "identity": {
@@ -239,16 +229,12 @@
           "resolve": 1,
           "strain": 0,
           "trained_skills": [],
-          "usage": {
-
-          },
+          "usage": {},
           "zone_id": "street"
         },
         "npc.rook": {
           "actor_id": "npc.rook",
-          "awards": {
-
-          },
+          "awards": {},
           "base_build": {
             "capabilities": [],
             "facets": {
@@ -272,9 +258,7 @@
               "core.second_look"
             ]
           },
-          "bonds": {
-
-          },
+          "bonds": {},
           "build": {
             "capabilities": [],
             "facets": {
@@ -301,9 +285,7 @@
           "conditions": [],
           "controller": "npc",
           "display_name": "Rook",
-          "flags": {
-
-          },
+          "flags": {},
           "growth": 0,
           "harm": 0,
           "identity": {
@@ -315,9 +297,7 @@
             "tell": "Jingles his keys"
           },
           "identity_triggers": [],
-          "items": {
-
-          },
+          "items": {},
           "known_facts": [],
           "ledger": [],
           "memories": [],
@@ -327,16 +307,12 @@
           "resolve": 1,
           "strain": 0,
           "trained_skills": [],
-          "usage": {
-
-          },
+          "usage": {},
           "zone_id": "street"
         },
         "npc.tamsin": {
           "actor_id": "npc.tamsin",
-          "awards": {
-
-          },
+          "awards": {},
           "base_build": {
             "capabilities": [],
             "facets": {
@@ -360,9 +336,7 @@
               "core.steady_voice"
             ]
           },
-          "bonds": {
-
-          },
+          "bonds": {},
           "build": {
             "capabilities": [],
             "facets": {
@@ -389,9 +363,7 @@
           "conditions": [],
           "controller": "npc",
           "display_name": "Tamsin",
-          "flags": {
-
-          },
+          "flags": {},
           "growth": 0,
           "harm": 0,
           "identity": {
@@ -403,9 +375,7 @@
             "tell": "Clutches a torn ticket"
           },
           "identity_triggers": [],
-          "items": {
-
-          },
+          "items": {},
           "known_facts": [],
           "ledger": [],
           "memories": [],
@@ -415,15 +385,11 @@
           "resolve": 1,
           "strain": 0,
           "trained_skills": [],
-          "usage": {
-
-          },
+          "usage": {},
           "zone_id": "street"
         }
       },
-      "awards": {
-
-      },
+      "awards": {},
       "chapter_id": "nm.chapter1",
       "clock": 0,
       "completed_chapters": [],
@@ -476,12 +442,8 @@
           "visibility": "private"
         }
       },
-      "grants": {
-
-      },
-      "objective_epochs": {
-
-      },
+      "grants": {},
+      "objective_epochs": {},
       "objects": {
         "controller": {
           "accessible": true,
@@ -504,17 +466,13 @@
           "open": false
         }
       },
-      "opportunities": {
-
-      },
+      "opportunities": {},
       "refusals": {
         "npc.rook": [
           "fixer_office"
         ]
       },
-      "retry_locks": {
-
-      },
+      "retry_locks": {},
       "revision": 0,
       "scene_id": "nm.gate",
       "zones": {
@@ -544,9 +502,7 @@
     }
   },
   "event_counter": 1,
-  "events": {
-
-  },
+  "events": {},
   "journal": [
     {
       "after_revision": 1,
@@ -653,9 +609,7 @@
       "lesser_concessions": [],
       "modifiers": [],
       "objective_id": "nm.objective.bypass_controller",
-      "relationship": {
-
-      },
+      "relationship": {},
       "required_tools": [
         "tool.signal_kit"
       ],
@@ -874,20 +828,16 @@
     },
     "routine": false,
     "scene_id": "nm.gate",
-    "second_look": {
-
-    },
+    "second_look": {},
     "status": "pending",
     "target_explanation": [
       "Target 13 (demanding)."
     ],
-    "tool_substitution": {
-
-    },
+    "tool_substitution": {},
     "visibility": "public"
   },
   "requests": {
-    "commit-0-479296-1": {
+    "commit-fixture-0-1": {
       "digest": "7b8977df264a294a2f3b4939971e09a6b46caaeb9d4a9dfcea80da0e2002fb6c",
       "response": {
         "action": {
@@ -959,9 +909,7 @@
           "lesser_concessions": [],
           "modifiers": [],
           "objective_id": "nm.objective.bypass_controller",
-          "relationship": {
-
-          },
+          "relationship": {},
           "required_tools": [
             "tool.signal_kit"
           ],
@@ -1180,16 +1128,12 @@
         },
         "routine": false,
         "scene_id": "nm.gate",
-        "second_look": {
-
-        },
+        "second_look": {},
         "status": "pending",
         "target_explanation": [
           "Target 13 (demanding)."
         ],
-        "tool_substitution": {
-
-        },
+        "tool_substitution": {},
         "visibility": "public"
       }
     }

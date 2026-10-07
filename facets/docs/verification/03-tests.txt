@@ -139,5 +139,5 @@ $ godot --headless --path . --script tests/run_tests.gd
   ok   test_transport :: test_t27_save_fixtures (10)
   ok   test_transport :: test_t27_event_fixtures (15)
 
-FACETS tests: 138 passed, 0 failed, 3169 assertions, 35 groups, 7116 ms (Godot 4.6.3-stable (official))
+FACETS tests: 138 passed, 0 failed, 3169 assertions, 35 groups, 6786 ms (Godot 4.7.2-stable (official))
 exit 0

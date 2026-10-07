@@ -39,7 +39,7 @@
 [resource]
 script = ExtResource("15_s4jtt")
 pack_id = "facets.core"
-compatibility = "FACETS rules draft v0.1; Godot 4.6.3 baseline."
+compatibility = "FACETS rules draft v0.1; Godot 4.7.2 baseline."
 skills = Array[ExtResource("16_oixec")]([ExtResource("17_xnkjq"), ExtResource("18_g7jsm"), ExtResource("19_q8jlr"), ExtResource("20_d5plf"), ExtResource("21_klss6"), ExtResource("22_w8v3e"), ExtResource("23_guaty"), ExtResource("24_ku3b4"), ExtResource("25_hueuu"), ExtResource("26_gjkor"), ExtResource("27_hes6p"), ExtResource("28_f88ay")])
 talents = Array[ExtResource("29_6kkqb")]([ExtResource("30_lb24t"), ExtResource("31_jpjji"), ExtResource("32_dtdd0"), ExtResource("33_yqbdk"), ExtResource("34_w07a0"), ExtResource("35_tuwsa")])
 conditions = Array[ExtResource("9_5r64k")]([ExtResource("10_34f74"), ExtResource("11_ucjpp"), ExtResource("12_slftb"), ExtResource("13_3alnj"), ExtResource("14_8ed1w")])

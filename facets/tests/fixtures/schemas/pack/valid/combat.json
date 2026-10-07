@@ -1,8 +1,6 @@
 {
   "actions": [],
-  "admission_policy": {
-
-  },
+  "admission_policy": {},
   "archetypes": [],
   "compatibility": "Optional zone combat for FACETS 0.1.0.",
   "conditions": [],
@@ -25,9 +23,7 @@
         "uses_per_round": 1
       },
       "prerequisites": {
-        "facets": {
-
-        },
+        "facets": {},
         "skills": {
           "fighting": 1
         },
@@ -51,9 +47,7 @@
         "facets": {
           "tenacity": 3
         },
-        "skills": {
-
-        },
+        "skills": {},
         "talents": []
       },
       "repeatable": false,

@@ -14,7 +14,7 @@ func _write(kind: String, name: String, data: Variant) -> void:
 
 
 func _initialize() -> void:
-	var demo: NightMarketDemo = NightMarketDemo.create({"store": FacetsMemoryStore.new(), "dice": [[3, 3], [5, 5]]}).value
+	var demo: NightMarketDemo = NightMarketDemo.create({"store": FacetsMemoryStore.new(), "dice": [[3, 3], [5, 5]], "request_salt": "fixture"}).value
 	var preview: FacetsCheckPreview = demo.preview(NightMarketDemo.MARA, "nm.bypass_controller", "tech").value
 	var request := demo.session.suggest_request(NightMarketDemo.MARA, "nm.bypass_controller", "tech")
 	_write("request", "bypass_controller", request.to_dict())

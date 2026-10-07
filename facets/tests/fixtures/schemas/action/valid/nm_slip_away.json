@@ -71,9 +71,7 @@
     }
   ],
   "objective_id": "nm.objective.slip_away",
-  "relationship": {
-
-  },
+  "relationship": {},
   "required_tools": [],
   "requirements": [
     {

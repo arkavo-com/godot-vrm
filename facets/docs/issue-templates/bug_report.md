@@ -4,7 +4,7 @@ about: Something in FACETS behaves differently from the rules or the docs
 labels: bug
 ---
 
-**Godot version** (Help → About, e.g. 4.6.3.stable.official):
+**Godot version** (Help → About, e.g. 4.7.2.stable.official):
 
 **FACETS version** (`addons/facets/plugin.cfg`):
 

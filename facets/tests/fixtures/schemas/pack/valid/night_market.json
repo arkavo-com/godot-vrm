@@ -255,9 +255,7 @@
       "lesser_concessions": [],
       "modifiers": [],
       "objective_id": "nm.objective.bypass_controller",
-      "relationship": {
-
-      },
+      "relationship": {},
       "required_tools": [
         "tool.signal_kit"
       ],
@@ -429,9 +427,7 @@
       "lesser_concessions": [],
       "modifiers": [],
       "objective_id": "nm.objective.rooftop_entry",
-      "relationship": {
-
-      },
+      "relationship": {},
       "required_tools": [],
       "requirements": [
         {
@@ -560,9 +556,7 @@
       "lesser_concessions": [],
       "modifiers": [],
       "objective_id": "nm.objective.help_passenger",
-      "relationship": {
-
-      },
+      "relationship": {},
       "required_tools": [],
       "requirements": [
         {
@@ -641,9 +635,7 @@
       "lesser_concessions": [],
       "modifiers": [],
       "objective_id": "nm.objective.deliver_package",
-      "relationship": {
-
-      },
+      "relationship": {},
       "required_tools": [],
       "requirements": [
         {
@@ -766,9 +758,7 @@
         }
       ],
       "objective_id": "nm.objective.slip_away",
-      "relationship": {
-
-      },
+      "relationship": {},
       "required_tools": [],
       "requirements": [
         {
@@ -851,9 +841,7 @@
       "lesser_concessions": [],
       "modifiers": [],
       "objective_id": "nm.objective.follow_lead",
-      "relationship": {
-
-      },
+      "relationship": {},
       "required_tools": [],
       "requirements": [
         {
@@ -959,9 +947,7 @@
         }
       ],
       "objective_id": "nm.objective.calm_doctor",
-      "relationship": {
-
-      },
+      "relationship": {},
       "required_tools": [],
       "requirements": [
         {
@@ -1005,9 +991,7 @@
       "version": 1
     }
   ],
-  "admission_policy": {
-
-  },
+  "admission_policy": {},
   "archetypes": [],
   "compatibility": "Night Market Delivery demo for FACETS 0.1.0.",
   "conditions": [],

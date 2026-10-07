@@ -2,5 +2,5 @@ $ python3 tools/build_release.py
 facets-addon-0.1.0.zip            170 files    133693 bytes
 facets-ai-0.1.0.zip                17 files     11730 bytes
 facets-combat-0.1.0.zip            18 files     14439 bytes
-facets-examples-0.1.0.zip         358 files    813970 bytes
+facets-examples-0.1.0.zip         358 files    814665 bytes
 exit 0

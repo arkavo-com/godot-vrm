@@ -29,7 +29,7 @@ func _initialize() -> void:
 	var pack := FacetsRulesPack.new()
 	pack.pack_id = "facets.core"
 	pack.version = FacetsRules.RULESET_VERSION
-	pack.compatibility = "FACETS rules draft v0.1; Godot 4.6.3 baseline."
+	pack.compatibility = "FACETS rules draft v0.1; Godot 4.7.2 baseline."
 	for skill_id in FacetsRules.CORE_SKILLS:
 		var skill := FacetsSkillResource.new()
 		skill.id = skill_id

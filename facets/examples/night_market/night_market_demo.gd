@@ -34,16 +34,22 @@ var store: FacetsSessionStore
 var player := FacetsPrincipal.player("player", [MARA, IRIS])
 var host := FacetsPrincipal.host("night_market")
 var log_lines: Array[String] = []
+## Distinguishes this instance's request IDs from IDs stored in a loaded
+## save. Random by default; set a fixed value for reproducible exports.
+var request_salt: String = "%x" % (randi() ^ Time.get_ticks_usec())
 var _request_counter: int = 0
 
 
 ## Options: "store" (FacetsSessionStore written on every transaction;
 ## default the autosave file), "resume" (continue from that store when it
 ## holds a valid save), "seed" (int), "dice" (Array of [d1, d2] pairs for
-## scripted runs).
+## scripted runs), "request_salt" (fixed request-ID salt for reproducible
+## fixture exports).
 static func create(options: Dictionary = {}) -> FacetsReply:
 	var demo := NightMarketDemo.new()
 	demo.registry = build_registry()
+	if options.has("request_salt"):
+		demo.request_salt = str(options["request_salt"])
 	var autosave: FacetsSessionStore = options.get("store") if options.get("store") is FacetsSessionStore else FacetsFileStore.at(AUTOSAVE)
 	if bool(options.get("resume", false)) and autosave.has_save():
 		var resumed := FacetsSession.restore(autosave, demo.registry)
@@ -134,7 +140,7 @@ func new_journey(options: Dictionary = {}) -> FacetsReply:
 
 func _request_id(prefix: String) -> String:
 	_request_counter += 1
-	return "%s-%d-%d-%d" % [prefix, session.last_sequence(), Time.get_ticks_usec(), _request_counter]
+	return "%s-%s-%d-%d" % [prefix, request_salt, session.last_sequence(), _request_counter]
 
 
 func _log(line: String) -> void:

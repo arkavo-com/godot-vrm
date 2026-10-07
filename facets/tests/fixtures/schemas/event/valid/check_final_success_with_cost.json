@@ -68,9 +68,7 @@
     "lesser_concessions": [],
     "modifiers": [],
     "objective_id": "nm.objective.bypass_controller",
-    "relationship": {
-
-    },
+    "relationship": {},
     "required_tools": [
       "tool.signal_kit"
     ],
@@ -229,9 +227,7 @@
       ]
     }
   ],
-  "decision": {
-
-  },
+  "decision": {},
   "dice": [
     3,
     3
@@ -324,16 +320,12 @@
   },
   "routine": false,
   "scene_id": "nm.gate",
-  "second_look": {
-
-  },
+  "second_look": {},
   "status": "final",
   "talent_notes": [],
   "target_explanation": [
     "Target 13 (demanding)."
   ],
-  "tool_substitution": {
-
-  },
+  "tool_substitution": {},
   "visibility": "public"
 }

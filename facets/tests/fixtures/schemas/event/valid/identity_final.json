@@ -12,9 +12,7 @@
       "option_id": "accept"
     }
   ],
-  "decision": {
-
-  },
+  "decision": {},
   "disadvantage": "Miss the delivery window",
   "event_id": "evt-000002",
   "finalize_ops": [

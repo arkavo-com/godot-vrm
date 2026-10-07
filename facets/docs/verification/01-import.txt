@@ -1,4 +1,4 @@
 $ godot --version
-4.6.3.stable.official.7d41c59c4
+4.7.2.stable.official.ed1daf0bf
 $ godot --headless --path . --editor --import
 exit 0

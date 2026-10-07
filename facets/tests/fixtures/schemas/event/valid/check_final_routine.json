@@ -33,9 +33,7 @@
     "lesser_concessions": [],
     "modifiers": [],
     "objective_id": "nm.objective.deliver_package",
-    "relationship": {
-
-    },
+    "relationship": {},
     "required_tools": [],
     "requirements": [
       {
@@ -118,9 +116,7 @@
   },
   "choices": [],
   "commit_ops": [],
-  "decision": {
-
-  },
+  "decision": {},
   "dice": [],
   "effect_labels": [
     "Package delivered"
@@ -176,16 +172,12 @@
   },
   "routine": true,
   "scene_id": "nm.gate",
-  "second_look": {
-
-  },
+  "second_look": {},
   "status": "final",
   "talent_notes": [],
   "target_explanation": [
     "Routine: succeeds without a roll."
   ],
-  "tool_substitution": {
-
-  },
+  "tool_substitution": {},
   "visibility": "public"
 }

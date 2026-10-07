@@ -23,12 +23,12 @@ jobs:
       matrix:
         include:
           # Pinned baseline (implementation decision D-001).
-          - godot: "4.6.3"
-            sha512: "a035258da32b77f966a5376f9fa29c30a6adde826a85ba918e1605bd1fc9823eba7d85f1dd5e748956bd2ba72827c0025ffa11bb82aec91128c407a2e723c99c"
-            baseline: true
-          # Additional tested version; compatibility is claimed only while this passes.
           - godot: "4.7.2"
             sha512: "9aa00f7a605200940bce3027a567b782f49bd8e940dd06ae9e987bd65aee1b1467edd56ed84fcdcbdd44354bf613bdbb4e5d2913e925850368e150c59ed54c65"
+            baseline: true
+          # Additional tested version; compatibility is claimed only while this passes.
+          - godot: "4.6.3"
+            sha512: "a035258da32b77f966a5376f9fa29c30a6adde826a85ba918e1605bd1fc9823eba7d85f1dd5e748956bd2ba72827c0025ffa11bb82aec91128c407a2e723c99c"
             baseline: false
     env:
       GODOT_VERSION: ${{ matrix.godot }}
@@ -61,6 +61,12 @@ jobs:
 
       - name: Clean install of addons/facets
         run: tools/verify_clean_install.sh
+
+      - name: Exported transport fixtures are reproducible
+        if: matrix.baseline
+        run: |
+          "$GODOT" --headless --path . --script tools/export_fixtures.gd
+          git diff --exit-code -- tests/fixtures/schemas
 
       - uses: actions/setup-python@v5
         if: matrix.baseline

@@ -67,9 +67,7 @@
   "lesser_concessions": [],
   "modifiers": [],
   "objective_id": "nm.objective.bypass_controller",
-  "relationship": {
-
-  },
+  "relationship": {},
   "required_tools": [
     "tool.signal_kit"
   ],

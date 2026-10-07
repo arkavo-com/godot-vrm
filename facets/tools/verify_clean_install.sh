@@ -16,7 +16,7 @@ config_version=5
 [application]
 
 config/name="FACETS clean install"
-config/features=PackedStringArray("4.6")
+config/features=PackedStringArray("4.7")
 CFG
 cat > "$WORK/smoke.gd" <<'GD'
 extends SceneTree

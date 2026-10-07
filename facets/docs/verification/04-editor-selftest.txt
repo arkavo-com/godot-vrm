@@ -1,5 +1,5 @@
 $ tools/run_editor_selftest.sh
-FACETS editor self-test (Godot 4.6.3-stable (official))
+FACETS editor self-test (Godot 4.7.2-stable (official))
   ok   FACETS plugin enabled at startup
   ok   two FACETS docks registered (found 2)
   ok   cycle 0: disable removes docks
